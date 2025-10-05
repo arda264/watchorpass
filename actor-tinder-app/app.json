@@ -1,0 +1,24 @@
+{
+  "expo": {
+    "name": "actor-tinder-app",
+    "slug": "actor-tinder-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "backgroundColor": "#000000",
+    "icon": "./assets/images/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": { "backgroundColor": "#000000" },
+    "android": { "backgroundColor": "#000000" },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#000000",
+          "dark": { "backgroundColor": "#000000" }
+        }
+      ]
+    ]
+  }
+}
