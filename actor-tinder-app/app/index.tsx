@@ -57,9 +57,9 @@ export default function Home() {
 
   const onSwipesComplete = () => {
     setRecommendation({
-      title: "Example Movie",
-      poster: "https://via.placeholder.com/250x350",
-      description: "This is a mock recommendation based on your swipes.",
+      title: "Buckaroo Banzai",
+      poster: "https://upload.wikimedia.org/wikipedia/en/b/ba/Adventures_of_buckaroo_banzai.jpg",
+      description: "The Adventures of Buckaroo Banzai Across the 8th Dimension stands as one of the greatest cult films ever made because it defies every genre convention with gleeful confidence. Blending sci-fi, comedy, adventure, and rockn roll, it creates a world so bizarre yet sincere that it feels both absurd and brilliant. Peter Wellers Buckaroo — a neurosurgeon, physicist, and rock star — embodies pure 1980s cool, while the films deadpan humor and wild imagination make it endlessly rewatchable. Its not just a movie; its a celebration of creative chaos and the timeless truth: No matter where you go, there you are. Also, Ian's favorite movie.",
     });
   };
 
@@ -101,23 +101,31 @@ const styles = StyleSheet.create({
     backgroundColor: "#000",
     justifyContent: "center",
     alignItems: "center",
+
   },
   card: {
-    width,
-    height,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#000",
+  width: "100%",
+  height: "100%",
+  justifyContent: "center",
+  alignItems: "center",
+  backgroundColor: "#000",
+  alignSelf: "center",
+
   },
+
   image: {
-    width: "90%",
-    height: "80%",
-    borderRadius: 12,
-    resizeMode: "cover",
-  },
+  width: "90%",
+  height: "70%",
+  borderRadius: 24,
+  resizeMode: "cover",
+  alignSelf: "center",
+  marginBottom: 40,
+
+},
+
   name: {
     position: "absolute",
-    bottom: 50,
+    bottom: 100,
     fontSize: 28,
     fontWeight: "bold",
     color: "#fff",
