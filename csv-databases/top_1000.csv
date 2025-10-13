@@ -1,1001 +1,1001 @@
-Position,Const,Created,Modified,Description,Name,Known For,Birth Date
-1,nm0000134,2014-03-09,2014-03-09,,"Robert De Niro","Cape Fear","August 17, 1943"
-2,nm0000197,2014-03-09,2015-10-25,,"Jack Nicholson","Chinatown","April 22, 1937"
-3,nm0000008,2014-03-09,2014-03-09,,"Marlon Brando","Apocalypse Now","April 3, 1924"
-4,nm0000243,2014-03-09,2014-03-09,,"Denzel Washington","Fences","December 28, 1954"
-5,nm0000658,2014-03-09,2014-03-09,,"Meryl Streep","Out of Africa","June 22, 1949"
-6,nm0000031,2014-03-09,2014-03-09,,"Katharine Hepburn","The Philadelphia Story","May 12, 1907"
-7,nm0000358,2014-03-09,2014-03-09,,"Daniel Day-Lewis","There Will Be Blood","April 29, 1957"
-8,nm0001627,2014-03-09,2014-03-09,,"Sidney Poitier","Lilies of the Field","February 20, 1927"
-9,nm0000007,2015-08-13,2015-08-13,,"Humphrey Bogart","Casablanca","December 25, 1899"
-10,nm0000022,2015-08-13,2015-08-13,,"Clark Gable","It Happened One Night","February 1, 1901"
-11,nm0000006,2014-03-09,2014-03-09,,"Ingrid Bergman","Casablanca","August 29, 1915"
-12,nm0000138,2014-03-09,2014-03-09,,"Leonardo DiCaprio","Inception","November 11, 1974"
-13,nm0000056,2014-03-09,2014-03-09,,"Paul Newman","The Hustler","January 26, 1925"
-14,nm0000072,2014-03-09,2014-03-09,,"Elizabeth Taylor","Who's Afraid of Virginia Woolf?","February 27, 1932"
-15,nm0000012,2014-03-09,2014-03-09,,"Bette Davis","All About Eve","April 5, 1908"
-16,nm0000071,2014-08-31,2014-08-31,,"James Stewart","Vertigo","May 20, 1908"
-17,nm0000060,2015-04-03,2015-04-03,,"Gregory Peck","To Kill a Mockingbird","April 5, 1916"
-18,nm0000199,2014-03-09,2014-03-09,,"Al Pacino","Serpico","April 25, 1940"
-19,nm0000158,2014-03-09,2014-03-09,,"Tom Hanks","Cast Away","July 9, 1956"
-20,nm0000949,2014-03-09,2014-03-09,,"Cate Blanchett","Carol","May 14, 1969"
-21,nm0000030,2014-03-09,2014-03-09,,"Audrey Hepburn","Breakfast at Tiffany's","May 4, 1929"
-22,nm0000701,2014-03-09,2014-03-09,,"Kate Winslet","Eternal Sunshine of the Spotless Mind","October 5, 1975"
-23,nm0205626,2014-03-10,2014-03-10,,"Viola Davis","Fences","August 11, 1965"
-24,nm0000026,2014-03-09,2014-03-09,,"Cary Grant","Arsenic and Old Lace","January 18, 1904"
-25,nm0000151,2015-08-13,2015-08-13,,"Morgan Freeman","Driving Miss Daisy","June 1, 1937"
-26,nm0000046,2014-03-09,2014-03-09,,"Vivien Leigh","A Streetcar Named Desire","November 5, 1913"
-27,nm0000059,2014-03-09,2014-03-09,,"Laurence Olivier","Rebecca","May 22, 1907"
-28,nm0000537,2015-08-13,2015-08-13,,"Steve McQueen","The Great Escape","March 24, 1930"
-29,nm0000473,2014-03-09,2014-03-09,,"Diane Keaton","Annie Hall","January 5, 1946"
-30,nm0000075,2014-03-09,2014-03-09,,"Spencer Tracy","Guess Who's Coming to Dinner","April 5, 1900"
-31,nm0451321,2014-03-10,2014-03-10,,"Shah Rukh Khan","Don 2","November 2, 1965"
-32,nm0000210,2014-03-09,2014-03-09,,"Julia Roberts","Pretty Woman","October 28, 1967"
-33,nm0000149,2014-03-09,2014-03-09,,"Jodie Foster","The Silence of the Lambs","November 19, 1962"
-34,nm0000023,2014-03-09,2014-03-09,,"Judy Garland","The Wizard of Oz","June 10, 1922"
-35,nm0000020,2014-03-09,2014-03-09,,"Henry Fonda","12 Angry Men","May 16, 1905"
-36,nm0000366,2014-03-10,2014-03-10,,"Catherine Deneuve","8 femmes","October 22, 1943"
-37,nm0000038,2015-08-13,2015-08-13,,"Grace Kelly","Dial M for Murder","November 12, 1929"
-38,nm0000545,2014-03-09,2014-03-09,,"Helen Mirren","The Queen","July 26, 1945"
-39,nm0000164,2014-03-09,2014-03-09,,"Anthony Hopkins","The Silence of the Lambs","December 31, 1937"
-40,nm0000010,2014-03-09,2014-03-09,,"James Cagney","Angels with Dirty Faces","July 17, 1899"
-41,nm0000291,2014-03-10,2014-03-10,,"Angela Bassett","Strange Days","August 16, 1958"
-42,nm0000136,2014-03-09,2014-03-09,,"Johnny Depp","Sweeney Todd: The Demon Barber of Fleet Street","June 9, 1963"
-43,nm0001256,2014-03-09,2014-03-09,,"Greta Garbo","Ninotchka","September 18, 1905"
-44,nm0000014,2014-03-09,2014-03-09,,"Olivia de Havilland","Gone with the Wind","July 1, 1916"
-45,nm0000122,2014-03-09,2014-03-09,,"Charles Chaplin","The Great Dictator","April 16, 1889"
-46,nm0361697,2014-03-10,2014-03-10,,"Setsuko Hara","Banshun","June 17, 1920"
-47,nm0000267,2014-03-09,2014-03-09,,"Julie Andrews","The Sound of Music","October 1, 1935"
-48,nm0001050,2014-03-10,2014-03-10,,"Montgomery Clift","A Place in the Sun","October 17, 1920"
-49,nm0001376,2014-03-10,2014-03-10,,"Isabelle Huppert","Elle","March 16, 1953"
-50,nm0000028,2014-03-09,2014-03-09,,"Rita Hayworth","Gilda","October 17, 1918"
-51,nm0000932,2014-03-09,2014-03-09,,"Halle Berry","Catwoman","August 14, 1966"
-52,nm0000015,2014-03-09,2014-03-09,,"James Dean","East of Eden","February 8, 1931"
-53,nm0000018,2014-03-09,2014-03-09,,"Kirk Douglas","Ace in the Hole","December 9, 1916"
-54,nm0000081,2014-03-09,2014-03-09,,"Natalie Wood","Rebel Without a Cause","July 20, 1938"
-55,nm0000052,2014-03-10,2014-03-10,,"Marcello Mastroianni","La dolce vita","September 26, 1924"
-56,nm0001076,2014-03-09,2014-03-09,,"Joan Crawford","Mildred Pierce","March 23, 1907"
-57,nm0000148,2015-08-13,2015-08-13,,"Harrison Ford","Raiders of the Lost Ark","July 13, 1942"
-58,nm0000215,2014-03-09,2014-03-09,,"Susan Sarandon","Thelma & Louise","October 4, 1946"
-59,nm0000037,2014-03-09,2014-03-09,,"Gene Kelly","Singin' in the Rain","August 23, 1912"
-60,nm0000335,2014-03-09,2014-03-09,,"Glenn Close","Fatal Attraction","March 19, 1947"
-61,nm0000021,2014-03-09,2014-03-09,,"Joan Fontaine","Rebecca","October 22, 1917"
-62,nm0000194,2014-03-09,2014-03-09,,"Julianne Moore","Far from Heaven","December 3, 1960"
-63,nm0000226,2014-03-09,2014-03-09,,"Will Smith","The Fresh Prince of Bel-Air","September 25, 1968"
-64,nm0000047,2014-03-09,2014-03-09,,"Sophia Loren","Arabesque","September 20, 1934"
-65,nm0000054,2014-03-09,2014-03-09,,"Marilyn Monroe","Some Like It Hot","June 1, 1926"
-66,nm0000045,2014-03-10,2014-03-10,,"Bruce Lee","Jing wu men","November 27, 1940"
-67,nm0005093,2019-11-09,2019-11-09,,"Regina King","Ray","January 15, 1971"
-68,nm0001401,2014-03-09,2014-03-09,,"Angelina Jolie","Maleficent","June 4, 1975"
-69,nm0000078,2014-03-09,2014-03-09,,"John Wayne","True Grit","May 26, 1907"
-70,nm0000404,2014-03-09,2014-03-09,,"Jane Fonda","Klute","December 21, 1937"
-71,nm0000032,2015-08-13,2015-08-13,,"Charlton Heston","Ben-Hur","October 4, 1923"
-72,nm0000011,2014-03-09,2014-03-09,,"Gary Cooper","High Noon","May 7, 1901"
-73,nm0880521,2014-03-10,2014-03-10,,"Liv Ullmann","Viskningar och rop","December 16, 1938"
-74,nm0000204,2014-03-09,2014-03-09,,"Natalie Portman","Black Swan","June 9, 1981"
-75,nm0001845,2014-03-09,2014-03-09,,"Forest Whitaker","The Last King of Scotland","July 15, 1961"
-76,nm0000113,2014-03-09,2014-03-09,,"Sandra Bullock","The Proposal","July 26, 1964"
-77,nm0000039,2014-03-09,2014-03-09,,"Deborah Kerr","The King and I","September 30, 1921"
-78,nm0001536,2014-03-10,2014-03-10,,"Toshirô Mifune","Yôjinbô","April 1, 1920"
-79,nm0000163,2014-03-09,2014-03-09,,"Dustin Hoffman","Tootsie","August 8, 1937"
-80,nm0000668,2014-03-09,2014-03-09,,"Emma Thompson","Sense and Sensibility","April 15, 1959"
-81,nm0000129,2014-03-09,2014-03-09,,"Tom Cruise","Top Gun","July 3, 1962"
-82,nm0000201,2014-03-09,2014-03-09,,"Michelle Pfeiffer","The Fabulous Baker Boys","April 29, 1958"
-83,nm0001159,2014-03-09,2014-03-09,,"Faye Dunaway","Bonnie and Clyde","January 14, 1941"
-84,nm0000168,2014-03-09,2014-03-09,,"Samuel L. Jackson","Pulp Fiction","December 21, 1948"
-85,nm0000564,2014-03-09,2014-03-09,,"Peter O'Toole","Lawrence of Arabia","August 2, 1932"
-86,nm0005132,2014-03-09,2014-03-09,,"Heath Ledger","Brokeback Mountain","April 4, 1979"
-87,nm0000173,2014-03-09,2014-03-09,,"Nicole Kidman","Moulin Rouge!","June 20, 1967"
-88,nm0004851,2014-03-10,2014-03-10,,"Penélope Cruz","Vicky Cristina Barcelona","April 28, 1974"
-89,nm1569276,2019-03-18,2019-03-18,,"Chadwick Boseman","Black Panther","November 29, 1976"
-90,nm0000104,2014-03-10,2014-03-10,,"Antonio Banderas","The Mask of Zorro","August 10, 1960"
-91,nm0000244,2014-03-09,2014-03-09,,"Sigourney Weaver","Alien: Resurrection","October 8, 1949"
-92,nm0000161,2014-03-10,2014-03-10,,"Salma Hayek","Frida","September 2, 1966"
-93,nm0000332,2014-03-10,2014-03-10,,"Don Cheadle","Crash","November 29, 1964"
-94,nm0000531,2014-03-09,2014-03-09,,"Frances McDormand","Three Billboards Outside Ebbing, Missouri","June 23, 1957"
-95,nm0000870,2014-03-09,2014-03-09,,"Kathy Bates","Misery","June 28, 1948"
-96,nm0001725,2019-04-12,2019-04-12,,"Omar Sharif","Lawrence of Arabia","April 10, 1932"
-97,nm0010736,2014-03-09,2014-03-09,,"Amy Adams","Arrival","August 20, 1974"
-98,nm0001618,2014-03-09,2014-03-09,,"Joaquin Phoenix","Walk the Line","October 28, 1974"
-99,nm0482320,2019-04-12,2019-04-12,,"Mohanlal","Dasharatham","May 21, 1960"
-100,nm0000093,2014-03-09,2014-03-09,,"Brad Pitt","Fight Club","December 18, 1963"
-101,nm0000313,2014-03-09,2014-03-09,,"Jeff Bridges","The Big Lebowski","December 4, 1949"
-102,nm0000125,2014-03-09,2014-03-09,,"Sean Connery","Dr. No","August 25, 1930"
-103,nm0001426,2014-03-09,2014-03-09,,"Ben Kingsley","Sexy Beast","December 31, 1943"
-104,nm0000169,2014-03-09,2014-03-09,,"Tommy Lee Jones","The Homesman","September 15, 1946"
-105,nm0000602,2014-03-09,2014-03-09,,"Robert Redford","The Natural","August 18, 1936"
-106,nm0000493,2015-08-13,2015-08-13,,"Jack Lemmon","The Apartment","February 8, 1925"
-107,nm0001715,2014-03-09,2014-03-09,,"George C. Scott","Patton","October 18, 1927"
-108,nm0000245,2014-03-09,2014-03-09,,"Robin Williams","Mrs. Doubtfire","July 21, 1951"
-109,nm0000450,2015-04-03,2015-04-03,,"Philip Seymour Hoffman","The Master","July 23, 1967"
-110,nm0000123,2014-03-09,2014-03-09,,"George Clooney","The Ides of March","May 6, 1961"
-111,nm0000432,2014-03-09,2014-03-09,,"Gene Hackman","The French Connection","January 30, 1930"
-112,nm0000115,2014-03-09,2014-03-09,,"Nicolas Cage","Face/Off","January 7, 1964"
-113,nm0000686,2014-03-09,2014-03-09,,"Christopher Walken","The Deer Hunter","March 31, 1943"
-114,nm0004266,2015-08-13,2015-08-13,,"Anne Hathaway","Les Misérables","November 12, 1982"
-115,nm0000367,2014-03-10,2014-03-10,,"Gérard Depardieu","Cyrano de Bergerac","December 27, 1948"
-116,nm0001626,2014-03-09,2014-03-09,,"Christopher Plummer","Beginners","December 13, 1929"
-117,nm0000246,2014-03-09,2014-03-09,,"Bruce Willis","Die Hard","March 19, 1955"
-118,nm0005212,2014-03-09,2014-03-09,,"Ian McKellen","The Lord of the Rings: The Fellowship of the Ring","May 25, 1939"
-119,nm0000128,2019-04-12,2019-04-12,,"Russell Crowe","Les Misérables","April 7, 1964"
-120,nm0000195,2014-03-09,2014-03-09,,"Bill Murray","Lost in Translation","September 21, 1950"
-121,nm0000906,2014-03-09,2014-03-09,,"Annette Bening","American Beauty","May 29, 1958"
-122,nm0000582,2014-03-09,2014-03-09,,"Joe Pesci","GoodFellas","February 9, 1943"
-123,nm0000126,2014-03-09,2014-03-09,,"Kevin Costner","The Postman","January 18, 1955"
-124,nm0000212,2014-03-09,2014-03-09,,"Meg Ryan","When Harry Met Sally...","November 19, 1961"
-125,nm0000661,2015-08-13,2015-08-13,,"Donald Sutherland","The Hunger Games: Catching Fire","July 17, 1935"
-126,nm0000142,2014-03-09,2014-03-09,,"Clint Eastwood","Million Dollar Baby","May 31, 1930"
-127,nm0000140,2014-03-09,2014-03-09,,"Michael Douglas","Behind the Candelabra","September 25, 1944"
-128,nm0000375,2015-08-13,2015-08-13,,"Robert Downey Jr.","Iron Man","April 4, 1965"
-129,nm0001257,2014-03-09,2014-03-09,,"Ava Gardner","The Night of the Iguana","December 24, 1922"
-130,nm0000398,2014-03-09,2014-03-09,,"Sally Field","Lincoln","November 6, 1946"
-131,nm0000013,2014-03-09,2014-03-09,,"Doris Day","Love Me or Leave Me","April 3, 1922"
-132,nm0000511,2014-03-09,2014-03-09,,"Shirley MacLaine","Terms of Endearment","April 24, 1934"
-133,nm0000456,2014-03-09,2014-03-09,,"Holly Hunter","Broadcast News","March 20, 1958"
-134,nm0000353,2014-03-09,2014-03-09,,"Willem Dafoe","Spider-Man","July 22, 1955"
-135,nm0005476,2014-03-09,2014-03-09,,"Hilary Swank","Million Dollar Baby","July 30, 1974"
-136,nm0252230,2015-04-03,2015-04-03,,"Chiwetel Ejiofor","12 Years a Slave","July 10, 1977"
-137,nm0001055,2014-03-09,2014-03-09,,"Claudette Colbert","It Happened One Night","September 13, 1903"
-138,nm0000178,2014-03-09,2014-03-09,,"Diane Lane","Unfaithful","January 22, 1965"
-139,nm0001448,2014-03-09,2014-03-09,,"Jessica Lange","Tootsie","April 20, 1949"
-140,nm0841797,2014-03-09,2014-03-09,,"Gloria Swanson","Sunset Blvd.","March 27, 1899"
-141,nm0000323,2014-03-09,2014-03-09,,"Michael Caine","Youth","March 14, 1933"
-142,nm0000002,2014-03-09,2014-03-09,,"Lauren Bacall","To Have and Have Not","September 16, 1924"
-143,nm0790454,2014-03-09,2014-03-09,,"Norma Shearer","The Divorcee","August 10, 1902"
-144,nm0000541,2014-03-09,2014-03-09,,"Bette Midler","Beaches","December 1, 1945"
-145,nm0001546,2014-03-09,2014-03-09,,"Mary Tyler Moore","Ordinary People","December 29, 1936"
-146,nm0536167,2014-03-09,2014-03-09,,"Anna Magnani","Roma città aperta","March 7, 1908"
-147,nm0001132,2014-03-09,2014-03-09,,"Judi Dench","Skyfall","December 9, 1934"
-148,nm0000232,2014-03-09,2014-03-09,,"Sharon Stone","Basic Instinct","March 10, 1958"
-149,nm0000107,2014-03-09,2014-03-09,,"Kim Basinger","L.A. Confidential","December 8, 1953"
-150,nm3154303,2024-12-18,2024-12-18,,"Timothée Chalamet","A Complete Unknown","December 27, 1995"
-151,nm0413559,2014-03-09,2014-03-09,,"Glenda Jackson","Women in Love","May 9, 1936"
-152,nm0001656,2014-03-09,2014-03-09,,"Donna Reed","It's a Wonderful Life","January 27, 1921"
-153,nm0000193,2014-03-09,2014-03-09,,"Demi Moore","G.I. Jane","November 11, 1962"
-154,nm0591485,2014-03-09,2014-03-09,,"Liza Minnelli","Cabaret","March 12, 1946"
-155,nm0000133,2014-03-09,2014-03-09,,"Geena Davis","Thelma & Louise","January 21, 1956"
-156,nm0000634,2014-03-09,2014-03-09,,"Peter Sellers","Being There","September 8, 1925"
-157,nm0000154,2014-03-09,2014-03-09,,"Mel Gibson","Braveheart","January 3, 1956"
-158,nm0000120,2014-03-09,2014-03-09,,"Jim Carrey","Ace Ventura: Pet Detective","January 17, 1962"
-159,nm0000242,2014-03-09,2014-03-09,,"Mark Wahlberg","The Fighter","June 5, 1971"
-160,nm0000188,2014-03-09,2014-03-09,,"Steve Martin","Roxanne","August 14, 1945"
-161,nm0000849,2014-03-09,2014-03-09,,"Javier Bardem","Skyfall","March 1, 1969"
-162,nm0910607,2014-03-09,2014-03-09,,"Christoph Waltz","Inglourious Basterds","October 4, 1956"
-163,nm0000209,2014-03-09,2014-03-09,,"Tim Robbins","Mystic River","October 16, 1958"
-164,nm0000216,2014-03-09,2014-03-09,,"Arnold Schwarzenegger","Terminator 2: Judgment Day","July 30, 1947"
-165,nm0000230,2014-03-09,2014-03-09,,"Sylvester Stallone","Rocky","July 6, 1946"
-166,nm0001557,2014-03-09,2014-03-09,,"Viggo Mortensen","Captain Fantastic","October 20, 1958"
-167,nm0000489,2014-03-09,2014-03-09,,"Christopher Lee","Star Wars: Episode II - Attack of the Clones","May 27, 1922"
-168,nm0001691,2014-03-09,2014-03-09,,"Geoffrey Rush","The King's Speech","July 6, 1951"
-169,nm0000027,2014-03-09,2014-03-09,,"Alec Guinness","Star Wars","April 2, 1914"
-170,nm0000009,2014-03-09,2014-03-09,,"Richard Burton","Who's Afraid of Virginia Woolf?","November 10, 1925"
-171,nm0005154,2014-03-10,2014-03-10,,"Lucy Liu","Kill Bill: Vol. 1","December 2, 1968"
-172,nm0000285,2014-03-09,2014-03-09,,"Alec Baldwin","The Departed","April 3, 1958"
-173,nm0001001,2014-03-09,2014-03-09,,"James Caan","Thief","March 26, 1940"
-174,nm0586568,2016-06-18,2016-06-18,,"Mads Mikkelsen","Hannibal","November 22, 1965"
-175,nm0001774,2014-03-09,2014-03-09,,"Ben Stiller","Zoolander","November 30, 1965"
-176,nm0000438,2014-03-09,2014-03-09,,"Ed Harris","Appaloosa","November 28, 1950"
-177,nm0000172,2014-03-09,2014-03-09,,"Harvey Keitel","Reservoir Dogs","May 13, 1939"
-178,nm0000685,2014-03-09,2014-03-09,,"Jon Voight","Midnight Cowboy","December 29, 1938"
-179,nm0000106,2014-03-09,2014-03-09,,"Drew Barrymore","Charlie's Angels","February 22, 1975"
-180,nm0000213,2014-03-09,2014-03-09,,"Winona Ryder","Alien: Resurrection","October 29, 1971"
-181,nm0000678,2014-03-09,2014-03-09,,"Kathleen Turner","Romancing the Stone","June 19, 1954"
-182,nm0000235,2014-03-09,2014-03-09,,"Uma Thurman","Kill Bill: Vol. 1","April 29, 1970"
-183,nm0000623,2014-03-09,2014-03-09,,"Rene Russo","Nightcrawler","February 17, 1954"
-184,nm0000155,2014-03-09,2014-03-09,,"Whoopi Goldberg","Ghost","November 13, 1955"
-185,nm0001749,2015-08-13,2015-08-13,,"Maggie Smith","Gosford Park","December 28, 1934"
-186,nm0000659,2014-03-09,2014-03-09,,"Barbra Streisand","Funny Girl","April 24, 1942"
-187,nm2225369,2014-03-09,2014-03-09,,"Jennifer Lawrence","The Hunger Games","August 15, 1990"
-188,nm0940946,2014-03-09,2014-03-09,,"Joanne Woodward","Rachel, Rachel","February 27, 1930"
-189,nm0564790,2014-03-09,2014-03-09,,"Mercedes McCambridge","Giant","March 16, 1916"
-190,nm0001378,2014-03-09,2014-03-09,,"Anjelica Huston","The Grifters","July 8, 1951"
-191,nm0001848,2014-03-09,2014-03-09,,"Dianne Wiest","Bullets Over Broadway","March 28, 1948"
-192,nm0000443,2014-03-09,2014-03-09,,"Goldie Hawn","Private Benjamin","November 21, 1945"
-193,nm0001012,2014-03-09,2014-03-09,,"Claudia Cardinale","C'era una volta il West","April 15, 1938"
-194,nm0000569,2014-03-09,2014-03-09,,"Gwyneth Paltrow","Shakespeare in Love","September 27, 1972"
-195,nm0000234,2014-03-09,2014-03-09,,"Charlize Theron","Monster","August 7, 1975"
-196,nm0000700,2014-03-09,2014-03-09,,"Debra Winger","Terms of Endearment","May 16, 1955"
-197,nm0182839,2015-08-13,2015-08-13,,"Marion Cotillard","De rouille et d'os","September 30, 1975"
-198,nm0000207,2014-03-09,2014-03-09,,"Christina Ricci","Buffalo '66","February 12, 1980"
-199,nm0000300,2014-03-09,2014-03-09,,"Juliette Binoche","The English Patient","March 9, 1964"
-200,nm0000435,2014-03-09,2014-03-09,,"Daryl Hannah","Wall Street","December 3, 1960"
-201,nm0095804,2014-03-09,2014-03-09,,"Shirley Booth","Come Back, Little Sheba","August 30, 1898"
-202,nm0000702,2014-03-09,2014-03-09,,"Reese Witherspoon","Wild","March 22, 1976"
-203,nm0001125,2014-03-09,2014-03-09,,"Benicio Del Toro","Sicario","February 19, 1967"
-204,nm0000102,2014-03-09,2014-03-09,,"Kevin Bacon","Footloose","July 8, 1958"
-205,nm0000664,2014-03-09,2014-03-09,,"Patrick Swayze","Dirty Dancing","August 18, 1952"
-206,nm0001057,2014-03-09,2014-03-09,,"Toni Collette","The Sixth Sense","November 1, 1972"
-207,nm0000380,2015-04-03,2015-04-03,,"Robert Duvall","The Apostle","January 5, 1931"
-208,nm0000044,2014-03-09,2014-03-09,,"Burt Lancaster","From Here to Eternity","November 2, 1913"
-209,nm0000053,2014-03-09,2014-03-09,,"Robert Mitchum","Out of the Past","August 6, 1917"
-210,nm0268199,2014-03-09,2014-03-09,,"Colin Farrell","The Lobster","May 31, 1976"
-211,nm0000034,2014-03-09,2014-03-09,,"William Holden","Stalag 17","April 17, 1918"
-212,nm0000064,2014-03-09,2014-03-09,,"Edward G. Robinson","Key Largo","December 12, 1893"
-213,nm0001635,2014-03-09,2014-03-09,,"William Powell","The Thin Man","July 29, 1892"
-214,nm0001467,2014-03-09,2014-03-09,,"Jared Leto","Dallas Buyers Club","December 26, 1971"
-215,nm0001224,2014-03-09,2014-03-09,,"Errol Flynn","The Adventures of Robin Hood","June 20, 1909"
-216,nm0000050,2014-03-09,2014-03-09,,"Groucho Marx","Horse Feathers","October 2, 1890"
-217,nm0000051,2014-03-09,2014-03-09,,"James Mason","Lolita","May 15, 1909"
-218,nm0000036,2014-03-09,2014-03-09,,"Buster Keaton","The General","October 4, 1895"
-219,nm0000080,2014-03-09,2014-03-09,,"Orson Welles","Citizen Kane","May 6, 1915"
-220,nm0000001,2014-03-09,2014-03-09,,"Fred Astaire","The Towering Inferno","May 10, 1899"
-221,nm0177896,2014-03-09,2014-03-09,,"Bradley Cooper","A Star Is Born","January 5, 1975"
-222,nm0000198,2019-03-19,2019-03-19,,"Gary Oldman","Tinker Tailor Soldier Spy","March 21, 1958"
-223,nm0000179,2014-03-09,2014-03-09,,"Jude Law","The Talented Mr. Ripley","December 29, 1972"
-224,nm0316079,2014-03-09,2014-03-09,,"Paul Giamatti","Sideways","June 6, 1967"
-225,nm0000553,2014-03-09,2014-03-09,,"Liam Neeson","Kinsey","June 7, 1952"
-226,nm0000354,2019-04-12,2019-04-12,,"Matt Damon","Good Will Hunting","October 8, 1970"
-227,nm1055413,2014-03-09,2014-03-09,,"Michael Fassbender","Shame","April 2, 1977"
-228,nm0000993,2014-03-09,2014-03-09,,"Carol Burnett","The Carol Burnett Show","April 26, 1933"
-229,nm0001788,2014-03-09,2014-03-09,,"Jessica Tandy","Driving Miss Daisy","June 7, 1909"
-230,nm0000166,2014-03-09,2014-03-09,,"Helen Hunt","As Good as It Gets","June 15, 1963"
-231,nm0000099,2015-03-08,2015-03-08,,"Patricia Arquette","True Romance","April 8, 1968"
-232,nm0000544,2014-03-09,2014-03-09,,"Carmen Miranda","Greenwich Village","February 9, 1909"
-233,nm0005028,2014-03-09,2014-03-09,,"Kate Hudson","Almost Famous","April 19, 1979"
-234,nm0001876,2014-03-09,2014-03-09,,"Catherine Zeta-Jones","Chicago","September 25, 1969"
-235,nm0000139,2014-03-09,2014-03-09,,"Cameron Diaz","Charlie's Angels","August 30, 1972"
-236,nm0001666,2014-03-09,2014-03-09,,"Debbie Reynolds","Singin' in the Rain","April 1, 1932"
-237,nm0000995,2014-03-09,2014-03-09,,"Ellen Burstyn","Requiem for a Dream","December 7, 1932"
-238,nm0000058,2014-03-09,2014-03-09,,"Maureen O'Hara","The Quiet Man","August 17, 1920"
-239,nm0001485,2014-03-09,2014-03-09,,"Myrna Loy","The Thin Man","August 2, 1905"
-240,nm0372176,2014-03-09,2014-03-09,,"Lena Headey","300","October 3, 1973"
-241,nm0001473,2014-03-09,2014-03-09,,"Laura Linney","The Big C","February 5, 1964"
-242,nm0000017,2014-03-09,2014-03-09,,"Marlene Dietrich","Witness for the Prosecution","December 27, 1901"
-243,nm0001479,2014-03-09,2014-03-09,,"Carole Lombard","My Man Godfrey","October 6, 1908"
-244,nm0000795,2014-03-09,2014-03-09,,"Jean Arthur","Mr. Smith Goes to Washington","October 17, 1900"
-245,nm0000095,2014-03-09,2014-03-09,,"Woody Allen","Annie Hall","November 30, 1935"
-246,nm0001318,2014-03-09,2014-03-09,,"Jean Harlow","Red Dust","March 3, 1911"
-247,nm0001677,2014-03-09,2014-03-09,,"Ginger Rogers","Kitty Foyle","July 16, 1911"
-248,nm0681933,2014-03-09,2014-03-09,,"Mary Pickford","Coquette","April 8, 1892"
-249,nm0922213,2014-03-09,2014-03-09,,"Mae West","She Done Him Wrong","August 17, 1893"
-250,nm0000096,2014-03-09,2014-03-09,,"Gillian Anderson","The X Files","August 9, 1968"
-251,nm0914612,2014-03-09,2014-03-09,,"Emma Watson","The Perks of Being a Wallflower","April 15, 1990"
-252,nm0000273,2014-03-09,2014-03-09,,"Alan Arkin","Argo","March 26, 1934"
-253,nm0000621,2014-03-10,2014-03-10,,"Kurt Russell","Escape from New York","March 17, 1951"
-254,nm0350453,2014-03-10,2014-03-10,,"Jake Gyllenhaal","Nightcrawler","December 19, 1980"
-255,nm0331516,2014-03-10,2014-03-10,,"Ryan Gosling","Blue Valentine","November 12, 1980"
-256,nm0000147,2014-03-09,2014-03-09,,"Colin Firth","A Single Man","September 10, 1960"
-257,nm0004937,2014-03-09,2014-03-09,,"Jamie Foxx","Ray","December 13, 1967"
-258,nm0004778,2014-03-09,2014-03-09,,"Adrien Brody","The Pianist","April 14, 1973"
-259,nm0000905,2014-03-09,2014-03-09,,"Roberto Benigni","La vita è bella","October 27, 1952"
-260,nm0000460,2014-03-09,2014-03-09,,"Jeremy Irons","Dead Ringers","September 19, 1948"
-261,nm0000719,2014-03-09,2014-03-09,,"F. Murray Abraham","Amadeus","October 24, 1939"
-262,nm0000377,2014-03-09,2014-03-09,,"Richard Dreyfuss","The Goodbye Girl","October 29, 1947"
-263,nm0002075,2014-03-09,2014-03-09,,"Peter Finch","Network","September 28, 1916"
-264,nm0138770,2014-03-09,2014-03-09,,"Art Carney","Harry and Tonto","November 4, 1918"
-265,nm0731772,2014-03-09,2014-03-09,,"Cliff Robertson","Charly","September 9, 1923"
-266,nm0001511,2014-03-09,2014-03-09,,"Lee Marvin","The Dirty Dozen","February 19, 1924"
-267,nm0001322,2014-03-09,2014-03-09,,"Rex Harrison","My Fair Lady","March 5, 1908"
-268,nm0000063,2014-03-10,2014-03-10,,"Anthony Quinn","Alexis Zorbas","April 21, 1915"
-269,nm0001703,2014-03-09,2014-03-09,,"Maximilian Schell","Judgment at Nuremberg","December 8, 1930"
-270,nm0362766,2014-03-09,2014-03-09,,"Tom Hardy","Inception","September 15, 1977"
-271,nm0000057,2014-03-09,2014-03-09,,"David Niven","A Matter of Life and Death","March 1, 1910"
-272,nm0000458,2014-03-09,2014-03-09,,"William Hurt","A History of Violence","March 20, 1950"
-273,nm0000989,2014-03-09,2014-03-09,,"Yul Brynner","The King and I","July 11, 1920"
-274,nm0000308,2014-03-09,2014-03-09,,"Ernest Borgnine","Marty","January 24, 1917"
-275,nm1212722,2014-03-09,2014-03-09,,"Benedict Cumberbatch","The Imitation Game","July 19, 1976"
-276,nm0001768,2014-03-09,2014-03-09,,"Rod Steiger","In the Heat of the Night","April 14, 1925"
-277,nm1631269,2014-03-09,2014-03-09,,"Chloë Grace Moretz","Kick-Ass","February 10, 1997"
-278,nm0447695,2014-03-09,2014-03-09,,"Anna Kendrick","Up in the Air","August 9, 1985"
-279,nm0001833,2014-03-09,2014-03-09,,"Emily Watson","Breaking the Waves","January 14, 1967"
-280,nm0000307,2014-03-09,2014-03-09,,"Helena Bonham Carter","Sweeney Todd: The Demon Barber of Fleet Street","May 26, 1966"
-281,nm0461136,2014-03-09,2014-03-09,,"Keira Knightley","Pirates of the Caribbean: The Curse of the Black Pearl","March 26, 1985"
-282,nm0005490,2014-03-09,2014-03-09,,"Alexis Thorpe","The Man from Earth","April 19, 1980"
-283,nm0203836,2014-03-09,2014-03-09,,"Marion Davies","The Patsy","January 3, 1897"
-284,nm0424060,2014-03-09,2014-03-09,,"Scarlett Johansson","Lost in Translation","November 22, 1984"
-285,nm0266824,2014-03-09,2014-03-09,,"Dakota Fanning","War of the Worlds","February 23, 1994"
-286,nm0000098,2014-03-09,2014-03-09,,"Jennifer Aniston","Friends","February 11, 1969"
-287,nm0000124,2014-03-09,2014-03-09,,"Jennifer Connelly","A Beautiful Mind","December 12, 1970"
-288,nm1046097,2014-03-09,2014-03-09,,"Rachel McAdams","The Notebook","November 17, 1978"
-289,nm1659547,2014-03-09,2014-03-09,,"Carey Mulligan","Shame","May 28, 1985"
-290,nm0005109,2014-03-09,2014-03-09,,"Mila Kunis","Black Swan","August 14, 1983"
-291,nm1086543,2014-03-09,2014-03-09,,"Amanda Seyfried","Les Misérables","December 3, 1985"
-292,nm0000182,2014-03-09,2014-03-09,,"Jennifer Lopez","Hustlers","July 24, 1969"
-293,nm0000117,2014-03-09,2014-03-09,,"Neve Campbell","Scream","October 3, 1973"
-294,nm0000103,2014-03-09,2014-03-09,,"Fairuza Balk","The Craft","May 21, 1974"
-295,nm0004695,2014-03-09,2014-03-09,,"Jessica Alba","Fantastic Four","April 28, 1981"
-296,nm0829576,2014-03-09,2014-03-09,,"Kristen Stewart","The Twilight Saga: Eclipse","April 9, 1990"
-297,nm0910278,2014-03-09,2014-03-09,,"Julie Walters","Billy Elliot","February 22, 1950"
-298,nm1913734,2014-03-09,2014-03-09,,"Rooney Mara","Carol","April 17, 1985"
-299,nm0000130,2014-03-09,2014-03-09,,"Jamie Lee Curtis","True Lies","November 22, 1958"
-300,nm1297015,2014-03-09,2014-03-09,,"Emma Stone","La La Land","November 6, 1988"
-301,nm0000379,2014-03-09,2014-03-09,,"Kirsten Dunst","Spider-Man","April 30, 1982"
-302,nm0001207,2014-03-09,2014-03-09,,"José Ferrer","The Caine Mutiny","January 8, 1912"
-303,nm0002024,2014-03-09,2014-03-09,,"Broderick Crawford","All the King's Men","December 9, 1911"
-304,nm0172903,2014-03-09,2014-03-09,,"Ronald Colman","Lost Horizon","February 9, 1891"
-305,nm0545298,2014-03-09,2014-03-09,,"Fredric March","The Best Years of Our Lives","August 31, 1897"
-306,nm0001537,2014-03-09,2014-03-09,,"Ray Milland","The Lost Weekend","January 3, 1907"
-307,nm0001078,2014-03-09,2014-03-09,,"Bing Crosby","White Christmas","May 2, 1903"
-308,nm0510134,2014-03-09,2014-03-09,,"Paul Lukas","20,000 Leagues Under the Sea","May 26, 1895"
-309,nm0232196,2014-03-09,2014-03-09,,"Robert Donat","The 39 Steps","March 18, 1905"
-310,nm0612847,2014-03-09,2014-03-09,,"Paul Muni","Scarface","September 22, 1895"
-311,nm0572142,2014-03-09,2014-03-09,,"Victor McLaglen","The Quiet Man","December 10, 1886"
-312,nm0001452,2014-03-09,2014-03-09,,"Charles Laughton","Mutiny on the Bounty","July 1, 1899"
-313,nm0000891,2014-03-09,2014-03-09,,"Wallace Beery","Grand Hotel","April 1, 1885"
-314,nm0000859,2014-03-10,2014-03-10,,"Lionel Barrymore","You Can't Take It with You","April 28, 1878"
-315,nm0000156,2014-03-10,2014-03-10,,"Jeff Goldblum","Jurassic Park","October 22, 1952"
-316,nm1165110,2014-03-09,2014-03-09,,"Chris Hemsworth","The Avengers","August 11, 1983"
-317,nm0062828,2014-03-10,2014-03-10,,"Warner Baxter","Penthouse","March 29, 1889"
-318,nm0417837,2014-03-10,2014-03-10,,"Emil Jannings","Faust: Eine deutsche Volkssage","July 23, 1884"
-319,nm0177933,2014-03-10,2014-03-10,,"Chris Cooper","Adaptation.","July 9, 1951"
-320,nm0000980,2014-03-10,2014-03-10,,"Jim Broadbent","Moulin Rouge!","May 24, 1949"
-321,nm0000336,2014-03-10,2014-03-10,,"James Coburn","The Great Escape","August 31, 1928"
-322,nm0000421,2014-03-10,2014-03-10,,"Cuba Gooding Jr.","Jerry Maguire","January 2, 1968"
-323,nm0001445,2014-03-10,2014-03-10,,"Martin Landau","Ed Wood","June 20, 1928"
-324,nm0001588,2014-03-10,2014-03-10,,"Jack Palance","City Slickers","February 18, 1919"
-325,nm0000177,2014-03-10,2014-03-10,,"Kevin Kline","Wild Wild West","October 24, 1947"
-326,nm0000747,2014-03-10,2014-03-10,,"Don Ameche","Cocoon","May 31, 1908"
-327,nm0000295,2014-03-10,2014-03-10,,"Kate Beckinsale","Love & Friendship","July 26, 1973"
-328,nm0221046,2014-03-10,2014-03-10,,"Zooey Deschanel","New Girl","January 17, 1980"
-329,nm0931329,2014-03-10,2014-03-10,,"Michelle Williams","Blue Valentine","September 9, 1980"
-330,nm0000170,2014-03-10,2014-03-10,,"Milla Jovovich","The Fifth Element","December 17, 1975"
-331,nm1411125,2014-03-10,2014-03-10,,"Selena Gomez","Spring Breakers","July 22, 1992"
-332,nm0001838,2014-03-10,2014-03-10,,"Rachel Weisz","The Constant Gardener","March 7, 1970"
-333,nm0068338,2014-03-10,2014-03-10,,"Kristen Bell","Frozen","July 18, 1980"
-334,nm0001337,2014-03-10,2014-03-10,,"Katherine Heigl","One for the Money","November 24, 1978"
-335,nm0000239,2014-03-10,2014-03-10,,"Liv Tyler","Armageddon","July 1, 1977"
-336,nm1567113,2014-03-10,2014-03-10,,"Jessica Chastain","Zero Dark Thirty","March 24, 1977"
-337,nm1083271,2014-03-10,2014-03-10,,"Megan Fox","Transformers","May 16, 1986"
-338,nm0924508,2014-03-10,2014-03-10,,"Betty White","The Proposal","January 17, 1922"
-339,nm0656183,2014-03-10,2014-03-10,,"Geraldine Page","Sweet Bird of Youth","November 22, 1924"
-340,nm0244630,2014-03-10,2014-03-10,,"Eliza Dushku","Bring It On","December 30, 1980"
-341,nm0000705,2014-03-10,2014-03-10,,"Robin Wright","Forrest Gump","April 8, 1966"
-342,nm1015262,2014-03-10,2014-03-10,,"Leighton Meester","The Roommate","April 9, 1986"
-343,nm0428354,2014-03-09,2014-03-09,,"Jennifer Jones","Madame Bovary","March 2, 1919"
-344,nm0000073,2014-03-10,2014-03-10,,"Shirley Temple","Rebecca of Sunnybrook Farm","April 23, 1928"
-345,nm0000506,2014-03-10,2014-03-10,,"Julia Louis-Dreyfus","Seinfeld","January 13, 1961"
-346,nm1880888,2014-03-10,2014-03-10,,"Olivia Thirlby","Juno","October 6, 1986"
-347,nm0000333,2014-03-10,2014-03-10,,"Cher","Moonstruck","May 20, 1946"
-348,nm0000651,2014-03-09,2014-03-09,,"Sissy Spacek","In the Bedroom","December 25, 1949"
-349,nm0001221,2014-03-10,2014-03-10,,"Louise Fletcher","One Flew Over the Cuckoo's Nest","July 22, 1934"
-350,nm0001046,2014-03-10,2014-03-10,,"Julie Christie","Doctor Zhivago","April 14, 1940"
-351,nm0623658,2014-03-10,2014-03-10,,"Patricia Neal","The Day the Earth Stood Still","January 20, 1926"
-352,nm0628955,2014-03-10,2014-03-10,,"Haing S. Ngor","The Killing Fields","March 22, 1940"
-353,nm0001283,2014-03-10,2014-03-10,,"Louis Gossett Jr.","An Officer and a Gentleman","May 27, 1936"
-354,nm0000024,2014-03-10,2014-03-10,,"John Gielgud","Arthur","April 14, 1904"
-355,nm0000459,2014-03-10,2014-03-10,,"Timothy Hutton","Ordinary People","August 16, 1960"
-356,nm0002048,2014-03-10,2014-03-10,,"Melvyn Douglas","Being There","April 5, 1901"
-357,nm0001673,2014-03-10,2014-03-10,,"Jason Robards","All the President's Men","July 26, 1922"
-358,nm0122675,2014-03-10,2014-03-10,,"George Burns","Oh, God!","January 20, 1896"
-359,nm0000288,2014-03-09,2014-03-09,,"Christian Bale","The Dark Knight","January 30, 1974"
-360,nm0000160,2014-03-10,2014-03-10,,"Ethan Hawke","Training Day","November 6, 1970"
-361,nm0424565,2014-03-10,2014-03-10,,"Ben Johnson","The Last Picture Show","June 13, 1918"
-362,nm0590055,2014-03-10,2014-03-10,,"John Mills","Great Expectations","February 22, 1908"
-363,nm0016776,2014-03-10,2014-03-10,,"Jack Albertson","Willy Wonka & the Chocolate Factory","June 16, 1907"
-364,nm0000576,2014-03-09,2014-03-09,,"Sean Penn","Mystic River","August 17, 1960"
-365,nm0001421,2014-03-10,2014-03-10,,"George Kennedy","Cool Hand Luke","February 18, 1925"
-366,nm0000527,2014-03-10,2014-03-10,,"Walter Matthau","The Odd Couple","October 1, 1920"
-367,nm0000842,2014-03-10,2014-03-10,,"Martin Balsam","All the President's Men","November 4, 1919"
-368,nm0001811,2014-03-10,2014-03-10,,"Peter Ustinov","Spartacus","April 16, 1921"
-369,nm0003225,2014-03-10,2014-03-10,,"Ed Begley","12 Angry Men","March 25, 1901"
-370,nm0001995,2014-03-10,2014-03-10,,"George Chakiris","West Side Story","September 16, 1932"
-371,nm0341518,2014-03-10,2014-03-10,,"Hugh Griffith","Ben-Hur","May 30, 1912"
-372,nm0412322,2014-03-10,2014-03-10,,"Burl Ives","The Big Country","June 14, 1909"
-373,nm0000999,2014-03-10,2014-03-10,,"Red Buttons","Pete's Dragon","February 5, 1919"
-374,nm0639529,2014-03-10,2014-03-10,,"Edmond O'Brien","The Man Who Shot Liberty Valance","September 10, 1915"
-375,nm0695435,2015-03-08,2015-03-08,,"Chris Pratt","Guardians of the Galaxy","June 21, 1979"
-376,nm0000069,2014-03-10,2014-03-10,,"Frank Sinatra","From Here to Eternity","December 12, 1915"
-377,nm0000843,2014-03-10,2014-03-10,,"Anne Bancroft","The Graduate","September 17, 1931"
-378,nm0001571,2014-03-10,2014-03-10,,"Kim Novak","Vertigo","February 13, 1933"
-379,nm0797531,2014-03-10,2014-03-10,,"Simone Signoret","Les diaboliques","March 25, 1921"
-380,nm0680983,2014-03-10,2014-03-10,,"Elliot Page","Juno","February 21, 1987"
-381,nm0001450,2017-09-16,2017-09-16,,"Angela Lansbury","The Manchurian Candidate","October 16, 1925"
-382,nm0391062,2014-03-10,2014-03-10,,"Judy Holliday","Born Yesterday","June 21, 1921"
-383,nm0949835,2014-03-10,2014-03-10,,"Loretta Young","Midnight Mary","January 6, 1913"
-384,nm0429250,2014-03-10,2014-03-10,,"Shirley Jones","The Music Man","March 31, 1934"
-385,nm0267812,2014-03-10,2014-03-10,,"Vera Farmiga","Up in the Air","August 6, 1973"
-386,nm0371040,2014-03-10,2014-03-10,,"Helen Hayes","Airport","October 10, 1900"
-387,nm0237597,2014-03-10,2014-03-10,,"Marie Dressler","Dinner at Eight","November 9, 1868"
-388,nm0310980,2014-03-10,2014-03-10,,"Janet Gaynor","A Star Is Born","October 6, 1906"
-389,nm2143282,2014-03-10,2014-03-10,,"Lupita Nyong'o","12 Years a Slave","March 1, 1983"
-390,nm0818055,2014-03-10,2014-03-10,,"Octavia Spencer","Hidden Figures","May 25, 1970"
-391,nm0502425,2014-03-10,2014-03-10,,"Melissa Leo","The Fighter","September 14, 1960"
-392,nm0594898,2014-03-10,2014-03-10,,"Mo'Nique","Precious","December 11, 1967"
-393,nm0559144,2014-03-10,2014-03-10,,"Marlee Matlin","CODA","August 24, 1965"
-394,nm0842770,2014-03-10,2014-03-10,,"Tilda Swinton","We Need to Talk About Kevin","November 5, 1960"
-395,nm1617685,2014-03-10,2014-03-10,,"Jennifer Hudson","Dreamgirls","September 12, 1981"
-396,nm0000250,2014-03-10,2014-03-10,,"Renée Zellweger","Chicago","April 25, 1969"
-397,nm0001315,2014-03-10,2014-03-10,,"Marcia Gay Harden","Mystic River","August 14, 1959"
-398,nm0001593,2014-03-10,2014-03-10,,"Anna Paquin","The Piano","July 24, 1982"
-399,nm0000673,2014-03-10,2014-03-10,,"Marisa Tomei","My Cousin Vinny","December 4, 1964"
-400,nm0001689,2014-03-10,2014-03-10,,"Mercedes Ruehl","The Fisher King","February 28, 1948"
-401,nm0002084,2014-03-10,2014-03-10,,"Brenda Fricker","My Left Foot: The Story of Christy Brown","February 17, 1945"
-402,nm0000606,2016-06-18,2016-06-18,,"Jean Reno","Léon","July 30, 1948"
-403,nm0001695,2014-03-10,2014-03-10,,"George Sanders","All About Eve","July 3, 1906"
-404,nm0415591,2014-03-10,2014-03-10,,"Dean Jagger","White Christmas","November 7, 1903"
-405,nm0404158,2014-03-10,2014-03-10,,"Walter Huston","The Treasure of the Sierra Madre","April 6, 1884"
-406,nm0350324,2014-03-10,2014-03-10,,"Edmund Gwenn","Miracle on 34th Street","September 26, 1877"
-407,nm0751174,2014-03-10,2014-03-10,,"Harold Russell","The Best Years of Our Lives","January 14, 1914"
-408,nm0000424,2014-03-10,2014-03-10,,"Hugh Grant","Love Actually","September 9, 1960"
-409,nm0280178,2014-03-10,2014-03-10,,"Barry Fitzgerald","The Quiet Man","March 10, 1888"
-410,nm0002013,2014-03-10,2014-03-10,,"Charles Coburn","The More the Merrier","June 19, 1877"
-411,nm0001336,2014-03-10,2014-03-10,,"Van Heflin","Shane","December 13, 1908"
-412,nm0187981,2014-03-10,2014-03-10,,"Donald Crisp","How Green Was My Valley","July 27, 1882"
-413,nm0593775,2014-03-10,2014-03-10,,"Thomas Mitchell","Stagecoach","July 11, 1892"
-414,nm0000974,2014-03-10,2014-03-10,,"Walter Brennan","To Have and Have Not","July 25, 1894"
-415,nm0771584,2014-03-10,2014-03-10,,"Joseph Schildkraut","The Shop Around the Corner","March 22, 1896"
-416,nm0000206,2014-03-10,2014-03-10,,"Keanu Reeves","The Matrix","September 2, 1964"
-417,nm1475594,2014-03-10,2014-03-10,,"Channing Tatum","21 Jump Street","April 26, 1980"
-418,nm0413168,2014-03-10,2014-03-10,,"Hugh Jackman","Les Misérables","October 12, 1968"
-419,nm0425005,2014-03-10,2014-03-10,,"Dwayne Johnson","Black Adam","May 2, 1972"
-420,nm0001191,2014-03-10,2014-03-10,,"Adam Sandler","The Waterboy","September 9, 1966"
-421,nm0705356,2014-03-10,2014-03-10,,"Daniel Radcliffe","Harry Potter and the Order of the Phoenix","July 23, 1989"
-422,nm0185819,2014-03-10,2014-03-10,,"Daniel Craig","No Time to Die","March 2, 1968"
-423,nm0147147,2014-03-09,2014-03-09,,"Henry Cavill","Man of Steel","May 5, 1983"
-424,nm0004874,2014-03-10,2014-03-10,,"Vin Diesel","The Fast and the Furious","July 18, 1967"
-425,nm0000255,2014-03-10,2014-03-10,,"Ben Affleck","Argo","August 15, 1972"
-426,nm1517976,2014-03-10,2014-03-10,,"Chris Pine","Star Trek","August 26, 1980"
-427,nm0001156,2014-03-10,2014-03-10,,"Olympia Dukakis","Moonstruck","June 20, 1931"
-428,nm0001919,2014-03-10,2014-03-10,,"Peggy Ashcroft","A Passage to India","December 22, 1907"
-429,nm0001373,2014-03-10,2014-03-10,,"Linda Hunt","The Year of Living Dangerously","April 2, 1945"
-430,nm0822972,2014-03-10,2014-03-10,,"Maureen Stapleton","Reds","June 21, 1925"
-431,nm0005460,2014-03-10,2014-03-10,,"Mary Steenburgen","Last Vegas","February 8, 1953"
-432,nm0833152,2014-03-10,2014-03-10,,"Beatrice Straight","Network","August 2, 1914"
-433,nm0000603,2014-03-10,2014-03-10,,"Vanessa Redgrave","Atonement","January 30, 1937"
-434,nm0335519,2014-03-10,2014-03-10,,"Lee Grant","In the Heat of the Night","October 31, 1925"
-435,nm0373012,2014-03-10,2014-03-10,,"Eileen Heckart","The Bad Seed","March 29, 1919"
-436,nm0001458,2014-03-10,2014-03-10,,"Cloris Leachman","The Last Picture Show","April 30, 1926"
-437,nm0002106,2014-03-10,2014-03-10,,"Ruth Gordon","Rosemary's Baby","October 30, 1896"
-438,nm0663820,2014-03-10,2014-03-10,,"Estelle Parsons","Bonnie and Clyde","November 20, 1927"
-439,nm0006800,2014-03-10,2014-03-10,,"Sandy Dennis","Who's Afraid of Virginia Woolf?","April 27, 1937"
-440,nm0001859,2014-03-10,2014-03-10,,"Shelley Winters","The Poseidon Adventure","August 18, 1920"
-441,nm0350454,2014-03-10,2014-03-10,,"Maggie Gyllenhaal","Secretary","November 16, 1977"
-442,nm0005017,2014-03-10,2014-03-10,,"Katie Holmes","Batman Begins","December 18, 1978"
-443,nm0001157,2014-03-10,2014-03-10,,"Patty Duke","Valley of the Dolls","December 14, 1946"
-444,nm0001549,2014-03-10,2014-03-10,,"Rita Moreno","West Side Story","December 11, 1931"
-445,nm0384908,2014-03-10,2014-03-10,,"Wendy Hiller","A Man for All Seasons","August 15, 1912"
-446,nm0880855,2014-03-10,2014-03-10,,"Miyoshi Umeki","Sayonara","May 8, 1929"
-447,nm0540416,2014-03-10,2014-03-10,,"Dorothy Malone","Written on the Wind","January 29, 1924"
-448,nm0886888,2014-03-10,2014-03-10,,"Jo Van Fleet","East of Eden","December 29, 1915"
-449,nm0001693,2014-03-10,2014-03-10,,"Eva Marie Saint","On the Waterfront","July 4, 1924"
-450,nm0002108,2014-03-10,2014-03-10,,"Gloria Grahame","In a Lonely Place","November 28, 1923"
-451,nm0001375,2014-03-10,2014-03-10,,"Kim Hunter","A Streetcar Named Desire","November 12, 1922"
-452,nm0002011,2019-04-12,2019-04-12,,"Lee J. Cobb","12 Angry Men","December 8, 1911"
-453,nm1940449,2014-03-10,2014-03-10,,"Andrew Garfield","Hacksaw Ridge","August 20, 1983"
-454,nm0001030,2019-04-12,2019-04-12,,"John Cazale","Dog Day Afternoon","August 12, 1935"
-455,nm0719637,2014-03-10,2014-03-10,,"Jeremy Renner","The Hurt Locker","January 7, 1971"
-456,nm0136797,2014-03-10,2014-03-10,,"Steve Carell","The Office","August 16, 1962"
-457,nm0241121,2014-03-09,2014-03-09,,"Jean Dujardin","The Artist","June 19, 1972"
-458,nm0262635,2014-03-10,2014-03-10,,"Chris Evans","The Avengers","June 13, 1981"
-459,nm0290556,2014-03-10,2014-03-10,,"James Franco","Spring Breakers","April 19, 1978"
-460,nm0302108,2014-03-10,2014-03-10,,"Zach Galifianakis","The Hangover","October 1, 1969"
-461,nm0002071,2014-03-10,2014-03-10,,"Will Ferrell","Talladega Nights: The Ballad of Ricky Bobby","July 16, 1967"
-462,nm0479471,2014-03-10,2014-03-10,,"Shia LaBeouf","Honey Boy","June 11"
-463,nm0736622,2014-03-10,2014-03-10,,"Seth Rogen","This Is the End","April 15, 1982"
-464,nm0330687,2014-03-10,2014-03-10,,"Joseph Gordon-Levitt","Inception","February 17, 1981"
-465,nm0005351,2014-03-10,2014-03-10,,"Ryan Reynolds","Deadpool 2","October 23, 1976"
-466,nm0748620,2014-03-10,2014-03-10,,"Paul Rudd","Ant-Man","April 6, 1969"
-467,nm0781981,2014-03-10,2014-03-10,,"Jason Segel","Forgetting Sarah Marshall","January 18, 1980"
-468,nm0005458,2014-03-10,2014-03-10,,"Jason Statham","Crank","July 26, 1967"
-469,nm0001813,2016-06-18,2016-06-18,,"Dick Van Dyke","Mary Poppins","December 13, 1925"
-470,nm0251986,2014-03-10,2014-03-10,,"Jesse Eisenberg","A Real Pain","October 5, 1983"
-471,nm0005562,2014-03-10,2014-03-10,,"Owen Wilson","The Royal Tenenbaums","November 18, 1968"
-472,nm0000867,2014-03-10,2014-03-10,,"Jason Bateman","Arrested Development","January 14, 1969"
-473,nm1347153,2014-03-10,2014-03-10,,"Tyler Perry","Diary of a Mad Black Woman","September 14, 1969"
-474,nm2955013,2014-03-10,2014-03-10,,"Liam Hemsworth","The Hunger Games","January 13, 1990"
-475,nm0000638,2014-03-10,2014-03-10,,"William Shatner","Star Trek V: The Final Frontier","March 22, 1931"
-476,nm0000698,2014-03-09,2014-03-09,,"Gene Wilder","Willy Wonka & the Chocolate Factory","June 11, 1933"
-477,nm0000301,2014-03-10,2014-03-10,,"Thora Birch","Ghost World","March 11, 1982"
-478,nm0872456,2014-03-10,2014-03-10,,"Claire Trevor","Key Largo","March 8, 1910"
-479,nm0002141,2014-03-10,2014-03-10,,"Celeste Holm","All About Eve","April 29, 1917"
-480,nm0000879,2014-03-10,2014-03-10,,"Anne Baxter","All About Eve","May 7, 1923"
-481,nm0001451,2014-03-10,2014-03-10,,"Queen Latifah","Chicago","March 18, 1970"
-482,nm0000856,2014-03-10,2014-03-10,,"Ethel Barrymore","The Spiral Staircase","August 15, 1879"
-483,nm0206257,2014-03-10,2014-03-10,,"Rosario Dawson","Rent","May 9, 1979"
-484,nm0942863,2014-03-10,2014-03-10,,"Teresa Wright","Shadow of a Doubt","October 27, 1918"
-485,nm0000802,2014-03-10,2014-03-10,,"Mary Astor","The Maltese Falcon","May 3, 1906"
-486,nm0002034,2014-03-10,2014-03-10,,"Jane Darwell","The Grapes of Wrath","October 15, 1879"
-487,nm2539953,2016-06-18,2016-06-18,,"Alicia Vikander","Ex Machina","October 3, 1988"
-488,nm1985859,2014-03-10,2014-03-10,,"Mia Wasikowska","Alice in Wonderland","October 25, 1989"
-489,nm1113550,2014-03-10,2014-03-10,,"Abigail Breslin","Little Miss Sunshine","April 14, 1996"
-490,nm0814216,2014-03-10,2014-03-10,,"Gale Sondergaard","The Mark of Zorro","February 15, 1899"
-491,nm0565250,2014-03-10,2014-03-10,,"Melissa McCarthy","The Heat","August 26, 1970"
-492,nm0275486,2014-03-10,2014-03-10,,"Tina Fey","Date Night","May 18, 1970"
-493,nm0757855,2014-03-10,2014-03-10,,"Zoe Saldaña","Avatar","June 19, 1978"
-494,nm0005253,2014-03-10,2014-03-10,,"Elisabeth Moss","The Invisible Man","July 24, 1982"
-495,nm1597316,2014-03-10,2014-03-10,,"Adrianne Palicki","G.I. Joe: Retaliation","May 6, 1983"
-496,nm0004950,2014-03-10,2014-03-10,,"Jennifer Garner","Alias","April 17, 1972"
-497,nm1325419,2014-03-10,2014-03-10,,"Kristen Wiig","Bridesmaids","August 22, 1973"
-498,nm0820053,2014-03-10,2014-03-10,,"June Squibb","Nebraska","November 6, 1929"
-499,nm1020089,2014-03-10,2014-03-10,,"Sally Hawkins","The Shape of Water","April 27, 1976"
-500,nm0192505,2014-03-10,2014-03-10,,"Kaley Cuoco","The Big Bang Theory","November 30, 1985"
-501,nm0915208,2014-03-10,2014-03-10,,"Naomi Watts","Mulholland Dr.","September 28, 1968"
-502,nm1500155,2019-03-19,2019-03-19,,"Robert Pattinson","Twilight","May 13, 1986"
-503,nm0402271,2014-03-10,2014-03-10,,"Charlie Hunnam","Sons of Anarchy","April 10, 1980"
-504,nm0396558,2014-03-10,2014-03-10,,"Nicholas Hoult","About a Boy","December 7, 1989"
-505,nm1093951,2014-03-10,2014-03-10,,"Aaron Taylor-Johnson","Nocturnal Animals","June 13, 1990"
-506,nm0186505,2014-03-10,2014-03-10,,"Bryan Cranston","Breaking Bad","March 7, 1956"
-507,nm0124930,2014-03-10,2014-03-10,,"Gerard Butler","300","November 13, 1969"
-508,nm0908094,2014-03-10,2014-03-10,,"Paul Walker","The Fast and the Furious","September 12, 1973"
-509,nm0881631,2014-03-10,2014-03-10,,"Karl Urban","Star Trek","June 7, 1972"
-510,nm0503567,2014-03-10,2014-03-10,,"Logan Lerman","The Perks of Being a Wallflower","January 19, 1992"
-511,nm2002649,2014-03-10,2014-03-10,,"Dave Franco","Neighbors","June 12, 1985"
-512,nm1089991,2014-03-10,2014-03-10,,"Tom Hiddleston","The Avengers","February 9, 1981"
-513,nm0227759,2014-03-10,2014-03-10,,"Peter Dinklage","Game of Thrones","June 11, 1969"
-514,nm2018237,2014-03-10,2014-03-10,,"Taylor Kitsch","X-Men Origins: Wolverine","April 8, 1981"
-515,nm0001570,2019-04-12,2019-04-12,,"Edward Norton","Fight Club","August 18, 1969"
-516,nm0001602,2014-03-10,2014-03-10,,"Guy Pearce","Memento","October 5, 1967"
-517,nm0749263,2014-03-10,2014-03-10,,"Mark Ruffalo","Spotlight","November 22, 1967"
-518,nm0000620,2014-03-10,2014-03-10,,"Mickey Rourke","Sin City","September 16, 1952"
-519,nm0001449,2014-03-10,2014-03-10,,"Frank Langella","Frost/Nixon","January 1, 1938"
-520,nm1519666,2015-03-08,2015-03-08,,"Eddie Redmayne","Les Misérables","January 6, 1982"
-521,nm0000657,2014-03-10,2014-03-10,,"David Strathairn","Good Night, and Good Luck.","January 26, 1949"
-522,nm0005024,2014-03-10,2014-03-10,,"Terrence Howard","Hustle & Flow","March 11, 1969"
-523,nm0000146,2014-03-09,2014-03-09,,"Ralph Fiennes","The Constant Gardener","December 22, 1962"
-524,nm0929489,2014-03-10,2014-03-10,,"Tom Wilkinson","Michael Clayton","February 5, 1948"
-525,nm0002070,2014-03-10,2014-03-10,,"Richard Farnsworth","The Straight Story","September 1, 1920"
-526,nm0000560,2014-03-10,2014-03-10,,"Nick Nolte","Warrior","February 8, 1941"
-527,nm1455681,2014-03-10,2014-03-10,,"AnnaSophia Robb","Rebel Ridge","December 8, 1993"
-528,nm2605345,2014-03-10,2014-03-10,,"Gemma Arterton","Prince of Persia: The Sands of Time","February 2, 1986"
-529,nm1312575,2014-03-10,2014-03-10,,"Olivia Wilde","Don't Worry Darling","March 10, 1984"
-530,nm0279545,2014-03-10,2014-03-10,,"Isla Fisher","Wedding Crashers","February 3, 1976"
-531,nm0940362,2014-03-10,2014-03-10,,"Shailene Woodley","Divergent","November 15, 1991"
-532,nm2313103,2014-03-10,2014-03-10,,"Rebel Wilson","Senior Year","March 2"
-533,nm0731075,2014-03-10,2014-03-10,,"Emma Roberts","We're the Millers","February 10, 1991"
-534,nm1720028,2014-03-10,2014-03-10,,"Amber Heard","Aquaman","April 22, 1986"
-535,nm1954240,2014-03-10,2014-03-10,,"Teresa Palmer","Warm Bodies","February 26, 1986"
-536,nm1519680,2014-03-10,2014-03-10,,"Saoirse Ronan","Hanna","April 12, 1994"
-537,nm0006969,2014-03-10,2014-03-10,,"Elizabeth Banks","The Hunger Games","February 10, 1974"
-538,nm0526946,2017-09-16,2017-09-16,,"Ida Lupino","High Sierra","February 4, 1918"
-539,nm1754059,2014-03-10,2014-03-10,,"Natalie Dormer","Game of Thrones","February 11, 1982"
-540,nm0811242,2014-03-10,2014-03-10,,"Brittany Snow","Pitch Perfect","March 9, 1986"
-541,nm0544718,2014-03-10,2014-03-10,,"Kate Mara","Fantastic Four","February 27, 1983"
-542,nm2584600,2014-03-10,2014-03-10,,"Julianne Hough","Rock of Ages","July 20, 1988"
-543,nm2934314,2014-03-10,2014-03-10,,"Lily Collins","The Mortal Instruments: City of Bones","March 18, 1989"
-544,nm1130627,2014-03-10,2014-03-10,,"Cobie Smulders","The Avengers","April 3, 1982"
-545,nm1404408,2014-03-10,2014-03-10,,"Alice Eve","Before We Go","February 6, 1982"
-546,nm1512166,2014-03-10,2014-03-10,,"Jamie Chung","Big Hero 6","April 10, 1983"
-547,nm0636426,2014-03-10,2014-03-10,,"Noomi Rapace","Män som hatar kvinnor","December 28, 1979"
-548,nm0515116,2014-03-10,2014-03-10,,"Blake Lively","Gossip Girl","August 25, 1987"
-549,nm1192254,2014-03-10,2014-03-10,,"Maggie Grace","Taken","September 21, 1983"
-550,nm0004754,2014-03-10,2014-03-10,,"Jessica Biel","The Illusionist","March 3, 1982"
-551,nm1200692,2014-03-10,2014-03-10,,"Eva Green","Casino Royale","July 6, 1980"
-552,nm0001228,2014-03-10,2014-03-10,,"Peter Fonda","Easy Rider","February 23, 1940"
-553,nm0000437,2014-03-10,2014-03-10,,"Woody Harrelson","True Detective","July 23, 1961"
-554,nm0000671,2014-03-10,2014-03-10,,"Billy Bob Thornton","Sling Blade","August 4, 1955"
-555,nm0252961,2014-03-10,2014-03-10,,"Idris Elba","Beasts of No Nation","September 6, 1972"
-556,nm0001329,2014-03-10,2014-03-10,,"Nigel Hawthorne","The Madness of King George","April 5, 1929"
-557,nm0000401,2014-03-10,2014-03-10,,"Laurence Fishburne","The Matrix","July 30, 1961"
-558,nm0001653,2014-03-10,2014-03-10,,"Stephen Rea","The Crying Game","October 31, 1946"
-559,nm0000886,2014-03-10,2014-03-10,,"Warren Beatty","Reds","March 30, 1937"
-560,nm0001321,2014-03-10,2014-03-10,,"Richard Harris","Gladiator","October 1, 1930"
-561,nm0000131,2014-03-09,2014-03-09,,"John Cusack","Grosse Pointe Blank","June 28, 1966"
-562,nm0000110,2014-03-10,2014-03-10,,"Kenneth Branagh","Henry V","December 10, 1960"
-563,nm0001579,2014-03-10,2014-03-10,,"Edward James Olmos","Battlestar Galactica","February 24, 1947"
-564,nm0001884,2014-03-10,2014-03-10,,"Max von Sydow","Flash Gordon","April 10, 1929"
-565,nm0001136,2015-04-03,2015-04-03,,"Bruce Dern","Nebraska","June 4, 1936"
-566,nm0001364,2014-03-10,2014-03-10,,"Bob Hoskins","The Long Good Friday","October 26, 1942"
-567,nm0000249,2014-03-10,2014-03-10,,"James Woods","Vampires","April 18, 1947"
-568,nm0370035,2014-03-10,2014-03-10,,"John Hawkes","The Sessions","September 11, 1959"
-569,nm0001258,2014-03-10,2014-03-10,,"James Garner","The Notebook","April 7, 1928"
-570,nm0001832,2014-03-10,2014-03-10,,"Sam Waterston","The Killing Fields","November 15, 1940"
-571,nm0001371,2014-03-10,2014-03-10,,"Tom Hulce","Amadeus","December 6, 1953"
-572,nm0001215,2014-03-10,2014-03-10,,"Albert Finney","Murder on the Orient Express","May 9, 1936"
-573,nm0002018,2014-03-10,2014-03-10,,"Tom Conti","Oppenheimer","November 22, 1941"
-574,nm0183822,2014-03-10,2014-03-10,,"Tom Courtenay","45 Years","February 25, 1937"
-575,nm0001545,2014-03-10,2014-03-10,,"Dudley Moore","Arthur","April 19, 1935"
-576,nm0000457,2014-03-10,2014-03-10,,"John Hurt","Nineteen Eighty-Four","January 22, 1940"
-577,nm0993507,2014-03-10,2014-03-10,,"Kat Dennings","Nick and Norah's Infinite Playlist","June 13, 1986"
-578,nm1231899,2017-09-16,2017-09-16,,"Priyanka Chopra Jonas","Barfi!","July 18, 1982"
-579,nm0728938,2014-03-10,2014-03-10,,"Emmanuelle Riva","Amour","February 24, 1927"
-580,nm1950086,2014-03-10,2014-03-10,,"Greta Gerwig","Barbie","August 4, 1983"
-581,nm0488953,2014-03-10,2014-03-10,,"Brie Larson","Room","October 1, 1989"
-582,nm1140300,2014-03-10,2014-03-10,,"Jessica Lucas","The Covenant","September 24, 1985"
-583,nm0266029,2014-03-10,2014-03-10,,"Maria Falconetti","La passion de Jeanne d'Arc","July 21, 1892"
-584,nm0002093,2014-03-09,2014-03-09,,"Greer Garson","Pride and Prejudice","September 29, 1904"
-585,nm0751426,2014-03-10,2014-03-10,,"Rosalind Russell","His Girl Friday","June 4, 1907"
-586,nm0000079,2014-03-09,2014-03-09,,"Raquel Welch","The Three Musketeers","September 5, 1940"
-587,nm0000400,2014-03-10,2014-03-10,,"Linda Fiorentino","The Last Seduction","March 9, 1958"
-588,nm2829737,2014-03-10,2014-03-10,,"Gabourey Sidibe","Precious","May 6, 1983"
-589,nm0001114,2014-03-09,2014-03-09,,"Judy Davis","Husbands and Wives","April 23, 1955"
-590,nm0001201,2014-03-10,2014-03-10,,"Mia Farrow","Rosemary's Baby","February 9, 1945"
-591,nm0851582,2014-03-10,2014-03-10,,"Audrey Tautou","Le fabuleux destin d'Amélie Poulain","August 9, 1976"
-592,nm0603402,2014-03-10,2014-03-10,,"Jeanne Moreau","Jules et Jim","January 23, 1928"
-593,nm0943837,2014-03-09,2014-03-09,,"Jane Wyman","Stage Fright","January 5, 1917"
-594,nm0001687,2014-03-10,2014-03-10,,"Gena Rowlands","The Notebook","June 19, 1930"
-595,nm0544334,2014-03-10,2014-03-10,,"Lesley Manville","Phantom Thread","March 12, 1956"
-596,nm0647634,2014-03-10,2014-03-10,,"Elizabeth Olsen","Martha Marcy May Marlene","February 16, 1989"
-597,nm0000176,2014-03-10,2014-03-10,,"Nastassja Kinski","Tess","January 24, 1961"
-598,nm0491259,2014-03-10,2014-03-10,,"Mélanie Laurent","Inglourious Basterds","February 21, 1983"
-599,nm0001365,2014-03-10,2014-03-10,,"Whitney Houston","The Bodyguard","August 9, 1963"
-600,nm0005031,2014-03-10,2014-03-10,,"Felicity Huffman","Transamerica","December 9, 1962"
-601,nm0001767,2014-03-10,2014-03-10,,"Imelda Staunton","Vera Drake","January 9, 1956"
-602,nm1209966,2014-03-10,2014-03-10,,"Oscar Isaac","Ex Machina","March 9, 1979"
-603,nm1417647,2014-03-10,2014-03-10,,"Jon Heder","Napoleon Dynamite","October 26, 1977"
-604,nm1886602,2014-03-10,2014-03-10,,"Miles Teller","Whiplash","February 20, 1987"
-605,nm0117709,2014-03-10,2014-03-10,,"Daniel Brühl","Inglourious Basterds","June 16, 1978"
-606,nm0001254,2014-03-10,2014-03-10,,"James Gandolfini","The Sopranos","September 18, 1961"
-607,nm0430107,2014-03-10,2014-03-10,,"Michael B. Jordan","Black Panther","February 9, 1987"
-608,nm0000578,2014-03-10,2014-03-10,,"Anthony Perkins","Psycho","April 4, 1932"
-609,nm0000667,2014-03-10,2014-03-10,,"David Thewlis","Naked","March 20, 1963"
-610,nm0001428,2014-03-10,2014-03-10,,"Klaus Kinski","Nosferatu - Phantom der Nacht","October 18, 1926"
-611,nm0000532,2014-03-10,2014-03-10,,"Malcolm McDowell","A Clockwork Orange","June 13, 1943"
-612,nm0935653,2014-03-10,2014-03-10,,"Ray Winstone","The Departed","February 19, 1957"
-613,nm0000901,2014-03-10,2014-03-10,,"Jean-Paul Belmondo","Pierrot le fou","April 9, 1933"
-614,nm0785227,2014-03-10,2014-03-10,,"Andy Serkis","War for the Planet of the Apes","April 20, 1964"
-615,nm0000111,2014-03-10,2014-03-10,,"Matthew Broderick","The Producers","March 21, 1962"
-616,nm0000454,2014-03-10,2014-03-10,,"Dennis Hopper","Easy Rider","May 17, 1936"
-617,nm0740264,2014-03-10,2014-03-10,,"Michael Rooker","Guardians of the Galaxy","April 6, 1955"
-618,nm0001252,2014-03-10,2014-03-10,,"Vincent Gallo","Buffalo '66","April 11, 1961"
-619,nm0000228,2014-03-09,2014-03-09,,"Kevin Spacey","L.A. Confidential","July 26, 1959"
-620,nm0001993,2014-03-10,2014-03-10,,"Vincent Cassel","L'ennemi public n°1","November 23, 1966"
-621,nm0799777,2015-03-08,2015-03-08,,"J.K. Simmons","Whiplash","January 9, 1955"
-622,nm0000472,2014-03-10,2014-03-10,,"Boris Karloff","The Bride of Frankenstein","November 23, 1887"
-623,nm0000048,2014-03-10,2014-03-10,,"Peter Lorre","Arsenic and Old Lace","June 26, 1904"
-624,nm0000190,2015-08-13,2015-08-13,,"Matthew McConaughey","Interstellar","November 4, 1969"
-625,nm0175916,2014-03-10,2014-03-10,,"Paddy Considine","Dead Man's Shoes","September 5, 1973"
-626,nm0000202,2014-03-10,2014-03-10,,"Ryan Phillippe","Crash","September 10, 1974"
-627,nm0913488,2014-03-10,2014-03-10,,"Kerry Washington","Scandal","January 31, 1977"
-628,nm0005251,2014-03-10,2014-03-10,,"Carrie-Anne Moss","The Matrix","August 21, 1967"
-629,nm0001463,2014-03-10,2014-03-10,,"Janet Leigh","Psycho","July 6, 1927"
-630,nm1503432,2014-03-10,2014-03-10,,"Catalina Sandino Moreno","Maria Full of Grace","April 19"
-631,nm0608090,2014-03-10,2014-03-10,,"Samantha Morton","Minority Report","May 13, 1977"
-632,nm1095720,2014-03-10,2014-03-10,,"Keisha Castle-Hughes","FBI: Most Wanted","March 24, 1990"
-633,nm0001766,2014-03-09,2014-03-09,,"Barbara Stanwyck","Double Indemnity","July 16, 1907"
-634,nm0000260,2014-03-10,2014-03-10,,"Joan Allen","Room","August 20, 1956"
-635,nm0005216,2014-03-10,2014-03-10,,"Janet McTeer","Albert Nobbs","August 5, 1961"
-636,nm0005244,2014-03-10,2014-03-10,,"Fernanda Montenegro","Central do Brasil","October 16, 1929"
-637,nm0000218,2014-03-10,2014-03-10,,"Kristin Scott Thomas","Gosford Park","May 24, 1960"
-638,nm0000950,2014-03-10,2014-03-10,,"Brenda Blethyn","Pride & Prejudice","February 20, 1946"
-639,nm0000223,2014-03-10,2014-03-10,,"Elisabeth Shue","Leaving Las Vegas","October 6, 1963"
-640,nm0001669,2014-03-10,2014-03-10,,"Miranda Richardson","The Crying Game","March 3, 1958"
-641,nm0000330,2014-03-10,2014-03-10,,"Stockard Channing","Practical Magic","February 13, 1944"
-642,nm0707023,2014-03-09,2014-03-09,,"Luise Rainer","The Great Ziegfeld","January 12, 1910"
-643,nm0001521,2014-03-10,2014-03-10,,"Mary McDonnell","Battlestar Galactica","April 28, 1952"
-644,nm0000840,2017-09-16,2017-09-16,,"Lucille Ball","I Love Lucy","August 6, 1911"
-645,nm0000368,2014-03-10,2014-03-10,,"Laura Dern","Jurassic Park","February 10, 1967"
-646,nm0172604,2014-03-10,2014-03-10,,"Pauline Collins","Shirley Valentine","September 3, 1940"
-647,nm0000254,2014-03-10,2014-03-10,,"Isabelle Adjani","Possession","June 27, 1955"
-648,nm0000429,2014-03-10,2014-03-10,,"Melanie Griffith","Working Girl","August 9, 1957"
-649,nm0000476,2014-03-10,2014-03-10,,"Sally Kirkland","Anna","October 31, 1941"
-650,nm0000737,2014-03-10,2014-03-10,,"Jane Alexander","Kramer vs. Kramer","October 28, 1939"
-651,nm0556850,2014-03-10,2014-03-10,,"Marsha Mason","The Goodbye Girl","April 3, 1942"
-652,nm0383603,2014-03-10,2014-03-10,,"Freddie Highmore","Finding Neverland","February 14, 1992"
-653,nm0000150,2014-03-10,2014-03-10,,"Michael J. Fox","Back to the Future","June 9, 1961"
-654,nm0000237,2014-03-09,2014-03-09,,"John Travolta","Pulp Fiction","February 18, 1954"
-655,nm0000334,2016-06-18,2016-06-18,,"Chow Yun-Fat","Ying hung boon sik","May 18, 1955"
-656,nm0532235,2014-03-10,2014-03-10,,"Seth MacFarlane","Family Guy","October 26, 1973"
-657,nm0001472,2014-03-10,2014-03-10,,"Jet Li","Huo Yuan Jia","April 26, 1963"
-658,nm0002144,2014-03-10,2014-03-10,,"John Houseman","The Paper Chase","September 22, 1902"
-659,nm0001569,2014-03-10,2014-03-10,,"Chuck Norris","Walker, Texas Ranger","March 10, 1940"
-660,nm0000241,2014-03-10,2014-03-10,,"Jean-Claude Van Damme","Double Impact","October 18, 1960"
-661,nm0005377,2014-03-10,2014-03-10,,"Sam Rockwell","Moon","November 5, 1968"
-662,nm0793766,2014-03-10,2014-03-10,,"Takashi Shimura","Shichinin no samurai","March 12, 1905"
-663,nm0001290,2014-03-10,2014-03-10,,"Richard E. Grant","Gosford Park","May 5, 1957"
-664,nm0000558,2014-03-10,2014-03-10,,"Leslie Nielsen","Airplane!","February 11, 1926"
-665,nm0670408,2014-03-10,2014-03-10,,"Simon Pegg","Shaun of the Dead","February 14, 1970"
-666,nm0000518,2014-03-10,2014-03-10,,"John Malkovich","In the Line of Fire","December 9, 1953"
-667,nm0788335,2014-03-10,2014-03-10,,"Michael Shannon","Take Shelter","August 7, 1974"
-668,nm0000640,2014-03-10,2014-03-10,,"Martin Sheen","The Departed","August 3, 1940"
-669,nm0001302,2014-03-10,2014-03-10,,"Christopher Guest","This Is Spinal Tap","February 5, 1948"
-670,nm0000614,2014-03-10,2014-03-10,,"Alan Rickman","Die Hard","February 21, 1946"
-671,nm0355097,2014-03-10,2014-03-10,,"Jackie Earle Haley","Watchmen","July 14, 1961"
-672,nm0949574,2014-03-10,2014-03-10,,"Gig Young","They Shoot Horses, Don't They?","November 4, 1913"
-673,nm0000652,2014-03-10,2014-03-10,,"James Spader","The Blacklist","February 7, 1960"
-674,nm0051509,2014-03-10,2014-03-10,,"Eric Bana","Dirty John","August 9, 1968"
-675,nm0244151,2014-03-10,2014-03-10,,"Romain Duris","De battre mon coeur s'est arrêté","May 28, 1974"
-676,nm0001727,2014-03-10,2014-03-10,,"Robert Shaw","Jaws","August 9, 1927"
-677,nm0915865,2014-03-10,2014-03-10,,"Jacki Weaver","Silver Linings Playbook","May 25, 1947"
-678,nm0067367,2014-03-10,2014-03-10,,"Bérénice Bejo","The Artist","July 7, 1976"
-679,nm2794962,2014-03-10,2014-03-10,,"Hailee Steinfeld","True Grit","December 11, 1996"
-680,nm0000492,2016-06-18,2016-06-18,,"Jennifer Jason Leigh","The Hateful Eight","February 5, 1962"
-681,nm0000599,2014-03-10,2014-03-10,,"Kathleen Quinlan","Apollo 13","November 19, 1954"
-682,nm0378245,2014-03-10,2014-03-10,,"Taraji P. Henson","The Curious Case of Benjamin Button","September 11, 1970"
-683,nm0752407,2014-03-10,2014-03-10,,"Amy Ryan","Gone Baby Gone","May 3, 1968"
-684,nm0002039,2014-03-10,2014-03-10,,"Ruby Dee","American Gangster","October 27, 1922"
-685,nm0001049,2014-03-10,2014-03-10,,"Jill Clayburgh","Bridesmaids","April 30, 1944"
-686,nm0056770,2014-03-10,2014-03-10,,"Adriana Barraza","Babel","March 5, 1956"
-687,nm0452860,2014-03-10,2014-03-10,,"Rinko Kikuchi","Babel","January 6, 1981"
-688,nm0001416,2014-03-10,2014-03-10,,"Catherine Keener","Being John Malkovich","March 26, 1959"
-689,nm0001648,2016-06-18,2016-06-18,,"Charlotte Rampling","45 Years","February 5, 1946"
-690,nm0645683,2014-03-10,2014-03-10,,"Sophie Okonedo","Hotel Rwanda","August 11, 1968"
-691,nm0165101,2014-03-10,2014-03-10,,"Patricia Clarkson","The Station Agent","December 29, 1959"
-692,nm0013037,2014-03-10,2014-03-10,,"Shohreh Aghdashloo","House of Sand and Fog","May 11, 1952"
-693,nm0517820,2014-03-10,2014-03-10,,"Lindsay Lohan","Mean Girls","July 2, 1986"
-694,nm0005502,2014-03-10,2014-03-10,,"Michelle Trachtenberg","Buffy the Vampire Slayer","October 11, 1985"
-695,nm0001721,2014-03-10,2014-03-10,,"Chloë Sevigny","We Are Who We Are","November 18, 1974"
-696,nm0001655,2014-03-10,2014-03-10,,"Lynn Redgrave","Gods and Monsters","March 8, 1943"
-697,nm0341737,2014-03-10,2014-03-10,,"Rachel Griffiths","Six Feet Under","December 18, 1968"
-698,nm3053338,2014-03-10,2014-03-10,,"Margot Robbie","Suicide Squad","July 2, 1990"
-699,nm0000666,2014-03-10,2014-03-10,,"Lili Taylor","American Crime","February 20, 1967"
-700,nm0917848,2014-03-10,2014-03-10,,"Robin Weigert","Deadwood","July 7, 1969"
-701,nm1128572,2014-03-10,2014-03-10,,"Lake Bell","In a World...","March 24, 1979"
-702,nm0001647,2014-03-10,2014-03-10,,"Claude Rains","Casablanca","November 10, 1889"
-703,nm0000114,2014-03-10,2014-03-10,,"Steve Buscemi","Fargo","December 13, 1957"
-704,nm0722636,2016-06-18,2016-06-18,,"John Rhys-Davies","The Lord of the Rings: The Return of the King","May 5, 1944"
-705,nm0004462,2014-03-10,2014-03-10,,"Jean-Louis Trintignant","Amour","December 11, 1930"
-706,nm0001072,2014-03-10,2014-03-10,,"Joseph Cotten","Citizen Kane","May 15, 1905"
-707,nm0001608,2014-03-10,2014-03-10,,"Barry Pepper","'Saving Private Ryan': Boot Camp","April 4, 1970"
-708,nm0002233,2014-03-10,2014-03-10,,"Erich von Stroheim","Sunset Blvd.","September 22, 1885"
-709,nm0933940,2016-06-18,2016-06-18,,"Patrick Wilson","The Phantom of the Opera","July 3, 1973"
-710,nm0000502,2014-03-10,2014-03-10,,"Christopher Lloyd","Back to the Future","October 22, 1938"
-711,nm0004936,2014-03-10,2014-03-10,,"Ben Foster","Hell or High Water","October 29, 1980"
-712,nm0566948,2014-03-10,2014-03-10,,"Joel McCrea","Sullivan's Travels","November 5, 1905"
-713,nm0158856,2014-03-10,2014-03-10,,"Choi Min-sik","Oldeuboi","January 22, 1962"
-714,nm0000191,2014-03-10,2014-03-10,,"Ewan McGregor","Moulin Rouge!","March 31, 1971"
-715,nm0305558,2014-03-10,2014-03-10,,"Gael García Bernal","Mozart in the Jungle","November 30, 1978"
-716,nm0004486,2014-03-10,2014-03-10,,"Bruno Ganz","Der Untergang","March 22, 1941"
-717,nm0000276,2014-03-10,2014-03-10,,"Sean Astin","The Lord of the Rings: The Two Towers","February 25, 1971"
-718,nm0451234,2016-06-18,2016-06-18,,"Irrfan Khan","The Lunchbox","January 7, 1967"
-719,nm0355910,2016-06-18,2016-06-18,,"Michael C. Hall","Dexter","February 1, 1971"
-720,nm0001702,2014-03-10,2014-03-10,,"Roy Scheider","Jaws","November 10, 1932"
-721,nm0000729,2014-03-10,2014-03-10,,"Casey Affleck","Manchester by the Sea","August 12, 1975"
-722,nm0000997,2014-03-10,2014-03-10,,"Gary Busey","The Buddy Holly Story","June 29, 1944"
-723,nm0005342,2016-06-18,2016-06-18,,"Norman Reedus","The Walking Dead: Daryl Dixon","January 6"
-724,nm0001099,2014-03-10,2014-03-10,,"Jeff Daniels","The Squid and the Whale","February 19, 1955"
-725,nm0001804,2014-03-10,2014-03-10,,"Stanley Tucci","Big Night","November 11, 1960"
-726,nm0000662,2014-03-10,2014-03-10,,"Kiefer Sutherland","24","December 21, 1966"
-727,nm0000706,2015-03-08,2015-03-08,,"Michelle Yeoh","Everything Everywhere All at Once","August 6, 1962"
-728,nm2244205,2014-03-10,2014-03-10,,"Léa Seydoux","La vie d'Adèle","July 1, 1985"
-729,nm0424848,2015-03-08,2015-03-08,,"Dakota Johnson","Fifty Shades of Grey","October 4, 1989"
-730,nm0000365,2014-03-10,2014-03-10,,"Julie Delpy","Trois couleurs : Blanc","December 21, 1969"
-731,nm0000157,2014-03-10,2014-03-10,,"Linda Hamilton","Terminator 2: Judgment Day","September 26, 1956"
-732,nm0000402,2014-03-10,2014-03-10,,"Carrie Fisher","Star Wars","October 21, 1956"
-733,nm0000427,2014-03-10,2014-03-10,,"Pam Grier","Jackie Brown","May 26, 1949"
-734,nm0001951,2014-03-10,2014-03-10,,"Björk","Dancer in the Dark","November 21, 1965"
-735,nm0115161,2014-03-10,2014-03-10,,"Emily Browning","A Series of Unfortunate Events","December 7, 1988"
-736,nm0000496,2014-03-10,2014-03-10,,"Juliette Lewis","August: Osage County","June 21, 1973"
-737,nm0000572,2014-03-10,2014-03-10,,"Sarah Jessica Parker","Sex and the City","March 25, 1965"
-738,nm0001453,2014-03-10,2014-03-10,,"Piper Laurie","The Hustler","January 22, 1932"
-739,nm1415323,2014-03-10,2014-03-10,,"Miley Cyrus","Hannah Montana","November 23, 1992"
-740,nm0005499,2014-03-10,2014-03-10,,"Lily Tomlin","Nashville","September 1, 1939"
-741,nm0005412,2019-11-09,2019-11-09,,"Jane Seymour","Somewhere in Time","February 15, 1951"
-742,nm0001784,2014-03-10,2014-03-10,,"Gloria Stuart","Titanic","July 4, 1910"
-743,nm0001735,2014-03-10,2014-03-10,,"Talia Shire","Rocky","April 25, 1946"
-744,nm2933757,2017-09-16,2017-09-16,,"Gal Gadot","Wonder Woman","April 30, 1985"
-745,nm0528987,2014-03-10,2014-03-10,,"Sue Lyon","Lolita","July 10, 1946"
-746,nm0000556,2014-03-10,2014-03-10,,"Olivia Newton-John","Grease","September 26, 1948"
-747,nm0000378,2014-03-10,2014-03-10,,"Minnie Driver","Circle of Friends","January 31, 1970"
-748,nm0000414,2014-03-10,2014-03-10,,"Teri Garr","Tootsie","December 11, 1944"
-749,nm0005392,2014-03-10,2014-03-10,,"Keri Russell","Mission: Impossible III","March 23, 1976"
-750,nm0781029,2014-03-10,2014-03-10,,"Jean Seberg","Airport","November 13, 1938"
-751,nm0001631,2014-03-10,2014-03-10,,"Sarah Polley","My Life Without Me","January 8, 1979"
-752,nm0000982,2014-03-10,2014-03-10,,"Josh Brolin","No Country for Old Men","February 12, 1968"
-753,nm0001358,2014-03-10,2014-03-10,,"Hal Holbrook","Into the Wild","February 17, 1925"
-754,nm0005023,2014-03-10,2014-03-10,,"Djimon Hounsou","Blood Diamond","April 24, 1964"
-755,nm0000369,2014-03-10,2014-03-10,,"Matt Dillon","There's Something About Mary","February 18, 1964"
-756,nm0000257,2014-03-10,2014-03-10,,"Alan Alda","M*A*S*H","January 28, 1936"
-757,nm0002006,2014-03-10,2014-03-10,,"Thomas Haden Church","Sideways","June 17, 1960"
-758,nm0654110,2014-03-10,2014-03-10,,"Clive Owen","Closer","October 3, 1964"
-759,nm0913822,2014-03-10,2014-03-10,,"Ken Watanabe","The Last Samurai","October 21, 1959"
-760,nm4139037,2014-03-10,2014-03-10,,"Suraj Sharma","Life of Pi","March 21, 1993"
-761,nm0000604,2014-03-10,2014-03-10,,"John C. Reilly","Chicago","May 24, 1965"
-762,nm0003817,2014-03-10,2014-03-10,,"Michael Clarke Duncan","The Green Mile","December 10, 1957"
-763,nm0005286,2014-03-10,2014-03-10,,"Haley Joel Osment","The Sixth Sense","April 10, 1988"
-764,nm0001427,2014-03-10,2014-03-10,,"Greg Kinnear","As Good as It Gets","June 17, 1963"
-765,nm0000608,2014-03-10,2014-03-10,,"Burt Reynolds","Boogie Nights","February 11, 1936"
-766,nm0001233,2014-03-10,2014-03-10,,"Robert Forster","Jackie Brown","July 13, 1941"
-767,nm0005403,2014-03-10,2014-03-10,,"Jason Schwartzman","Rushmore","June 26, 1980"
-768,nm0000513,2014-03-10,2014-03-10,,"William H. Macy","Fargo","March 13, 1950"
-769,nm0000090,2014-03-10,2014-03-10,,"Armin Mueller-Stahl","Eastern Promises","December 17, 1930"
-770,nm0000619,2014-03-10,2014-03-10,,"Tim Roth","Rob Roy","May 14, 1961"
-771,nm0000342,2014-03-10,2014-03-10,,"James Cromwell","L.A. Confidential","January 27, 1940"
-772,nm0001590,2014-03-10,2014-03-10,,"Chazz Palminteri","The Usual Suspects","May 15, 1946"
-773,nm0000641,2014-03-10,2014-03-10,,"Gary Sinise","Forrest Gump","March 17, 1955"
-774,nm0006890,2014-03-10,2014-03-10,,"Paul Scofield","A Man for All Seasons","January 21, 1922"
-775,nm0000592,2014-03-10,2014-03-10,,"Pete Postlethwaite","The Usual Suspects","February 7, 1946"
-776,nm0915989,2014-03-09,2014-03-09,,"Hugo Weaving","The Lord of the Rings: The Return of the King","April 4, 1960"
-777,nm0000586,2014-03-10,2014-03-10,,"Jada Pinkett Smith","The Matrix Revolutions","September 18, 1971"
-778,nm0001575,2014-03-10,2014-03-10,,"Tatum O'Neal","Paper Moon","November 5, 1963"
-779,nm0267506,2014-03-10,2014-03-10,,"Anna Faris","The House Bunny","November 29, 1976"
-780,nm0567408,2014-03-09,2014-03-09,,"Hattie McDaniel","Gone with the Wind","June 10, 1893"
-781,nm0000463,2014-03-10,2014-03-10,,"Famke Janssen","X-Men: The Last Stand","November 5, 1964"
-782,nm0683253,2015-03-08,2015-03-08,,"Rosamund Pike","Gone Girl","January 27, 1979"
-783,nm0001372,2014-03-10,2014-03-10,,"Bonnie Hunt","Jumanji","September 22, 1961"
-784,nm0005182,2014-03-10,2014-03-10,,"Leslie Mann","Knocked Up","March 26, 1972"
-785,nm1411676,2014-03-10,2014-03-10,,"Mindy Kaling","The Office","June 24, 1979"
-786,nm0628601,2014-03-10,2014-03-10,,"Thandiwe Newton","Crash","November 6, 1972"
-787,nm0688132,2019-03-19,2019-03-19,,"Amy Poehler","Inside Out","September 16, 1971"
-788,nm0001605,2014-03-10,2014-03-10,,"Amanda Peet","2012","January 11, 1972"
-789,nm0005466,2014-03-10,2014-03-10,,"Julia Stiles","10 Things I Hate About You","March 28, 1981"
-790,nm0004742,2014-03-10,2014-03-10,,"Maria Bello","A History of Violence","April 18, 1967"
-791,nm0578949,2014-03-10,2014-03-10,,"Eva Mendes","Hitch","March 5, 1974"
-792,nm1289434,2014-03-10,2014-03-10,,"Emily Blunt","Edge of Tomorrow","February 23, 1983"
-793,nm0126284,2014-03-10,2014-03-10,,"Rose Byrne","Spy","July 24, 1979"
-794,nm0000171,2014-03-10,2014-03-10,,"Ashley Judd","Double Jeopardy","April 19, 1968"
-795,nm3592338,2014-03-10,2014-03-10,,"Emilia Clarke","Game of Thrones","October 23, 1986"
-796,nm0000775,2014-03-10,2014-03-10,,"Christina Applegate","Don't Tell Mom the Babysitter's Dead","November 25, 1971"
-797,nm0000505,2014-03-10,2014-03-10,,"Nia Long","Big Momma's House","October 30, 1970"
-798,nm0428065,2015-03-08,2015-03-08,,"Felicity Jones","Rogue One","October 17, 1983"
-799,nm0000495,2014-03-10,2014-03-10,,"Téa Leoni","The Family Man","February 25, 1966"
-800,nm1275259,2014-03-10,2014-03-10,,"Alexandra Daddario","Baywatch","March 16, 1986"
-801,nm0540441,2014-03-10,2014-03-10,,"Jena Malone","The Neon Demon","November 21, 1984"
-802,nm0000152,2014-03-10,2014-03-10,,"Richard Gere","Chicago","August 31, 1949"
-803,nm0296545,2014-03-10,2014-03-10,,"Nick Frost","The World's End","March 28, 1972"
-804,nm0000501,2014-03-10,2014-03-10,,"Ray Liotta","GoodFellas","December 18, 1954"
-805,nm0001674,2014-03-10,2014-03-10,,"Chris Rock","Top Five","February 7, 1965"
-806,nm0358316,2014-03-10,2014-03-10,,"Jon Hamm","Mad Men","March 10, 1971"
-807,nm0000439,2014-03-10,2014-03-10,,"Neil Patrick Harris","A Series of Unfortunate Events","June 15, 1973"
-808,nm0000221,2014-03-10,2014-03-10,,"Charlie Sheen","Two and a Half Men","September 3, 1965"
-809,nm0753314,2016-06-18,2016-06-18,,"Mark Rylance","Bridge of Spies","January 18, 1960"
-810,nm0000412,2014-03-10,2014-03-10,,"Andy Garcia","Ocean's Eleven","April 12, 1956"
-811,nm0503627,2014-03-10,2014-03-10,,"Michael Lerner","Barton Fink","June 22, 1941"
-812,nm0001295,2014-03-10,2014-03-10,,"Graham Greene","The Green Mile","June 22, 1952"
-813,nm0001117,2014-03-10,2014-03-10,,"Bruce Davison","X-Men","June 28, 1946"
-814,nm0000101,2014-03-10,2014-03-10,,"Dan Aykroyd","Ghostbusters","July 1, 1952"
-815,nm0000732,2014-03-10,2014-03-10,,"Danny Aiello","Do the Right Thing","June 20, 1933"
-816,nm0000203,2014-03-10,2014-03-10,,"River Phoenix","My Own Private Idaho","August 23, 1970"
-817,nm0001777,2014-03-10,2014-03-10,,"Dean Stockwell","Quantum Leap","March 5, 1936"
-818,nm0000345,2014-03-10,2014-03-10,,"Billy Crystal","Forget Paris","March 14, 1948"
-819,nm0000422,2014-03-10,2014-03-10,,"John Goodman","10 Cloverfield Lane","June 20, 1952"
-820,nm0089217,2014-03-10,2014-03-10,,"Orlando Bloom","The Lord of the Rings: The Fellowship of the Ring","January 13, 1977"
-821,nm0001745,2014-03-10,2014-03-10,,"Stellan Skarsgård","Good Will Hunting","June 13"
-822,nm0002907,2016-06-18,2016-06-18,,"Alexander Skarsgård","The Legend of Tarzan","August 25, 1976"
-823,nm0000196,2014-03-10,2014-03-10,,"Mike Myers","Austin Powers in Goldmember","May 25, 1963"
-824,nm0879085,2014-03-10,2014-03-10,,"Tyrese Gibson","Baby Boy","December 30, 1978"
-825,nm0000704,2014-03-10,2014-03-10,,"Elijah Wood","The Lord of the Rings: The Fellowship of the Ring","January 28, 1981"
-826,nm0000362,2014-03-10,2014-03-10,,"Danny DeVito","Matilda","November 17, 1944"
-827,nm0001333,2014-03-09,2014-03-09,,"Susan Hayward","I Want to Live!","June 30, 1917"
-828,nm0735442,2014-03-10,2014-03-10,,"Michelle Rodriguez","Fast & Furious 7","July 12, 1978"
-829,nm0001264,2014-03-10,2014-03-10,,"Sarah Michelle Gellar","Buffy the Vampire Slayer","April 14, 1977"
-830,nm0644897,2019-03-19,2019-03-19,,"Sandra Oh","Killing Eve","July 20, 1971"
-831,nm0452288,2019-09-04,2019-09-04,,"Margot Kidder","Superman","October 17, 1948"
-832,nm0461498,2014-03-10,2014-03-10,,"Beyoncé","Dreamgirls","September 4, 1981"
-833,nm0356017,2014-03-10,2014-03-10,,"Rebecca Hall","Vicky Cristina Barcelona","May 3, 1982"
-834,nm0005305,2014-03-10,2014-03-10,,"Piper Perabo","Coyote Ugly","October 31, 1976"
-835,nm0001073,2014-03-10,2014-03-10,,"Courteney Cox","Friends","June 15, 1964"
-836,nm0000205,2014-03-10,2014-03-10,,"Parker Posey","Superman Returns","November 8, 1968"
-837,nm1745736,2014-03-10,2014-03-10,,"Paula Patton","Precious","December 5, 1975"
-838,nm1157358,2014-03-10,2014-03-10,,"Michelle Monaghan","Gone Baby Gone","March 23, 1976"
-839,nm0000132,2014-03-10,2014-03-10,,"Claire Danes","My So-Called Life","April 12, 1979"
-840,nm0005049,2019-03-19,2019-03-19,,"Allison Janney","The Help","November 19, 1959"
-841,nm0098378,2014-03-10,2014-03-10,,"Kate Bosworth","Superman Returns","January 2, 1983"
-842,nm0939697,2014-03-10,2014-03-10,,"Evan Rachel Wood","Thirteen","September 7, 1987"
-843,nm0000227,2015-03-08,2015-03-08,,"Mira Sorvino","Mighty Aphrodite","September 28, 1967"
-844,nm0955471,2014-03-10,2014-03-10,,"Ziyi Zhang","Yi dai zong shi","February 9, 1979"
-845,nm0004789,2014-03-10,2014-03-10,,"Amanda Bynes","Hairspray","April 3, 1986"
-846,nm0001435,2014-03-10,2014-03-10,,"Lisa Kudrow","Friends","July 30, 1963"
-847,nm1779870,2019-07-29,2019-07-29,,"Brit Marling","Another Earth","August 7, 1982"
-848,nm7248827,2020-08-10,2020-08-10,,"Cynthia Erivo","Wicked: Part I","January 8, 1987"
-849,nm0005527,2015-03-08,2015-03-08,,"Sofía Vergara","Hot Pursuit","July 10, 1972"
-850,nm0601553,2014-03-10,2014-03-10,,"Mandy Moore","A Walk to Remember","April 10, 1984"
-851,nm0000515,2014-03-10,2014-03-10,,"Virginia Madsen","Sideways","September 11, 1961"
-852,nm0005188,2014-03-10,2014-03-10,,"James Marsden","Hairspray","September 18, 1973"
-853,nm0000741,2014-03-10,2014-03-10,,"Tim Allen","Toy Story","June 13, 1953"
-854,nm0000610,2014-03-10,2014-03-10,,"Giovanni Ribisi","Boiler Room","December 17, 1974"
-855,nm0000442,2016-06-18,2016-06-18,,"Rutger Hauer","Hobo with a Shotgun","January 23, 1944"
-856,nm0000681,2014-03-10,2014-03-10,,"Vince Vaughn","The Break-Up","March 28, 1970"
-857,nm0004051,2014-03-10,2014-03-10,,"Brian Cox","Succession","June 1, 1946"
-858,nm0000598,2014-03-10,2014-03-10,,"Dennis Quaid","Far from Heaven","April 9, 1954"
-859,nm0000491,2014-03-10,2014-03-10,,"John Leguizamo","Moulin Rouge!","July 22, 1960"
-860,nm0000474,2014-03-10,2014-03-10,,"Michael Keaton","Birdman or (The Unexpected Virtue of Ignorance)","September 5, 1951"
-861,nm0121605,2014-03-10,2014-03-10,,"Billy Burke","Twilight","November 25, 1966"
-862,nm0322407,2014-03-10,2014-03-10,,"Brendan Gleeson","Calvary","March 29, 1955"
-863,nm0000314,2019-03-18,2019-03-18,,"Charles Bronson","Death Wish","November 3, 1921"
-864,nm0000596,2014-03-10,2014-03-10,,"Jonathan Pryce","The Two Popes","June 1, 1947"
-865,nm0001497,2014-03-10,2014-03-10,,"Tobey Maguire","Brothers","June 27, 1975"
-866,nm0790688,2014-03-10,2014-03-10,,"Michael Sheen","Masters of Sex","February 5, 1969"
-867,nm0519043,2014-03-10,2014-03-10,,"Justin Long","Live Free or Die Hard","June 2, 1978"
-868,nm0085312,2014-03-10,2014-03-10,,"Jack Black","School of Rock","August 28, 1969"
-869,nm0000316,2019-03-18,2019-03-18,,"Mel Brooks","Spaceballs","June 28, 1926"
-870,nm0000112,2014-03-10,2014-03-10,,"Pierce Brosnan","The World Is Not Enough","May 16, 1953"
-871,nm0000293,2014-03-10,2014-03-10,,"Sean Bean","The Lord of the Rings: The Fellowship of the Ring","April 17, 1959"
-872,nm0991810,2017-09-16,2017-09-16,,"Mahershala Ali","Jurassic World: Rebirth","February 16, 1974"
-873,nm0241049,2014-03-10,2014-03-10,,"Josh Duhamel","Transformers","November 14, 1972"
-874,nm0000552,2014-03-10,2014-03-10,,"Eddie Murphy","Harlem Nights","April 3, 1961"
-875,nm0269463,2014-03-10,2014-03-10,,"Jon Favreau","Chef","October 19, 1966"
-876,nm0000418,2014-03-10,2014-03-10,,"Danny Glover","Lethal Weapon","July 22, 1946"
-877,nm2951768,2014-03-10,2014-03-10,,"Freida Pinto","Slumdog Millionaire","October 18, 1984"
-878,nm0240381,2014-03-10,2014-03-10,,"Hilary Duff","A Cinderella Story","September 28, 1987"
-879,nm0935541,2014-03-10,2014-03-10,,"Mary Elizabeth Winstead","10 Cloverfield Lane","November 28, 1984"
-880,nm0177639,2014-03-10,2014-03-10,,"Jennifer Coolidge","A Mighty Wind","June 1, 1961"
-881,nm2057859,2015-03-08,2015-03-08,,"Andrea Riseborough","Birdman or (The Unexpected Virtue of Ignorance)","November 20, 1981"
-882,nm0000208,2015-03-08,2015-03-08,,"Molly Ringwald","Sixteen Candles","February 18, 1968"
-883,nm0005064,2014-03-10,2014-03-10,,"January Jones","X: First Class","January 5, 1978"
-884,nm0748973,2015-03-08,2015-03-08,,"Maya Rudolph","Bridesmaids","July 27, 1972"
-885,nm0000521,2015-03-08,2015-03-08,,"Sophie Marceau","La boum","November 17, 1966"
-886,nm0004376,2014-03-10,2014-03-10,,"Franka Potente","Lola rennt","July 22, 1974"
-887,nm2946516,2019-03-19,2019-03-19,,"Claire Foy","First Man","April 16, 1984"
-888,nm0429069,2014-03-10,2014-03-10,,"Rashida Jones","Parks and Recreation","February 25, 1976"
-889,nm0000224,2014-03-10,2014-03-10,,"Alicia Silverstone","Clueless","October 4, 1976"
-890,nm0001273,2015-07-05,2015-07-05,,"Lillian Gish","The Night of the Hunter","October 14, 1893"
-891,nm1431940,2014-03-10,2014-03-10,,"Evangeline Lilly","Ant-Man","August 3, 1979"
-892,nm1469236,2019-03-19,2019-03-19,,"Olivia Colman","The Favourite","January 30, 1974"
-893,nm0257969,2015-03-08,2015-03-08,,"Mireille Enos","World War Z","September 22, 1975"
-894,nm0001349,2014-03-10,2014-03-10,,"Jennifer Love Hewitt","I Know What You Did Last Summer","February 21, 1979"
-895,nm0002536,2014-03-10,2014-03-10,,"Emmy Rossum","The Phantom of the Opera","September 12, 1986"
-896,nm1428821,2014-03-10,2014-03-10,,"Joey King","The Act","July 30"
-897,nm0329481,2014-03-10,2014-03-10,,"Ginnifer Goodwin","Zootopia","May 22, 1978"
-898,nm0852132,2014-03-10,2014-03-10,,"Christine Taylor","Dodgeball: A True Underdog Story","July 30, 1971"
-899,nm1227814,2014-03-10,2014-03-10,,"Vanessa Hudgens","High School Musical 3: Senior Year","December 14, 1988"
-900,nm0180411,2014-03-10,2014-03-10,,"Abbie Cornish","Three Billboards Outside Ebbing, Missouri","August 7, 1982"
-901,nm6073955,2020-08-10,2020-08-10,,"Florence Pugh","The Falling","January 3, 1996"
-902,nm0000453,2014-03-10,2014-03-10,,"Ian Holm","The Lord of the Rings: The Fellowship of the Ring","September 12, 1931"
-903,nm0001447,2014-03-10,2014-03-10,,"Nathan Lane","The Producers","February 3, 1956"
-904,nm0000144,2014-03-10,2014-03-10,,"Cary Elwes","Saw","October 26, 1962"
-905,nm0001454,2014-03-10,2014-03-10,,"Martin Lawrence","Martin","April 16, 1965"
-906,nm0176869,2014-03-10,2014-03-10,,"Steve Coogan","Philomena","October 14, 1965"
-907,nm0056187,2014-03-10,2014-03-10,,"Sacha Baron Cohen","Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan","October 13, 1971"
-908,nm0942482,2014-03-10,2014-03-10,,"Jeffrey Wright","American Fiction","December 7, 1965"
-909,nm0000329,2014-03-10,2014-03-10,,"Jackie Chan","Ngo si seoi","April 7, 1954"
-910,nm0001173,2014-03-10,2014-03-10,,"Aaron Eckhart","The Dark Knight","March 12, 1968"
-911,nm0941777,2014-03-10,2014-03-10,,"Sam Worthington","Avatar","August 2, 1976"
-912,nm0202603,2014-03-10,2014-03-10,,"Jack Davenport","Pirates of the Caribbean: Dead Man's Chest","March 1, 1973"
-913,nm0000547,2014-03-10,2014-03-10,,"Alfred Molina","Spider-Man 2","May 24, 1953"
-914,nm0000347,2019-03-18,2019-03-18,,"Tim Curry","Congo","April 19, 1946"
-915,nm0000434,2014-03-10,2014-03-10,,"Mark Hamill","Star Wars","September 25"
-916,nm0000409,2014-03-10,2014-03-10,,"Brendan Fraser","The Mummy","December 3, 1968"
-917,nm0001084,2014-03-10,2014-03-10,,"Ice Cube","War of the Worlds","June 15, 1969"
-918,nm0000630,2014-03-10,2014-03-10,,"Liev Schreiber","Spotlight","October 4, 1967"
-919,nm1159180,2014-03-10,2014-03-10,,"Ed Helms","The Hangover","January 24, 1974"
-920,nm8402992,2024-12-18,2024-12-18,,"Daisy Edgar-Jones","Normal People","May 24, 1998"
-921,nm4960279,2024-12-18,2024-12-18,,"Margaret Qualley","Once Upon a Time in... Hollywood","October 23, 1994"
-922,nm0000174,2014-03-10,2014-03-10,,"Val Kilmer","The Doors","December 31, 1959"
-923,nm1258970,2014-03-10,2014-03-10,,"Russell Brand","Arthur","June 4, 1975"
-924,nm0005266,2014-03-10,2014-03-10,,"Craig T. Nelson","Coach","April 4, 1944"
-925,nm0005170,2014-03-10,2014-03-10,,"Bernie Mac","The Bernie Mac Show","October 5, 1957"
-926,nm0001772,2014-03-10,2014-03-10,,"Patrick Stewart","Logan","July 13, 1940"
-927,nm0001293,2014-03-10,2014-03-10,,"Seth Green","Robot Chicken","February 8, 1974"
-928,nm0005110,2014-03-10,2014-03-10,,"Ashton Kutcher","That '70s Show","February 7, 1978"
-929,nm0001642,2014-03-10,2014-03-10,,"Randy Quaid","Kingpin","October 1, 1950"
-930,nm0000648,2014-03-10,2014-03-10,,"Wesley Snipes","Blade","July 31, 1962"
-931,nm0654648,2015-03-08,2015-03-08,,"David Oyelowo","Government Cheese","April 1, 1976"
-932,nm0835016,2014-03-10,2014-03-10,,"Mark Strong","1917","August 5, 1963"
-933,nm0001705,2014-03-10,2014-03-10,,"Rob Schneider","Deuce Bigalow: Male Gigolo","October 31, 1963"
-934,nm0059431,2014-03-10,2014-03-10,,"Jay Baruchel","This Is the End","April 9, 1982"
-935,nm0159789,2014-03-10,2014-03-10,,"Hayden Christensen","Star Wars: Episode II - Attack of the Clones","April 19, 1981"
-936,nm0829032,2014-03-10,2014-03-10,,"Ray Stevenson","The Three Musketeers","May 25, 1964"
-937,nm0079273,2014-03-10,2014-03-10,,"Paul Bettany","WandaVision","May 27, 1971"
-938,nm0491402,2014-03-10,2014-03-10,,"Hugh Laurie","House M.D.","June 11, 1959"
-939,nm0000676,2014-03-10,2014-03-10,,"Chris Tucker","Rush Hour 2","August 31, 1971"
-940,nm0001006,2019-04-12,2019-04-12,,"John Candy","Planes, Trains & Automobiles","October 31, 1950"
-941,nm0000277,2019-03-18,2019-03-18,,"Richard Attenborough","Jurassic Park","August 29, 1923"
-942,nm0000563,2014-03-10,2014-03-10,,"Chris O'Donnell","Batman & Robin","June 26, 1970"
-943,nm0000973,2014-03-10,2014-03-10,,"Benjamin Bratt","Miss Congeniality","December 16"
-944,nm0996669,2014-03-10,2014-03-10,,"Common","John Wick: Chapter 2","March 13, 1972"
-945,nm0005541,2014-03-10,2014-03-10,,"Marlon Wayans","White Chicks","July 23, 1972"
-946,nm0000983,2014-03-10,2014-03-10,,"Albert Brooks","Drive","July 22, 1947"
-947,nm0666739,2019-03-18,2019-03-18,,"Aaron Paul","Breaking Bad","August 27, 1979"
-948,nm0000346,2014-03-10,2014-03-10,,"Macaulay Culkin","Home Alone","August 26, 1980"
-949,nm0000385,2014-03-10,2014-03-10,,"Sam Elliott","A Star Is Born","August 9, 1944"
-950,nm5473782,2019-07-29,2019-07-29,,"Taron Egerton","Kingsman: The Secret Service","November 10, 1989"
-951,nm0001029,2014-03-10,2014-03-10,,"Jim Caviezel","The Passion of the Christ","September 26, 1968"
-952,nm0000062,2019-03-19,2019-03-19,,"Elvis Presley","Girls! Girls! Girls!","January 8, 1935"
-953,nm1706767,2014-03-09,2014-03-09,,"Jonah Hill","21 Jump Street","December 20, 1983"
-954,nm0437646,2019-07-29,2019-07-29,,"Sung Kang","Furious 6","April 8, 1972"
-955,nm0837177,2014-03-10,2014-03-10,,"Jason Sudeikis","Ted Lasso","September 18, 1975"
-956,nm0001326,2014-03-10,2014-03-10,,"Josh Hartnett","Lucky Number Slevin","July 21, 1978"
-957,nm0614165,2014-03-10,2014-03-10,,"Cillian Murphy","Breakfast on Pluto","May 25, 1976"
-958,nm0001082,2014-03-10,2014-03-10,,"Billy Crudup","Almost Famous","July 8, 1968"
-959,nm1107001,2014-03-10,2014-03-10,,"Anthony Mackie","The Hurt Locker","September 23, 1978"
-960,nm0000858,2019-03-19,2019-03-19,,"John Barrymore","Twentieth Century","February 15, 1882"
-961,nm0648249,2014-03-10,2014-03-10,,"Timothy Olyphant","Justified","May 20, 1968"
-962,nm1265802,2014-03-10,2014-03-10,,"Josh Gad","Frozen","February 23, 1981"
-963,nm0000708,2019-07-29,2019-07-29,,"Billy Zane","Titanic","February 24, 1966"
-964,nm0005561,2014-03-10,2014-03-10,,"Luke Wilson","Old School","September 21, 1971"
-965,nm0765597,2014-03-10,2014-03-10,,"Peter Sarsgaard","Shattered Glass","March 7, 1971"
-966,nm0406975,2014-03-10,2014-03-10,,"Rhys Ifans","Notting Hill","July 22, 1967"
-967,nm0333410,2014-03-10,2014-03-10,,"Topher Grace","In Good Company","July 12, 1978"
-968,nm0366389,2014-03-10,2014-03-10,,"Kevin Hart","Ride Along","July 6, 1979"
-969,nm0200452,2014-03-10,2014-03-10,,"Paul Dano","There Will Be Blood","June 19, 1984"
-970,nm0352778,2015-03-08,2015-03-08,,"Bill Hader","The Skeleton Twins","June 7, 1978"
-971,nm0000507,2014-03-10,2014-03-10,,"Rob Lowe","St. Elmo's Fire","March 17, 1964"
-972,nm0000305,2019-03-19,2019-03-19,,"Mel Blanc","Who Framed Roger Rabbit","May 30, 1908"
-973,nm0005450,2014-03-10,2014-03-10,,"David Spade","Joe Dirt","July 22, 1964"
-974,nm0000448,2014-03-10,2014-03-10,,"Lance Henriksen","Hard Target","May 5, 1940"
-975,nm0420955,2015-03-08,2015-03-08,,"Richard Jenkins","The Shape of Water","May 4, 1947"
-976,nm0000389,2019-03-19,2019-03-19,,"Emilio Estevez","The Way","May 12, 1962"
-977,nm1013003,2014-03-10,2014-03-10,,"Michael Ealy","Barbershop","August 3, 1973"
-978,nm0068260,2014-03-10,2014-03-10,,"Jamie Bell","Billy Elliot","March 14, 1986"
-979,nm1684869,2019-03-19,2019-03-19,,"Troy Baker","The Last of Us","April 1, 1976"
-980,nm1104131,2014-03-10,2014-03-10,,"Danny McBride","Pineapple Express","December 29, 1976"
-981,nm0001667,2015-07-05,2015-07-05,,"Jonathan Rhys Meyers","Den 12. mann","July 27, 1977"
-982,nm0148418,2014-03-10,2014-03-10,,"Michael Cera","Superbad","June 7, 1988"
-983,nm0000200,2016-06-18,2016-06-18,,"Bill Paxton","Frailty","May 17, 1955"
-984,nm0344435,2014-03-10,2014-03-10,,"Ioan Gruffudd","Fantastic Four","October 6, 1973"
-985,nm0511088,2016-06-18,2016-06-18,,"Andrew Lincoln","The Walking Dead","September 14, 1973"
-986,nm0000597,2016-06-18,2016-06-18,,"Bill Pullman","Independence Day","December 17, 1953"
-987,nm0732497,2015-03-08,2015-03-08,,"Craig Robinson","This Is the End","October 25, 1971"
-988,nm0206359,2014-03-10,2014-03-10,,"Charlie Day","It's Always Sunny in Philadelphia","February 9, 1976"
-989,nm1676221,2014-03-10,2014-03-10,,"Andy Samberg","Popstar: Never Stop Never Stopping","August 18, 1978"
-990,nm1330560,2014-03-10,2014-03-10,,"Garrett Hedlund","Tron: Legacy","September 3, 1984"
-991,nm1024677,2014-03-10,2014-03-10,,"John Krasinski","Jack Ryan","October 20, 1979"
-992,nm0001659,2014-03-10,2014-03-10,,"Christopher Reeve","Superman","September 25, 1952"
-993,nm0564215,2015-08-13,2015-08-13,,"James McAvoy","Filth","April 21, 1979"
-994,nm0001722,2014-03-10,2014-03-10,,"Rufus Sewell","A Knight's Tale","October 29, 1967"
-995,nm3485845,2019-03-19,2019-03-19,,"Adam Driver","Star Wars: Episode VII - The Force Awakens","November 19, 1983"
-996,nm0000885,2014-03-10,2014-03-10,,"Ned Beatty","Network","July 6, 1937"
-997,nm0000092,2014-03-10,2014-03-10,,"John Cleese","A Fish Called Wanda","October 27, 1939"
-998,nm0001806,2014-03-10,2014-03-10,,"John Turturro","Fading Gigolo","February 28, 1957"
-999,nm0001471,2017-09-16,2017-09-16,,"Jerry Lewis","The Nutty Professor","March 16, 1926"
-1000,nm8958770,2024-12-18,2024-12-18,,"Paul Mescal","Aftersun","February 2, 1996"
+Const,Name
+nm0000134,Robert De Niro
+nm0000197,Jack Nicholson
+nm0000008,Marlon Brando
+nm0000243,Denzel Washington
+nm0000658,Meryl Streep
+nm0000031,Katharine Hepburn
+nm0000358,Daniel Day-Lewis
+nm0001627,Sidney Poitier
+nm0000007,Humphrey Bogart
+nm0000022,Clark Gable
+nm0000006,Ingrid Bergman
+nm0000138,Leonardo DiCaprio
+nm0000056,Paul Newman
+nm0000072,Elizabeth Taylor
+nm0000012,Bette Davis
+nm0000071,James Stewart
+nm0000060,Gregory Peck
+nm0000199,Al Pacino
+nm0000158,Tom Hanks
+nm0000949,Cate Blanchett
+nm0000030,Audrey Hepburn
+nm0000701,Kate Winslet
+nm0205626,Viola Davis
+nm0000026,Cary Grant
+nm0000151,Morgan Freeman
+nm0000046,Vivien Leigh
+nm0000059,Laurence Olivier
+nm0000537,Steve McQueen
+nm0000473,Diane Keaton
+nm0000075,Spencer Tracy
+nm0451321,Shah Rukh Khan
+nm0000210,Julia Roberts
+nm0000149,Jodie Foster
+nm0000023,Judy Garland
+nm0000020,Henry Fonda
+nm0000366,Catherine Deneuve
+nm0000038,Grace Kelly
+nm0000545,Helen Mirren
+nm0000164,Anthony Hopkins
+nm0000010,James Cagney
+nm0000291,Angela Bassett
+nm0000136,Johnny Depp
+nm0001256,Greta Garbo
+nm0000014,Olivia de Havilland
+nm0000122,Charles Chaplin
+nm0361697,Setsuko Hara
+nm0000267,Julie Andrews
+nm0001050,Montgomery Clift
+nm0001376,Isabelle Huppert
+nm0000028,Rita Hayworth
+nm0000932,Halle Berry
+nm0000015,James Dean
+nm0000018,Kirk Douglas
+nm0000081,Natalie Wood
+nm0000052,Marcello Mastroianni
+nm0001076,Joan Crawford
+nm0000148,Harrison Ford
+nm0000215,Susan Sarandon
+nm0000037,Gene Kelly
+nm0000335,Glenn Close
+nm0000021,Joan Fontaine
+nm0000194,Julianne Moore
+nm0000226,Will Smith
+nm0000047,Sophia Loren
+nm0000054,Marilyn Monroe
+nm0000045,Bruce Lee
+nm0005093,Regina King
+nm0001401,Angelina Jolie
+nm0000078,John Wayne
+nm0000404,Jane Fonda
+nm0000032,Charlton Heston
+nm0000011,Gary Cooper
+nm0880521,Liv Ullmann
+nm0000204,Natalie Portman
+nm0001845,Forest Whitaker
+nm0000113,Sandra Bullock
+nm0000039,Deborah Kerr
+nm0001536,Toshirô Mifune
+nm0000163,Dustin Hoffman
+nm0000668,Emma Thompson
+nm0000129,Tom Cruise
+nm0000201,Michelle Pfeiffer
+nm0001159,Faye Dunaway
+nm0000168,Samuel L. Jackson
+nm0000564,Peter O'Toole
+nm0005132,Heath Ledger
+nm0000173,Nicole Kidman
+nm0004851,Penélope Cruz
+nm1569276,Chadwick Boseman
+nm0000104,Antonio Banderas
+nm0000244,Sigourney Weaver
+nm0000161,Salma Hayek
+nm0000332,Don Cheadle
+nm0000531,Frances McDormand
+nm0000870,Kathy Bates
+nm0001725,Omar Sharif
+nm0010736,Amy Adams
+nm0001618,Joaquin Phoenix
+nm0482320,Mohanlal
+nm0000093,Brad Pitt
+nm0000313,Jeff Bridges
+nm0000125,Sean Connery
+nm0001426,Ben Kingsley
+nm0000169,Tommy Lee Jones
+nm0000602,Robert Redford
+nm0000493,Jack Lemmon
+nm0001715,George C. Scott
+nm0000245,Robin Williams
+nm0000450,Philip Seymour Hoffman
+nm0000123,George Clooney
+nm0000432,Gene Hackman
+nm0000115,Nicolas Cage
+nm0000686,Christopher Walken
+nm0004266,Anne Hathaway
+nm0000367,Gérard Depardieu
+nm0001626,Christopher Plummer
+nm0000246,Bruce Willis
+nm0005212,Ian McKellen
+nm0000128,Russell Crowe
+nm0000195,Bill Murray
+nm0000906,Annette Bening
+nm0000582,Joe Pesci
+nm0000126,Kevin Costner
+nm0000212,Meg Ryan
+nm0000661,Donald Sutherland
+nm0000142,Clint Eastwood
+nm0000140,Michael Douglas
+nm0000375,Robert Downey Jr.
+nm0001257,Ava Gardner
+nm0000398,Sally Field
+nm0000013,Doris Day
+nm0000511,Shirley MacLaine
+nm0000456,Holly Hunter
+nm0000353,Willem Dafoe
+nm0005476,Hilary Swank
+nm0252230,Chiwetel Ejiofor
+nm0001055,Claudette Colbert
+nm0000178,Diane Lane
+nm0001448,Jessica Lange
+nm0841797,Gloria Swanson
+nm0000323,Michael Caine
+nm0000002,Lauren Bacall
+nm0790454,Norma Shearer
+nm0000541,Bette Midler
+nm0001546,Mary Tyler Moore
+nm0536167,Anna Magnani
+nm0001132,Judi Dench
+nm0000232,Sharon Stone
+nm0000107,Kim Basinger
+nm3154303,Timothée Chalamet
+nm0413559,Glenda Jackson
+nm0001656,Donna Reed
+nm0000193,Demi Moore
+nm0591485,Liza Minnelli
+nm0000133,Geena Davis
+nm0000634,Peter Sellers
+nm0000154,Mel Gibson
+nm0000120,Jim Carrey
+nm0000242,Mark Wahlberg
+nm0000188,Steve Martin
+nm0000849,Javier Bardem
+nm0910607,Christoph Waltz
+nm0000209,Tim Robbins
+nm0000216,Arnold Schwarzenegger
+nm0000230,Sylvester Stallone
+nm0001557,Viggo Mortensen
+nm0000489,Christopher Lee
+nm0001691,Geoffrey Rush
+nm0000027,Alec Guinness
+nm0000009,Richard Burton
+nm0005154,Lucy Liu
+nm0000285,Alec Baldwin
+nm0001001,James Caan
+nm0586568,Mads Mikkelsen
+nm0001774,Ben Stiller
+nm0000438,Ed Harris
+nm0000172,Harvey Keitel
+nm0000685,Jon Voight
+nm0000106,Drew Barrymore
+nm0000213,Winona Ryder
+nm0000678,Kathleen Turner
+nm0000235,Uma Thurman
+nm0000623,Rene Russo
+nm0000155,Whoopi Goldberg
+nm0001749,Maggie Smith
+nm0000659,Barbra Streisand
+nm2225369,Jennifer Lawrence
+nm0940946,Joanne Woodward
+nm0564790,Mercedes McCambridge
+nm0001378,Anjelica Huston
+nm0001848,Dianne Wiest
+nm0000443,Goldie Hawn
+nm0001012,Claudia Cardinale
+nm0000569,Gwyneth Paltrow
+nm0000234,Charlize Theron
+nm0000700,Debra Winger
+nm0182839,Marion Cotillard
+nm0000207,Christina Ricci
+nm0000300,Juliette Binoche
+nm0000435,Daryl Hannah
+nm0095804,Shirley Booth
+nm0000702,Reese Witherspoon
+nm0001125,Benicio Del Toro
+nm0000102,Kevin Bacon
+nm0000664,Patrick Swayze
+nm0001057,Toni Collette
+nm0000380,Robert Duvall
+nm0000044,Burt Lancaster
+nm0000053,Robert Mitchum
+nm0268199,Colin Farrell
+nm0000034,William Holden
+nm0000064,Edward G. Robinson
+nm0001635,William Powell
+nm0001467,Jared Leto
+nm0001224,Errol Flynn
+nm0000050,Groucho Marx
+nm0000051,James Mason
+nm0000036,Buster Keaton
+nm0000080,Orson Welles
+nm0000001,Fred Astaire
+nm0177896,Bradley Cooper
+nm0000198,Gary Oldman
+nm0000179,Jude Law
+nm0316079,Paul Giamatti
+nm0000553,Liam Neeson
+nm0000354,Matt Damon
+nm1055413,Michael Fassbender
+nm0000993,Carol Burnett
+nm0001788,Jessica Tandy
+nm0000166,Helen Hunt
+nm0000099,Patricia Arquette
+nm0000544,Carmen Miranda
+nm0005028,Kate Hudson
+nm0001876,Catherine Zeta-Jones
+nm0000139,Cameron Diaz
+nm0001666,Debbie Reynolds
+nm0000995,Ellen Burstyn
+nm0000058,Maureen O'Hara
+nm0001485,Myrna Loy
+nm0372176,Lena Headey
+nm0001473,Laura Linney
+nm0000017,Marlene Dietrich
+nm0001479,Carole Lombard
+nm0000795,Jean Arthur
+nm0000095,Woody Allen
+nm0001318,Jean Harlow
+nm0001677,Ginger Rogers
+nm0681933,Mary Pickford
+nm0922213,Mae West
+nm0000096,Gillian Anderson
+nm0914612,Emma Watson
+nm0000273,Alan Arkin
+nm0000621,Kurt Russell
+nm0350453,Jake Gyllenhaal
+nm0331516,Ryan Gosling
+nm0000147,Colin Firth
+nm0004937,Jamie Foxx
+nm0004778,Adrien Brody
+nm0000905,Roberto Benigni
+nm0000460,Jeremy Irons
+nm0000719,F. Murray Abraham
+nm0000377,Richard Dreyfuss
+nm0002075,Peter Finch
+nm0138770,Art Carney
+nm0731772,Cliff Robertson
+nm0001511,Lee Marvin
+nm0001322,Rex Harrison
+nm0000063,Anthony Quinn
+nm0001703,Maximilian Schell
+nm0362766,Tom Hardy
+nm0000057,David Niven
+nm0000458,William Hurt
+nm0000989,Yul Brynner
+nm0000308,Ernest Borgnine
+nm1212722,Benedict Cumberbatch
+nm0001768,Rod Steiger
+nm1631269,Chloë Grace Moretz
+nm0447695,Anna Kendrick
+nm0001833,Emily Watson
+nm0000307,Helena Bonham Carter
+nm0461136,Keira Knightley
+nm0005490,Alexis Thorpe
+nm0203836,Marion Davies
+nm0424060,Scarlett Johansson
+nm0266824,Dakota Fanning
+nm0000098,Jennifer Aniston
+nm0000124,Jennifer Connelly
+nm1046097,Rachel McAdams
+nm1659547,Carey Mulligan
+nm0005109,Mila Kunis
+nm1086543,Amanda Seyfried
+nm0000182,Jennifer Lopez
+nm0000117,Neve Campbell
+nm0000103,Fairuza Balk
+nm0004695,Jessica Alba
+nm0829576,Kristen Stewart
+nm0910278,Julie Walters
+nm1913734,Rooney Mara
+nm0000130,Jamie Lee Curtis
+nm1297015,Emma Stone
+nm0000379,Kirsten Dunst
+nm0001207,José Ferrer
+nm0002024,Broderick Crawford
+nm0172903,Ronald Colman
+nm0545298,Fredric March
+nm0001537,Ray Milland
+nm0001078,Bing Crosby
+nm0510134,Paul Lukas
+nm0232196,Robert Donat
+nm0612847,Paul Muni
+nm0572142,Victor McLaglen
+nm0001452,Charles Laughton
+nm0000891,Wallace Beery
+nm0000859,Lionel Barrymore
+nm0000156,Jeff Goldblum
+nm1165110,Chris Hemsworth
+nm0062828,Warner Baxter
+nm0417837,Emil Jannings
+nm0177933,Chris Cooper
+nm0000980,Jim Broadbent
+nm0000336,James Coburn
+nm0000421,Cuba Gooding Jr.
+nm0001445,Martin Landau
+nm0001588,Jack Palance
+nm0000177,Kevin Kline
+nm0000747,Don Ameche
+nm0000295,Kate Beckinsale
+nm0221046,Zooey Deschanel
+nm0931329,Michelle Williams
+nm0000170,Milla Jovovich
+nm1411125,Selena Gomez
+nm0001838,Rachel Weisz
+nm0068338,Kristen Bell
+nm0001337,Katherine Heigl
+nm0000239,Liv Tyler
+nm1567113,Jessica Chastain
+nm1083271,Megan Fox
+nm0924508,Betty White
+nm0656183,Geraldine Page
+nm0244630,Eliza Dushku
+nm0000705,Robin Wright
+nm1015262,Leighton Meester
+nm0428354,Jennifer Jones
+nm0000073,Shirley Temple
+nm0000506,Julia Louis-Dreyfus
+nm1880888,Olivia Thirlby
+nm0000333,Cher
+nm0000651,Sissy Spacek
+nm0001221,Louise Fletcher
+nm0001046,Julie Christie
+nm0623658,Patricia Neal
+nm0628955,Haing S. Ngor
+nm0001283,Louis Gossett Jr.
+nm0000024,John Gielgud
+nm0000459,Timothy Hutton
+nm0002048,Melvyn Douglas
+nm0001673,Jason Robards
+nm0122675,George Burns
+nm0000288,Christian Bale
+nm0000160,Ethan Hawke
+nm0424565,Ben Johnson
+nm0590055,John Mills
+nm0016776,Jack Albertson
+nm0000576,Sean Penn
+nm0001421,George Kennedy
+nm0000527,Walter Matthau
+nm0000842,Martin Balsam
+nm0001811,Peter Ustinov
+nm0003225,Ed Begley
+nm0001995,George Chakiris
+nm0341518,Hugh Griffith
+nm0412322,Burl Ives
+nm0000999,Red Buttons
+nm0639529,Edmond O'Brien
+nm0695435,Chris Pratt
+nm0000069,Frank Sinatra
+nm0000843,Anne Bancroft
+nm0001571,Kim Novak
+nm0797531,Simone Signoret
+nm0680983,Elliot Page
+nm0001450,Angela Lansbury
+nm0391062,Judy Holliday
+nm0949835,Loretta Young
+nm0429250,Shirley Jones
+nm0267812,Vera Farmiga
+nm0371040,Helen Hayes
+nm0237597,Marie Dressler
+nm0310980,Janet Gaynor
+nm2143282,Lupita Nyong'o
+nm0818055,Octavia Spencer
+nm0502425,Melissa Leo
+nm0594898,Mo'Nique
+nm0559144,Marlee Matlin
+nm0842770,Tilda Swinton
+nm1617685,Jennifer Hudson
+nm0000250,Renée Zellweger
+nm0001315,Marcia Gay Harden
+nm0001593,Anna Paquin
+nm0000673,Marisa Tomei
+nm0001689,Mercedes Ruehl
+nm0002084,Brenda Fricker
+nm0000606,Jean Reno
+nm0001695,George Sanders
+nm0415591,Dean Jagger
+nm0404158,Walter Huston
+nm0350324,Edmund Gwenn
+nm0751174,Harold Russell
+nm0000424,Hugh Grant
+nm0280178,Barry Fitzgerald
+nm0002013,Charles Coburn
+nm0001336,Van Heflin
+nm0187981,Donald Crisp
+nm0593775,Thomas Mitchell
+nm0000974,Walter Brennan
+nm0771584,Joseph Schildkraut
+nm0000206,Keanu Reeves
+nm1475594,Channing Tatum
+nm0413168,Hugh Jackman
+nm0425005,Dwayne Johnson
+nm0001191,Adam Sandler
+nm0705356,Daniel Radcliffe
+nm0185819,Daniel Craig
+nm0147147,Henry Cavill
+nm0004874,Vin Diesel
+nm0000255,Ben Affleck
+nm1517976,Chris Pine
+nm0001156,Olympia Dukakis
+nm0001919,Peggy Ashcroft
+nm0001373,Linda Hunt
+nm0822972,Maureen Stapleton
+nm0005460,Mary Steenburgen
+nm0833152,Beatrice Straight
+nm0000603,Vanessa Redgrave
+nm0335519,Lee Grant
+nm0373012,Eileen Heckart
+nm0001458,Cloris Leachman
+nm0002106,Ruth Gordon
+nm0663820,Estelle Parsons
+nm0006800,Sandy Dennis
+nm0001859,Shelley Winters
+nm0350454,Maggie Gyllenhaal
+nm0005017,Katie Holmes
+nm0001157,Patty Duke
+nm0001549,Rita Moreno
+nm0384908,Wendy Hiller
+nm0880855,Miyoshi Umeki
+nm0540416,Dorothy Malone
+nm0886888,Jo Van Fleet
+nm0001693,Eva Marie Saint
+nm0002108,Gloria Grahame
+nm0001375,Kim Hunter
+nm0002011,Lee J. Cobb
+nm1940449,Andrew Garfield
+nm0001030,John Cazale
+nm0719637,Jeremy Renner
+nm0136797,Steve Carell
+nm0241121,Jean Dujardin
+nm0262635,Chris Evans
+nm0290556,James Franco
+nm0302108,Zach Galifianakis
+nm0002071,Will Ferrell
+nm0479471,Shia LaBeouf
+nm0736622,Seth Rogen
+nm0330687,Joseph Gordon-Levitt
+nm0005351,Ryan Reynolds
+nm0748620,Paul Rudd
+nm0781981,Jason Segel
+nm0005458,Jason Statham
+nm0001813,Dick Van Dyke
+nm0251986,Jesse Eisenberg
+nm0005562,Owen Wilson
+nm0000867,Jason Bateman
+nm1347153,Tyler Perry
+nm2955013,Liam Hemsworth
+nm0000638,William Shatner
+nm0000698,Gene Wilder
+nm0000301,Thora Birch
+nm0872456,Claire Trevor
+nm0002141,Celeste Holm
+nm0000879,Anne Baxter
+nm0001451,Queen Latifah
+nm0000856,Ethel Barrymore
+nm0206257,Rosario Dawson
+nm0942863,Teresa Wright
+nm0000802,Mary Astor
+nm0002034,Jane Darwell
+nm2539953,Alicia Vikander
+nm1985859,Mia Wasikowska
+nm1113550,Abigail Breslin
+nm0814216,Gale Sondergaard
+nm0565250,Melissa McCarthy
+nm0275486,Tina Fey
+nm0757855,Zoe Saldaña
+nm0005253,Elisabeth Moss
+nm1597316,Adrianne Palicki
+nm0004950,Jennifer Garner
+nm1325419,Kristen Wiig
+nm0820053,June Squibb
+nm1020089,Sally Hawkins
+nm0192505,Kaley Cuoco
+nm0915208,Naomi Watts
+nm1500155,Robert Pattinson
+nm0402271,Charlie Hunnam
+nm0396558,Nicholas Hoult
+nm1093951,Aaron Taylor-Johnson
+nm0186505,Bryan Cranston
+nm0124930,Gerard Butler
+nm0908094,Paul Walker
+nm0881631,Karl Urban
+nm0503567,Logan Lerman
+nm2002649,Dave Franco
+nm1089991,Tom Hiddleston
+nm0227759,Peter Dinklage
+nm2018237,Taylor Kitsch
+nm0001570,Edward Norton
+nm0001602,Guy Pearce
+nm0749263,Mark Ruffalo
+nm0000620,Mickey Rourke
+nm0001449,Frank Langella
+nm1519666,Eddie Redmayne
+nm0000657,David Strathairn
+nm0005024,Terrence Howard
+nm0000146,Ralph Fiennes
+nm0929489,Tom Wilkinson
+nm0002070,Richard Farnsworth
+nm0000560,Nick Nolte
+nm1455681,AnnaSophia Robb
+nm2605345,Gemma Arterton
+nm1312575,Olivia Wilde
+nm0279545,Isla Fisher
+nm0940362,Shailene Woodley
+nm2313103,Rebel Wilson
+nm0731075,Emma Roberts
+nm1720028,Amber Heard
+nm1954240,Teresa Palmer
+nm1519680,Saoirse Ronan
+nm0006969,Elizabeth Banks
+nm0526946,Ida Lupino
+nm1754059,Natalie Dormer
+nm0811242,Brittany Snow
+nm0544718,Kate Mara
+nm2584600,Julianne Hough
+nm2934314,Lily Collins
+nm1130627,Cobie Smulders
+nm1404408,Alice Eve
+nm1512166,Jamie Chung
+nm0636426,Noomi Rapace
+nm0515116,Blake Lively
+nm1192254,Maggie Grace
+nm0004754,Jessica Biel
+nm1200692,Eva Green
+nm0001228,Peter Fonda
+nm0000437,Woody Harrelson
+nm0000671,Billy Bob Thornton
+nm0252961,Idris Elba
+nm0001329,Nigel Hawthorne
+nm0000401,Laurence Fishburne
+nm0001653,Stephen Rea
+nm0000886,Warren Beatty
+nm0001321,Richard Harris
+nm0000131,John Cusack
+nm0000110,Kenneth Branagh
+nm0001579,Edward James Olmos
+nm0001884,Max von Sydow
+nm0001136,Bruce Dern
+nm0001364,Bob Hoskins
+nm0000249,James Woods
+nm0370035,John Hawkes
+nm0001258,James Garner
+nm0001832,Sam Waterston
+nm0001371,Tom Hulce
+nm0001215,Albert Finney
+nm0002018,Tom Conti
+nm0183822,Tom Courtenay
+nm0001545,Dudley Moore
+nm0000457,John Hurt
+nm0993507,Kat Dennings
+nm1231899,Priyanka Chopra Jonas
+nm0728938,Emmanuelle Riva
+nm1950086,Greta Gerwig
+nm0488953,Brie Larson
+nm1140300,Jessica Lucas
+nm0266029,Maria Falconetti
+nm0002093,Greer Garson
+nm0751426,Rosalind Russell
+nm0000079,Raquel Welch
+nm0000400,Linda Fiorentino
+nm2829737,Gabourey Sidibe
+nm0001114,Judy Davis
+nm0001201,Mia Farrow
+nm0851582,Audrey Tautou
+nm0603402,Jeanne Moreau
+nm0943837,Jane Wyman
+nm0001687,Gena Rowlands
+nm0544334,Lesley Manville
+nm0647634,Elizabeth Olsen
+nm0000176,Nastassja Kinski
+nm0491259,Mélanie Laurent
+nm0001365,Whitney Houston
+nm0005031,Felicity Huffman
+nm0001767,Imelda Staunton
+nm1209966,Oscar Isaac
+nm1417647,Jon Heder
+nm1886602,Miles Teller
+nm0117709,Daniel Brühl
+nm0001254,James Gandolfini
+nm0430107,Michael B. Jordan
+nm0000578,Anthony Perkins
+nm0000667,David Thewlis
+nm0001428,Klaus Kinski
+nm0000532,Malcolm McDowell
+nm0935653,Ray Winstone
+nm0000901,Jean-Paul Belmondo
+nm0785227,Andy Serkis
+nm0000111,Matthew Broderick
+nm0000454,Dennis Hopper
+nm0740264,Michael Rooker
+nm0001252,Vincent Gallo
+nm0000228,Kevin Spacey
+nm0001993,Vincent Cassel
+nm0799777,J.K. Simmons
+nm0000472,Boris Karloff
+nm0000048,Peter Lorre
+nm0000190,Matthew McConaughey
+nm0175916,Paddy Considine
+nm0000202,Ryan Phillippe
+nm0913488,Kerry Washington
+nm0005251,Carrie-Anne Moss
+nm0001463,Janet Leigh
+nm1503432,Catalina Sandino Moreno
+nm0608090,Samantha Morton
+nm1095720,Keisha Castle-Hughes
+nm0001766,Barbara Stanwyck
+nm0000260,Joan Allen
+nm0005216,Janet McTeer
+nm0005244,Fernanda Montenegro
+nm0000218,Kristin Scott Thomas
+nm0000950,Brenda Blethyn
+nm0000223,Elisabeth Shue
+nm0001669,Miranda Richardson
+nm0000330,Stockard Channing
+nm0707023,Luise Rainer
+nm0001521,Mary McDonnell
+nm0000840,Lucille Ball
+nm0000368,Laura Dern
+nm0172604,Pauline Collins
+nm0000254,Isabelle Adjani
+nm0000429,Melanie Griffith
+nm0000476,Sally Kirkland
+nm0000737,Jane Alexander
+nm0556850,Marsha Mason
+nm0383603,Freddie Highmore
+nm0000150,Michael J. Fox
+nm0000237,John Travolta
+nm0000334,Chow Yun-Fat
+nm0532235,Seth MacFarlane
+nm0001472,Jet Li
+nm0002144,John Houseman
+nm0001569,Chuck Norris
+nm0000241,Jean-Claude Van Damme
+nm0005377,Sam Rockwell
+nm0793766,Takashi Shimura
+nm0001290,Richard E. Grant
+nm0000558,Leslie Nielsen
+nm0670408,Simon Pegg
+nm0000518,John Malkovich
+nm0788335,Michael Shannon
+nm0000640,Martin Sheen
+nm0001302,Christopher Guest
+nm0000614,Alan Rickman
+nm0355097,Jackie Earle Haley
+nm0949574,Gig Young
+nm0000652,James Spader
+nm0051509,Eric Bana
+nm0244151,Romain Duris
+nm0001727,Robert Shaw
+nm0915865,Jacki Weaver
+nm0067367,Bérénice Bejo
+nm2794962,Hailee Steinfeld
+nm0000492,Jennifer Jason Leigh
+nm0000599,Kathleen Quinlan
+nm0378245,Taraji P. Henson
+nm0752407,Amy Ryan
+nm0002039,Ruby Dee
+nm0001049,Jill Clayburgh
+nm0056770,Adriana Barraza
+nm0452860,Rinko Kikuchi
+nm0001416,Catherine Keener
+nm0001648,Charlotte Rampling
+nm0645683,Sophie Okonedo
+nm0165101,Patricia Clarkson
+nm0013037,Shohreh Aghdashloo
+nm0517820,Lindsay Lohan
+nm0005502,Michelle Trachtenberg
+nm0001721,Chloë Sevigny
+nm0001655,Lynn Redgrave
+nm0341737,Rachel Griffiths
+nm3053338,Margot Robbie
+nm0000666,Lili Taylor
+nm0917848,Robin Weigert
+nm1128572,Lake Bell
+nm0001647,Claude Rains
+nm0000114,Steve Buscemi
+nm0722636,John Rhys-Davies
+nm0004462,Jean-Louis Trintignant
+nm0001072,Joseph Cotten
+nm0001608,Barry Pepper
+nm0002233,Erich von Stroheim
+nm0933940,Patrick Wilson
+nm0000502,Christopher Lloyd
+nm0004936,Ben Foster
+nm0566948,Joel McCrea
+nm0158856,Choi Min-sik
+nm0000191,Ewan McGregor
+nm0305558,Gael García Bernal
+nm0004486,Bruno Ganz
+nm0000276,Sean Astin
+nm0451234,Irrfan Khan
+nm0355910,Michael C. Hall
+nm0001702,Roy Scheider
+nm0000729,Casey Affleck
+nm0000997,Gary Busey
+nm0005342,Norman Reedus
+nm0001099,Jeff Daniels
+nm0001804,Stanley Tucci
+nm0000662,Kiefer Sutherland
+nm0000706,Michelle Yeoh
+nm2244205,Léa Seydoux
+nm0424848,Dakota Johnson
+nm0000365,Julie Delpy
+nm0000157,Linda Hamilton
+nm0000402,Carrie Fisher
+nm0000427,Pam Grier
+nm0001951,Björk
+nm0115161,Emily Browning
+nm0000496,Juliette Lewis
+nm0000572,Sarah Jessica Parker
+nm0001453,Piper Laurie
+nm1415323,Miley Cyrus
+nm0005499,Lily Tomlin
+nm0005412,Jane Seymour
+nm0001784,Gloria Stuart
+nm0001735,Talia Shire
+nm2933757,Gal Gadot
+nm0528987,Sue Lyon
+nm0000556,Olivia Newton-John
+nm0000378,Minnie Driver
+nm0000414,Teri Garr
+nm0005392,Keri Russell
+nm0781029,Jean Seberg
+nm0001631,Sarah Polley
+nm0000982,Josh Brolin
+nm0001358,Hal Holbrook
+nm0005023,Djimon Hounsou
+nm0000369,Matt Dillon
+nm0000257,Alan Alda
+nm0002006,Thomas Haden Church
+nm0654110,Clive Owen
+nm0913822,Ken Watanabe
+nm4139037,Suraj Sharma
+nm0000604,John C. Reilly
+nm0003817,Michael Clarke Duncan
+nm0005286,Haley Joel Osment
+nm0001427,Greg Kinnear
+nm0000608,Burt Reynolds
+nm0001233,Robert Forster
+nm0005403,Jason Schwartzman
+nm0000513,William H. Macy
+nm0000090,Armin Mueller-Stahl
+nm0000619,Tim Roth
+nm0000342,James Cromwell
+nm0001590,Chazz Palminteri
+nm0000641,Gary Sinise
+nm0006890,Paul Scofield
+nm0000592,Pete Postlethwaite
+nm0915989,Hugo Weaving
+nm0000586,Jada Pinkett Smith
+nm0001575,Tatum O'Neal
+nm0267506,Anna Faris
+nm0567408,Hattie McDaniel
+nm0000463,Famke Janssen
+nm0683253,Rosamund Pike
+nm0001372,Bonnie Hunt
+nm0005182,Leslie Mann
+nm1411676,Mindy Kaling
+nm0628601,Thandiwe Newton
+nm0688132,Amy Poehler
+nm0001605,Amanda Peet
+nm0005466,Julia Stiles
+nm0004742,Maria Bello
+nm0578949,Eva Mendes
+nm1289434,Emily Blunt
+nm0126284,Rose Byrne
+nm0000171,Ashley Judd
+nm3592338,Emilia Clarke
+nm0000775,Christina Applegate
+nm0000505,Nia Long
+nm0428065,Felicity Jones
+nm0000495,Téa Leoni
+nm1275259,Alexandra Daddario
+nm0540441,Jena Malone
+nm0000152,Richard Gere
+nm0296545,Nick Frost
+nm0000501,Ray Liotta
+nm0001674,Chris Rock
+nm0358316,Jon Hamm
+nm0000439,Neil Patrick Harris
+nm0000221,Charlie Sheen
+nm0753314,Mark Rylance
+nm0000412,Andy Garcia
+nm0503627,Michael Lerner
+nm0001295,Graham Greene
+nm0001117,Bruce Davison
+nm0000101,Dan Aykroyd
+nm0000732,Danny Aiello
+nm0000203,River Phoenix
+nm0001777,Dean Stockwell
+nm0000345,Billy Crystal
+nm0000422,John Goodman
+nm0089217,Orlando Bloom
+nm0001745,Stellan Skarsgård
+nm0002907,Alexander Skarsgård
+nm0000196,Mike Myers
+nm0879085,Tyrese Gibson
+nm0000704,Elijah Wood
+nm0000362,Danny DeVito
+nm0001333,Susan Hayward
+nm0735442,Michelle Rodriguez
+nm0001264,Sarah Michelle Gellar
+nm0644897,Sandra Oh
+nm0452288,Margot Kidder
+nm0461498,Beyoncé
+nm0356017,Rebecca Hall
+nm0005305,Piper Perabo
+nm0001073,Courteney Cox
+nm0000205,Parker Posey
+nm1745736,Paula Patton
+nm1157358,Michelle Monaghan
+nm0000132,Claire Danes
+nm0005049,Allison Janney
+nm0098378,Kate Bosworth
+nm0939697,Evan Rachel Wood
+nm0000227,Mira Sorvino
+nm0955471,Ziyi Zhang
+nm0004789,Amanda Bynes
+nm0001435,Lisa Kudrow
+nm1779870,Brit Marling
+nm7248827,Cynthia Erivo
+nm0005527,Sofía Vergara
+nm0601553,Mandy Moore
+nm0000515,Virginia Madsen
+nm0005188,James Marsden
+nm0000741,Tim Allen
+nm0000610,Giovanni Ribisi
+nm0000442,Rutger Hauer
+nm0000681,Vince Vaughn
+nm0004051,Brian Cox
+nm0000598,Dennis Quaid
+nm0000491,John Leguizamo
+nm0000474,Michael Keaton
+nm0121605,Billy Burke
+nm0322407,Brendan Gleeson
+nm0000314,Charles Bronson
+nm0000596,Jonathan Pryce
+nm0001497,Tobey Maguire
+nm0790688,Michael Sheen
+nm0519043,Justin Long
+nm0085312,Jack Black
+nm0000316,Mel Brooks
+nm0000112,Pierce Brosnan
+nm0000293,Sean Bean
+nm0991810,Mahershala Ali
+nm0241049,Josh Duhamel
+nm0000552,Eddie Murphy
+nm0269463,Jon Favreau
+nm0000418,Danny Glover
+nm2951768,Freida Pinto
+nm0240381,Hilary Duff
+nm0935541,Mary Elizabeth Winstead
+nm0177639,Jennifer Coolidge
+nm2057859,Andrea Riseborough
+nm0000208,Molly Ringwald
+nm0005064,January Jones
+nm0748973,Maya Rudolph
+nm0000521,Sophie Marceau
+nm0004376,Franka Potente
+nm2946516,Claire Foy
+nm0429069,Rashida Jones
+nm0000224,Alicia Silverstone
+nm0001273,Lillian Gish
+nm1431940,Evangeline Lilly
+nm1469236,Olivia Colman
+nm0257969,Mireille Enos
+nm0001349,Jennifer Love Hewitt
+nm0002536,Emmy Rossum
+nm1428821,Joey King
+nm0329481,Ginnifer Goodwin
+nm0852132,Christine Taylor
+nm1227814,Vanessa Hudgens
+nm0180411,Abbie Cornish
+nm6073955,Florence Pugh
+nm0000453,Ian Holm
+nm0001447,Nathan Lane
+nm0000144,Cary Elwes
+nm0001454,Martin Lawrence
+nm0176869,Steve Coogan
+nm0056187,Sacha Baron Cohen
+nm0942482,Jeffrey Wright
+nm0000329,Jackie Chan
+nm0001173,Aaron Eckhart
+nm0941777,Sam Worthington
+nm0202603,Jack Davenport
+nm0000547,Alfred Molina
+nm0000347,Tim Curry
+nm0000434,Mark Hamill
+nm0000409,Brendan Fraser
+nm0001084,Ice Cube
+nm0000630,Liev Schreiber
+nm1159180,Ed Helms
+nm8402992,Daisy Edgar-Jones
+nm4960279,Margaret Qualley
+nm0000174,Val Kilmer
+nm1258970,Russell Brand
+nm0005266,Craig T. Nelson
+nm0005170,Bernie Mac
+nm0001772,Patrick Stewart
+nm0001293,Seth Green
+nm0005110,Ashton Kutcher
+nm0001642,Randy Quaid
+nm0000648,Wesley Snipes
+nm0654648,David Oyelowo
+nm0835016,Mark Strong
+nm0001705,Rob Schneider
+nm0059431,Jay Baruchel
+nm0159789,Hayden Christensen
+nm0829032,Ray Stevenson
+nm0079273,Paul Bettany
+nm0491402,Hugh Laurie
+nm0000676,Chris Tucker
+nm0001006,John Candy
+nm0000277,Richard Attenborough
+nm0000563,Chris O'Donnell
+nm0000973,Benjamin Bratt
+nm0996669,Common
+nm0005541,Marlon Wayans
+nm0000983,Albert Brooks
+nm0666739,Aaron Paul
+nm0000346,Macaulay Culkin
+nm0000385,Sam Elliott
+nm5473782,Taron Egerton
+nm0001029,Jim Caviezel
+nm0000062,Elvis Presley
+nm1706767,Jonah Hill
+nm0437646,Sung Kang
+nm0837177,Jason Sudeikis
+nm0001326,Josh Hartnett
+nm0614165,Cillian Murphy
+nm0001082,Billy Crudup
+nm1107001,Anthony Mackie
+nm0000858,John Barrymore
+nm0648249,Timothy Olyphant
+nm1265802,Josh Gad
+nm0000708,Billy Zane
+nm0005561,Luke Wilson
+nm0765597,Peter Sarsgaard
+nm0406975,Rhys Ifans
+nm0333410,Topher Grace
+nm0366389,Kevin Hart
+nm0200452,Paul Dano
+nm0352778,Bill Hader
+nm0000507,Rob Lowe
+nm0000305,Mel Blanc
+nm0005450,David Spade
+nm0000448,Lance Henriksen
+nm0420955,Richard Jenkins
+nm0000389,Emilio Estevez
+nm1013003,Michael Ealy
+nm0068260,Jamie Bell
+nm1684869,Troy Baker
+nm1104131,Danny McBride
+nm0001667,Jonathan Rhys Meyers
+nm0148418,Michael Cera
+nm0000200,Bill Paxton
+nm0344435,Ioan Gruffudd
+nm0511088,Andrew Lincoln
+nm0000597,Bill Pullman
+nm0732497,Craig Robinson
+nm0206359,Charlie Day
+nm1676221,Andy Samberg
+nm1330560,Garrett Hedlund
+nm1024677,John Krasinski
+nm0001659,Christopher Reeve
+nm0564215,James McAvoy
+nm0001722,Rufus Sewell
+nm3485845,Adam Driver
+nm0000885,Ned Beatty
+nm0000092,John Cleese
+nm0001806,John Turturro
+nm0001471,Jerry Lewis
+nm8958770,Paul Mescal
