@@ -1,18 +1,8 @@
 // app/_layout.tsx
-import { Slot } from "expo-router";
-import { StyleSheet, View } from "react-native";
+//
+import { Stack } from "expo-router";
+import React from "react";
 
-export default function RootLayout() {
-  return (
-    <View style={styles.container}>
-      <Slot /> {/* renders index.tsx or modal.tsx */}
-    </View>
-  );
+export default function Layout() {
+  return <Stack screenOptions={{ headerShown: false }} />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#000000", // global black background
-  },
-});
