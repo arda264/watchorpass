@@ -9,11 +9,11 @@ from collections import Counter, defaultdict # some functions for working with d
 films = pd.read_csv('final_films.csv')
 actors = pd.read_csv('top_1000.csv')
 
-# Retrieve actors' info (c[1]=Const, c[5]=Name) and store it into actor_map dictionary
-# variable Const is an actor's personal ID number, later referred as ID
+# Retrieve actors' info (c[0]=Const, c[1]=Name) and store it into actor_map dictionary
+
 actor_map = {}
 for c in actors.itertuples(index=False):
-    actor_map[c[1]] = c[5]
+    actor_map[c[0]] = c[1]
 
 def parse_cast(cast_str):
     """
