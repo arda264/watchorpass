@@ -146,23 +146,22 @@ liked_actors = []
 disliked_actors = []
 
 print("Respond to the following actors with:")
-print(" y = like, n = dislike, i = don't know / skip\n")
+print(" y = like, n = dislike\n")
 
 # Retrieve 30 actors from shuffled all_actors list. User will swipe on them one by one
 for actor in all_actors[:num_actors_to_show]:
     while True:
-        response = input(f"{actor}? (y/n/i): ").strip().lower()
-        if response in ['y', 'n', 'i']:
+        response = input(f"{actor}? (y/n): ").strip().lower()
+        if response in ['y', 'n']:
             break
         else:
-            print("Please respond with 'y', 'n', or 'i'.")
+            print("Please respond with 'y', 'n'.")
 
     # The liked actors will be added to the liked_actors and the disliked actors will be added to disliked_actors
     if response == 'y':
         liked_actors.append(actor)
     elif response == 'n':
         disliked_actors.append(actor)
-    # 'i' means we do nothing
 
 print("\nYou've finished rating actors.")
 print(f"Liked actors ({len(liked_actors)}): {', '.join(liked_actors)}")
