@@ -1,23 +1,24 @@
 import numpy as np
-import pandas as pd # Manipulate data tables
-from sentence_transformers import SentenceTransformer # Creating text embeddings
-from sklearn.metrics.pairwise import cosine_similarity # Measuring the similarity of the embeddings
-import ast # Converting string representations of Python lists or dictionaries into real Python lists or dictionaries to safely evaluate them
-from collections import Counter, defaultdict # some functions for working with dictionaries
+import pandas as pd  # Manipulate data tables
+from sentence_transformers import SentenceTransformer  # Creating text embeddings
+from sklearn.metrics.pairwise import cosine_similarity  # Measuring the similarity of the embeddings
+import ast  # Converting string representations of Python lists or dictionaries into real Python lists or dictionaries to safely evaluate them
+from collections import Counter, defaultdict  # Some functions for working with dictionaries
+import random
 
 # Read actor and films databases
 films = pd.read_csv('final_films.csv')
 actors = pd.read_csv('top_1000.csv')
 
 # Retrieve actors' info (c[0]=Const, c[1]=Name) and store it into actor_map dictionary
-
 actor_map = {}
 for c in actors.itertuples(index=False):
     actor_map[c[0]] = c[1]
 
+
 def parse_cast(cast_str):
     """
-    Convert actor ID's from strings into Python lists
+    Converts actor ID's from strings into Python lists
     param cast_str: a string that consists of 1 or multiple IDs (actor's personal ID numbers)
     return: actor's name
     """
@@ -29,7 +30,8 @@ def parse_cast(cast_str):
 
 # Creates Actor_Names column in the film table with readable actor names (instead of IDs) for the cast
 films['Actor_Names'] = films['Cast'].apply(parse_cast)
-films.columns = films.columns.str.strip() # removing empty spaces in columns' names just in case for easier access
+films.columns = films.columns.str.strip()  # remove empty spaces in columns' names for easier access
+
 
 def create_movie_text(row):
     """
@@ -43,56 +45,56 @@ def create_movie_text(row):
     return f"Genres: {genres}. Director: {director}. Actors: {actors}."
 
 # Creates Description column in film table with str information about each film
-films['Description'] = films.apply(create_movie_text, axis=1) # specifying axis to address rows of the table
+films['description'] = films.apply(create_movie_text, axis=1)  # specifying axis to address rows of the table
 
 # Generate vectors from movies' descriptions using a pretrained model and store them in embeddings
 model = SentenceTransformer('all-MiniLM-L6-v2')
-embeddings = model.encode(films['Description'].tolist(), show_progress_bar=True) # providing text descriptions
+embeddings = model.encode(films['description'].tolist(), show_progress_bar=True)
 embeddings = np.array(embeddings)
 
-# Initializing dictionaries for mapping actors to directors and genres
-actor_to_directors = defaultdict(set) # a set to avoid repeating directors
-actor_to_genres = defaultdict(list) # a list so that the same genre could appear twice
+# Initialize dictionaries for mapping actors to directors and genres
+actor_to_directors = defaultdict(set)  # a set to avoid repeating directors
+actor_to_genres = defaultdict(list)  # a list so that the same genre could appear twice
 
-# Mapping actors to directors and genres
+# Map actors to directors and genres
 for j, row in films.iterrows():
     for actor in row['Actor_Names']:
         if isinstance(row['Director'], str):
-            for d in [director.strip() for director in row['Director'].split(",") if director.strip()]: # some movies have more than 1 director
+            for d in [director.strip() for director in row['Director'].split(",") if director.strip()]:  # some movies have more than 1 director
                 actor_to_directors[actor].add(d)
         if isinstance(row['Genres'], str):
             for g in [genre.strip() for genre in row['Genres'].split(",") if genre.strip()]:
                 actor_to_genres[actor].append(g)
 
-# Updated recommendation function
+
 def recommend_movies(liked_actors, disliked_actors, weights, top_k=10):
     """
-    param liked_actors, disliked_actors: lists of actor names
-    weights: a dictionary of weights for each recommendation parameter
-    param top_k: a number of movies to recommend
-    return: a Pandas DataFrame containing the info on recommended movies (Title, Genres, Similarity_Score)
+    param liked_actors, disliked_actors: list of actor names the user likes or dislikes
+    weights: dictionary of weights for each category
+    param top_k: number of top recommendations to return
+
     """
     # Create 2 text queries from actor names
-    liked_actor_text = ", ".join(liked_actors) if liked_actors else ""
-    disliked_actor_text = ", ".join(disliked_actors) if disliked_actors else ""
+    like_actor_text = ", ".join(liked_actors) if liked_actors else ""
+    dislike_actor_text = ", ".join(disliked_actors) if disliked_actors else ""
 
     # Encode the actors related queries
-    liked_actors_vec = model.encode([f"Movies featuring actors like {liked_actor_text}."]) \
-        if liked_actor_text else np.zeros((1, embeddings.shape[1]))
-    disliked_actors_vec = model.encode([f"Movies featuring actors like {disliked_actor_text}."]) \
-        if disliked_actor_text else np.zeros((1, embeddings.shape[1]))
+    like_actors_vec = model.encode([f"Movies featuring actors like {like_actor_text}."]) \
+        if like_actor_text else np.zeros((1, embeddings.shape[1]))
+    dislike_actors_vec = model.encode([f"Movies featuring actors like {dislike_actor_text}."]) \
+        if dislike_actor_text else np.zeros((1, embeddings.shape[1]))
 
-    # Get directors that have worked with the actor user likes
+    # Get directors that have worked with the actor the user likes
     bonus_directors = set()
     for actor in liked_actors:
         bonus_directors.update(actor_to_directors.get(actor, []))
 
-    # Get genres related to actors (with counting!) and create a distribution
+    # Get genres related to actors (with counting) and create a distribution
     genre_counter = Counter()
     for act in liked_actors:
         genre_counter.update(actor_to_genres.get(act, []))
-    total_genres = sum(genre_counter.values()) or 1 # avoid division by 0 if no liked_actors input or they are not in the actors_to_genres dict
-    genre_distribution = {genre: count / total_genres for genre, count in genre_counter.items()} # distribution of genre related preferences based on liked actors' film history
+    total_genres = sum(genre_counter.values()) or 1  # avoid division by 0 if no liked_actors input or they are not in the actors_to_genres dict
+    genre_distribution = {genre: count / total_genres for genre, count in genre_counter.items()}  # distribution of genre related preferences based on liked actors' film history
 
     directors_text = ", ".join(bonus_directors)
     genres_text = ", ".join(genre_distribution.keys())
@@ -105,8 +107,8 @@ def recommend_movies(liked_actors, disliked_actors, weights, top_k=10):
 
     # Combine preference vectors into one single vector
     preference_vec = (
-        weights["liked_actors"] * liked_actors_vec
-        - weights["disliked_actors"] * disliked_actors_vec
+        weights["liked_actors"] * like_actors_vec
+        - weights["disliked_actors"] * dislike_actors_vec
         + weights["directors"] * directors_vec
         + weights["genres"] * genres_vec
     )
@@ -115,11 +117,11 @@ def recommend_movies(liked_actors, disliked_actors, weights, top_k=10):
     similarity_scores = cosine_similarity(preference_vec, embeddings)[0]
 
     # Add small score bonuses for directors and genres
-    bonus_scores = np.zeros_like(similarity_scores) # zero vector, same size as similarity_scores vector
+    bonus_scores = np.zeros_like(similarity_scores)  # zero vector, same size as similarity_scores vector
     for i, row in films.iterrows():
         if isinstance(row['Genres'], str):
             for g in [x.strip() for x in row['Genres'].split(",") if x.strip()]:
-                bonus_scores[i] += genre_distribution.get(g, 0) # bonus equals to the distribution value of the genre
+                bonus_scores[i] += genre_distribution.get(g, 0)  # bonus equals to the distribution value of the genre
         if row['Director'] in bonus_directors:
             bonus_scores[i] += 0.1  # small director bonus
 
@@ -135,14 +137,36 @@ def recommend_movies(liked_actors, disliked_actors, weights, top_k=10):
     recommendations['Similarity_Score'] = similar_scores
     return recommendations
 
-
-
 # Testing
-print("Enter up to 5 ACTORS you LIKE (comma-separated):")
-liked_actors = [a.strip() for a in input("Actors you like: ").split(",") if a.strip()]
+num_actors_to_show = 30
+all_actors = list(actor_map.values())
+random.shuffle(all_actors)
 
-print("\nEnter up to 5 ACTORS you DISLIKE (comma-separated):")
-disliked_actors = [a.strip() for a in input("Actors you dislike: ").split(",") if a.strip()]
+liked_actors = []
+disliked_actors = []
+
+print("Respond to the following actors with:")
+print(" y = like, n = dislike, i = don't know / skip\n")
+
+# Retrieve 30 actors from shuffled all_actors list. User will swipe on them one by one
+for actor in all_actors[:num_actors_to_show]:
+    while True:
+        response = input(f"{actor}? (y/n/i): ").strip().lower()
+        if response in ['y', 'n', 'i']:
+            break
+        else:
+            print("Please respond with 'y', 'n', or 'i'.")
+
+    # The liked actors will be added to the liked_actors and the disliked actors will be added to disliked_actors
+    if response == 'y':
+        liked_actors.append(actor)
+    elif response == 'n':
+        disliked_actors.append(actor)
+    # 'i' means we do nothing
+
+print("\nYou've finished rating actors.")
+print(f"Liked actors ({len(liked_actors)}): {', '.join(liked_actors)}")
+print(f"Disliked actors ({len(disliked_actors)}): {', '.join(disliked_actors)}")
 
 # Weights values
 weights = {
