@@ -15,6 +15,12 @@ actor_map = {}
 for c in actors.itertuples(index=False):
     actor_map[c[0]] = c[1]
 
+# Creates a list all_actors with shuffled actor names
+all_actors = list(actor_map.values())
+random.shuffle(all_actors)
+
+# Testing
+num_actors_to_show = 30
 
 def parse_cast(cast_str):
     """
@@ -65,6 +71,16 @@ for j, row in films.iterrows():
         if isinstance(row['Genres'], str):
             for g in [genre.strip() for genre in row['Genres'].split(",") if genre.strip()]:
                 actor_to_genres[actor].append(g)
+
+def get_actor(num_actor):
+    """
+    Retrieve an actor's name from the shuffled list of all actors.
+
+    param num_actor : an integer index position of the desired actor within the shuffled 'all_actors' list.
+
+    return : a string with the name of the actor corresponding to the given index.
+    """
+    return all_actors[num_actor]
 
 
 def recommend_movies(liked_actors, disliked_actors, weights, top_k=10):
@@ -137,31 +153,30 @@ def recommend_movies(liked_actors, disliked_actors, weights, top_k=10):
     recommendations['Similarity_Score'] = similar_scores
     return recommendations
 
-# Testing
-num_actors_to_show = 30
-all_actors = list(actor_map.values())
-random.shuffle(all_actors)
-
 liked_actors = []
 disliked_actors = []
 
 print("Respond to the following actors with:")
-print(" y = like, n = dislike\n")
+print(" y = like or n = dislike\n")
 
-# Retrieve 30 actors from shuffled all_actors list. User will swipe on them one by one
-for actor in all_actors[:num_actors_to_show]:
+# Retrieve num_actors_to_show(int) actors from shuffled all_actors list
+# User will swipe on them one by one
+for i in range(num_actors_to_show) :
+    actor = get_actor(i)
+
     while True:
         response = input(f"{actor}? (y/n): ").strip().lower()
         if response in ['y', 'n']:
             break
         else:
-            print("Please respond with 'y', 'n'.")
+            print("Please respond with 'y' or 'n'")
 
     # The liked actors will be added to the liked_actors and the disliked actors will be added to disliked_actors
     if response == 'y':
         liked_actors.append(actor)
     elif response == 'n':
         disliked_actors.append(actor)
+
 
 print("\nYou've finished rating actors.")
 print(f"Liked actors ({len(liked_actors)}): {', '.join(liked_actors)}")
@@ -176,10 +191,33 @@ weights = {
     "bonus_genre_director": 0.5  # how much the extra bonuses affect score
 }
 
+def bias_correction(disliked_actors, drop_fraction=0.5):
+    """
+    Randomly ignores a fraction of disliked actors to reduce bias from unknown actors.
+    Returns a filtered list of disliked actors that will actually affect recommendations.
+
+    param disliked_actors: list of actors the user disliked
+    param drop_fraction: fraction of disliked actors to ignore
+    return: filtered list of disliked actors
+    """
+    if not disliked_actors:
+        return disliked_actors  # nothing to do
+
+    num_to_drop = int(len(disliked_actors) * drop_fraction)
+    # Randomly choose actors to ignore
+    ignored = set(random.sample(disliked_actors, num_to_drop))
+    corrected_list = []
+    for actor in disliked_actors:
+        if actor not in ignored:
+            corrected_list.append(actor)
+
+    print(f"\nBias correction applied: Ignoring {num_to_drop} disliked actors -> {', '.join(ignored)}")
+    return corrected_list
+
+# Apply bias correction to disliked actors
+disliked_actors = bias_correction(disliked_actors, drop_fraction=0.2)
+
 # Generate recommendations
-if not (liked_actors or disliked_actors):
-    print("Please enter at least one preference to generate recommendations.")
-else:
-    recs = recommend_movies(liked_actors, disliked_actors, weights, top_k=15)
-    print("\nRecommended Movies Based on Weighted Preferences and Bonuses:\n")
-    print(recs.to_string(index=False))
+recs = recommend_movies(liked_actors, disliked_actors, weights, top_k=15)
+print("\nRecommended Movies Based on Weighted Preferences and Bonuses:\n")
+print(recs.to_string(index=False))
