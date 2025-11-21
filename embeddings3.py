@@ -83,7 +83,7 @@ def get_actor(num_actor):
     return all_actors[num_actor]
 
 
-def recommend_movies(liked_actors, disliked_actors, weights, top_k=10):
+def recommend_movies(liked_actors, disliked_actors, weights, top_k):
     """
     param liked_actors, disliked_actors: list of actor names the user likes or dislikes
     weights: dictionary of weights for each category
@@ -146,11 +146,9 @@ def recommend_movies(liked_actors, disliked_actors, weights, top_k=10):
 
     # Compute final scores and gets top k similar movies
     similar_indices = np.argsort(final_scores)[::-1][:top_k]
-    similar_scores = final_scores[similar_indices]
 
     # Give the final recommendation
-    recommendations = films.iloc[similar_indices][['Title', 'Genres']].copy()
-    recommendations['Similarity_Score'] = similar_scores
+    recommendations = films.iloc[similar_indices][['Title']].copy()
     return recommendations
 
 liked_actors = []
@@ -218,6 +216,6 @@ def bias_correction(disliked_actors, drop_fraction=0.5):
 disliked_actors = bias_correction(disliked_actors, drop_fraction=0.2)
 
 # Generate recommendations
-recs = recommend_movies(liked_actors, disliked_actors, weights, top_k=15)
+recs = recommend_movies(liked_actors, disliked_actors, weights, top_k=4)
 print("\nRecommended Movies Based on Weighted Preferences and Bonuses:\n")
 print(recs.to_string(index=False))
