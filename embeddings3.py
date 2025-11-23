@@ -38,7 +38,6 @@ def parse_cast(cast_str):
 films['Actor_Names'] = films['Cast'].apply(parse_cast)
 films.columns = films.columns.str.strip()  # remove empty spaces in columns' names for easier access
 
-
 def create_movie_text(row):
     """
     Combine metadata into one descriptive text field
@@ -58,19 +57,29 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 embeddings = model.encode(films['description'].tolist(), show_progress_bar=True)
 embeddings = np.array(embeddings)
 
-# Initialize dictionaries for mapping actors to directors and genres
-actor_to_directors = defaultdict(set)  # a set to avoid repeating directors
-actor_to_genres = defaultdict(list)  # a list so that the same genre could appear twice
+def build_actor_mapping(database):
+    """
+    Build mappings from actor names to directors and genres
+    :param database: main movie dataset
+    :return: 2 dictionaries: actor_to_directors and actor_to_genres
+    """
+    # Initialize dictionaries for mapping actors to directors and genres
+    actor_to_directors = defaultdict(set)  # a set to avoid repeating directors
+    actor_to_genres = defaultdict(list)  # a list so that the same genre could appear twice
 
-# Map actors to directors and genres
-for j, row in films.iterrows():
-    for actor in row['Actor_Names']:
-        if isinstance(row['Director'], str):
-            for d in [director.strip() for director in row['Director'].split(",") if director.strip()]:  # some movies have more than 1 director
-                actor_to_directors[actor].add(d)
-        if isinstance(row['Genres'], str):
-            for g in [genre.strip() for genre in row['Genres'].split(",") if genre.strip()]:
-                actor_to_genres[actor].append(g)
+    # Map actors to directors and genres
+    for j, row in database.iterrows():
+        for actor in row['Actor_Names']:
+            if isinstance(row['Director'], str):
+                for d in [director.strip() for director in row['Director'].split(",") if director.strip()]:  # some movies have more than 1 director
+                    actor_to_directors[actor].add(d)
+            if isinstance(row['Genres'], str):
+                for g in [genre.strip() for genre in row['Genres'].split(",") if genre.strip()]:
+                    actor_to_genres[actor].append(g)
+
+    return actor_to_directors, actor_to_genres
+
+actor_to_directors, actor_to_genres = build_actor_mapping(films)
 
 def get_actor(num_actor):
     """

@@ -7,8 +7,7 @@ parse_cast(), create_movie_text(), get_actor(), mapping actors to directors and 
 import pytest
 import embeddings3
 import pandas as pd
-import importlib
-from embeddings3 import parse_cast, create_movie_text, get_actor, actor_to_directors, actor_to_genres
+from embeddings3 import parse_cast, create_movie_text, get_actor, build_actor_mapping
 
 
 def test_parse_cast_valid_input(monkeypatch):
@@ -71,7 +70,7 @@ def test_parse_cast_unknown_id(monkeypatch):
     # Expected output
     assert result == ["Heath Ledger", "Christian Bale"]
 
-def test_create_movie_text(monkeypatch):
+def test_create_movie_text():
     """
     Test scenario: a row contains all relevant data in a valid format
     Should return a text field with info on actors, genres and a director
@@ -82,13 +81,13 @@ def test_create_movie_text(monkeypatch):
         "Director": "Nolan",
         "Actor_Names": ["Christian Bale", "Gary Oldman"]
     }
-    monkeypatch.setattr(embeddings3, "row", mock_row)
+
     result = create_movie_text(mock_row)
 
     # Expected result
     assert result == "Genres: Action, Crime, Drama. Director: Nolan. Actors: Christian Bale, Gary Oldman."
 
-def test_create_movie_text_invalid(monkeypatch):
+def test_create_movie_text_invalid():
     """
     Test scenario: a row doesn't contain any information on directors and data on genres is not a string
     Should return a text field with info only on actors
@@ -99,7 +98,7 @@ def test_create_movie_text_invalid(monkeypatch):
         "Director": "",
         "Actor_Names": ["Christian Bale", "Gary Oldman"]
     }
-    monkeypatch.setattr(embeddings3, "row", mock_row)
+
     result = create_movie_text(mock_row)
 
     # Expected result
@@ -134,25 +133,22 @@ def test_get_actor_index_error(monkeypatch):
         get_actor(mock_num_actor)
 
 
-def test_mapping(monkeypatch):
-    # TODO
+def test_mapping():
     """
     Test scenario: mapping actors to films and genres based on a valid  films dataset
     Should return correct dictionaries
     """
-    pass
-#    mock_films = pd.DataFrame({
-#        "Actor_Names": [["A"], ["A", "B"]],
-#        "Director": ["Dir1", "Dir2"],
-#        "Genres": ["Action", "Comedy"]
-#    })
+    mock_films = pd.DataFrame({
+        "Actor_Names": [["Uma Thurman"], ["Uma Thurman", "Meryl Streep"]],
+        "Director": ["Dir1", "Dir2"],
+        "Genres": ["Action", "Comedy"]
+    })
 
-#    monkeypatch.setattr(embeddings3, "films", mock_films)
-#    importlib.reload(embeddings3)
+    mock_actor_to_directors, mock_actor_to_genres = build_actor_mapping(mock_films)
 
-#    assert embeddings3.actor_to_directors["A"] == {"Dir1", "Dir2"}
-#    assert set(embeddings3.actor_to_genres["A"]) == {"Action", "Comedy"}
-#    assert embeddings3.actor_to_directors["B"] == {"Dir2"}
+    assert mock_actor_to_directors["Uma Thurman"] == {"Dir1", "Dir2"}
+    assert set(mock_actor_to_genres["Uma Thurman"]) == {"Action", "Comedy"}
+    assert mock_actor_to_directors["Meryl Streep"] == {"Dir2"}
 
 
 
