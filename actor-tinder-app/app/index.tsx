@@ -5,72 +5,140 @@ import { Button, Dimensions, Image, ScrollView, StyleSheet, Text, View } from "r
 import Swiper from "react-native-deck-swiper";
 
 const { width, height } = Dimensions.get("window");
-const API_URL = "http://YOUR_PC_IP:8000"; // replace with your backend IP
+const API = "http://145.118.239.11:8000"; // replace with your backend IP
 
 interface Actor {
   name: string;
   image?: string;
 }
 
+interface Recommendation {
+  title: string;
+  Genres: string;
+  Score: number;
+}
+
 export default function Home() {
-  const [actors, setActors] = useState<Actor[]>([
-    { name: "Tom Hanks" },
-    { name: "Scarlett Johansson" },
-    { name: "Denzel Washington" },
-    { name: "Natalie Portman" },
-    { name: "Tilda Swinton" },
-  ]);
+  const [actors, setActors] = useState<Actor[]>([]);
+  const [liked, setLiked] = useState<string[]>([]);
+  const [disliked, setDisliked] = useState<string[]>([]);
+  const [recommendations, setRecommendations] = useState<Recommendation[] | null>(null);
+  const [topMoviePoster, setTopMoviePoster] = useState<string | undefined>(undefined);
 
-  const [recommendation, setRecommendation] = useState<{ title: string; poster: string; description: string } | null>(null);
-
-  // Fetch images from Wikimedia
-  useEffect(() => {
-    async function fetchImages() {
-      const updatedActors = await Promise.all(
-        actors.map(async (actor) => {
-          try {
-            const url = `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(
-              actor.name
-            )}&prop=pageimages&format=json&pithumbsize=500&origin=*`;
-            const response = await axios.get(url);
-            const page = Object.values(response.data.query.pages)[0] as any;
-            const image = page.thumbnail ? page.thumbnail.source : undefined;
-            return { ...actor, image };
-          } catch {
-            return actor;
-          }
-        })
-      );
-      setActors(updatedActors);
+  // Fetch 30 actors from backend
+  async function fetchBatchActors() {
+    const batch: Actor[] = [];
+    for (let i = 0; i < 30; i++) {
+      const res = await axios.get(`${API}/actor`);
+      batch.push({ name: res.data.name });
     }
 
-    fetchImages();
+    //Fetch actor images from Wikipedia
+    const actorsWithImages = await Promise.all(
+      batch.map(async (actor) => {
+        try {
+          const url = `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(
+            actor.name
+          )}&prop=pageimages&format=json&pithumbsize=500&origin=*`;
+          const response = await axios.get(url);
+          const page = Object.values(response.data.query.pages)[0] as any;
+          const image = page.thumbnail ? page.thumbnail.source : undefined;
+          return { ...actor, image };
+        } catch {
+          return actor;
+        }
+      })
+    );
+
+    setActors(actorsWithImages);
+  }
+
+  useEffect(() => {
+    fetchBatchActors();
   }, []);
 
+  // Handle swipes
   const onSwipeRight = (index: number) => {
-    console.log("Liked:", actors[index].name);
+    setLiked((prev) => [...prev, actors[index].name]);
   };
 
   const onSwipeLeft = (index: number) => {
-    console.log("Disliked:", actors[index].name);
+    setDisliked((prev) => [...prev, actors[index].name]);
   };
 
-  const onSwipesComplete = () => {
-    setRecommendation({
-      title: "Buckaroo Banzai",
-      poster: "https://upload.wikimedia.org/wikipedia/en/b/ba/Adventures_of_buckaroo_banzai.jpg",
-      description: "The Adventures of Buckaroo Banzai Across the 8th Dimension stands as one of the greatest cult films ever made because it defies every genre convention with gleeful confidence. Blending sci-fi, comedy, adventure, and rockn roll, it creates a world so bizarre yet sincere that it feels both absurd and brilliant. Peter Wellers Buckaroo — a neurosurgeon, physicist, and rock star — embodies pure 1980s cool, while the films deadpan humor and wild imagination make it endlessly rewatchable. Its not just a movie; its a celebration of creative chaos and the timeless truth: No matter where you go, there you are. Also, Ian's favorite movie.",
-    });
+  // When swiping ends → recommend movies + fetch poster
+  const onSwipesComplete = async () => {
+    const payload = {
+      liked_actors: liked,
+      disliked_actors: disliked,
+    };
+
+    try {
+      const res = await axios.post(`${API}/recommend`, payload);
+
+      //Map backend response to Recommendation[]
+      const recs: Recommendation[] = res.data.recommendations.map((movie: any) => ({
+        title: movie.Title,
+        Genres: movie.Genres || "",
+        Score: movie.Score || 0,
+      }));
+
+      setRecommendations(recs);
+
+      //Fetch poster for top movie immediately
+      if (recs.length > 0) {
+        const topMovie = recs[0];
+        try {
+          const url = `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(
+            topMovie.title + " (film)"
+          )}&prop=pageimages&format=json&pithumbsize=500&origin=*`;
+          const response = await axios.get(url);
+          const page = Object.values(response.data.query.pages)[0] as any;
+          if (page.thumbnail) setTopMoviePoster(page.thumbnail.source);
+        } catch (err) {
+          console.warn("Could not fetch top movie poster:", err);
+        }
+      }
+
+    } catch (err) {
+      console.error("Failed to fetch recommendations:", err);
+    }
   };
 
-  if (recommendation) {
+  //Recommendation screen
+  if (recommendations && recommendations.length > 0) {
+    const topMovie = recommendations[0];
+
     return (
       <ScrollView contentContainerStyle={styles.container}>
-        <Image source={{ uri: recommendation.poster }} style={styles.poster} />
-        <Text style={styles.title}>{recommendation.title}</Text>
-        <Text style={styles.description}>{recommendation.description}</Text>
-        <Button title="Back to Swipe" onPress={() => setRecommendation(null)} />
+        <Text style={styles.title}>Top Recommended Movie</Text>
+
+        {topMoviePoster && <Image source={{ uri: topMoviePoster }} style={styles.poster} />}
+        <Text style={styles.movieTitle}>{topMovie.title}</Text>
+        <Text style={styles.movieInfo}>{topMovie.Genres}</Text>
+        <Text style={styles.movieInfo}>Score: {topMovie.Score.toFixed(3)}</Text>
+
+        <Button
+          title="Swipe Again"
+          onPress={() => {
+            setRecommendations(null);
+            setLiked([]);
+            setDisliked([]);
+            setActors([]);
+            setTopMoviePoster(undefined);
+            fetchBatchActors();
+          }}
+        />
       </ScrollView>
+    );
+  }
+
+  //Loading screen while actor images are fetched
+  if (actors.length === 0) {
+    return (
+      <View style={styles.container}>
+        <Text style={{ color: "white" }}>Loading actors...</Text>
+      </View>
     );
   }
 
@@ -95,34 +163,29 @@ export default function Home() {
   );
 }
 
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#000",
     justifyContent: "center",
     alignItems: "center",
-
   },
   card: {
-  width: "100%",
-  height: "100%",
-  justifyContent: "center",
-  alignItems: "center",
-  backgroundColor: "#000",
-  alignSelf: "center",
-
+    width: "100%",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#000",
   },
-
   image: {
-  width: "90%",
-  height: "70%",
-  borderRadius: 24,
-  resizeMode: "cover",
-  alignSelf: "center",
-  marginBottom: 40,
-
-},
-
+    width: "90%",
+    height: "70%",
+    borderRadius: 24,
+    resizeMode: "cover",
+    alignSelf: "center",
+    marginBottom: 40,
+  },
   name: {
     position: "absolute",
     bottom: 100,
@@ -130,23 +193,26 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "#fff",
   },
+  title: {
+    fontSize: 28,
+    color: "white",
+    marginBottom: 20,
+    fontWeight: "bold",
+  },
   poster: {
     width: 250,
     height: 350,
     borderRadius: 12,
     marginBottom: 20,
   },
-  title: {
-    fontSize: 24,
+  movieTitle: {
+    fontSize: 20,
+    color: "white",
     fontWeight: "bold",
-    marginBottom: 10,
     textAlign: "center",
-    color: "#fff",
   },
-  description: {
-    fontSize: 16,
+  movieInfo: {
+    color: "#ccc",
     textAlign: "center",
-    marginBottom: 20,
-    color: "#fff",
   },
 });
