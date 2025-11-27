@@ -24,7 +24,7 @@ def test_parse_cast_valid_input(monkeypatch):
     # Cast IDs we want to process
     mock_cast_str = "[103,101,102]"
     # Temporarily placing our mock dictionary on the place of a real actors dic
-    monkeypatch.setattr(embeddings3, "actor_map", mock_actor_map)
+    monkeypatch.setattr("embeddings3.actor_map", mock_actor_map)
     # Applying the function we want to test
     result = parse_cast(mock_cast_str)
 
@@ -42,7 +42,7 @@ def test_parse_cast_invalid_input(monkeypatch):
     # Invalid string we want to process
     mock_cast_str = "The cast consists of 101 and 102"
     # Temporarily placing our mock dictionary on the place of a real actors dic
-    monkeypatch.setattr(embeddings3, "actor_map", mock_actor_map)
+    monkeypatch.setattr("embeddings3.actor_map", mock_actor_map)
     # Applying the function we want to test
     result = parse_cast(mock_cast_str)
 
@@ -63,7 +63,7 @@ def test_parse_cast_unknown_id(monkeypatch):
     # Cast IDs we want to process, ID 999 and 111 are imposters
     mock_cast_str = "[103,999,102,111]"
     # Temporarily placing our mock dictionary on the place of a real actors dic
-    monkeypatch.setattr(embeddings3, "actor_map", mock_actor_map)
+    monkeypatch.setattr("embeddings3.actor_map", mock_actor_map)
     # Applying the function we want to test
     result = parse_cast(mock_cast_str)
 
@@ -112,7 +112,7 @@ def test_get_actor(monkeypatch):
     # Creating a temporary list of actors
     mock_all_actors = ["Ellen Burstyn", "Jared Leto", "Jennifer Connelly"]
     mock_num_actor = 2
-    monkeypatch.setattr(embeddings3, "all_actors", mock_all_actors)
+    monkeypatch.setattr("embeddings3.all_actors", mock_all_actors)
     result = get_actor(mock_num_actor)
 
     # Expected result
@@ -126,7 +126,7 @@ def test_get_actor_index_error(monkeypatch):
     # Creating a temporary list of actors with max index == 2
     mock_all_actors = ["Ellen Burstyn", "Jared Leto", "Jennifer Connelly"]
     mock_num_actor = 3
-    monkeypatch.setattr(embeddings3, "all_actors", mock_all_actors)
+    monkeypatch.setattr("embeddings3.all_actors", mock_all_actors)
 
     # If the exception is raised the test is passed
     with pytest.raises(IndexError):
