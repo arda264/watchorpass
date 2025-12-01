@@ -11,9 +11,7 @@ films = pd.read_csv('final_films.csv')
 actors = pd.read_csv('top_1000.csv')
 
 # Retrieve actors' info (c[0]=Const, c[1]=Name) and store it into actor_map dictionary
-actor_map = {}
-for c in actors.itertuples(index=False):
-    actor_map[c[0]] = c[1]
+actor_map = {c[0]: c[1] for c in actors.itertuples(index=False)}
 
 # Creates a list all_actors with shuffled actor names
 all_actors = list(actor_map.values())
@@ -38,6 +36,7 @@ def parse_cast(cast_str):
 films['Actor_Names'] = films['Cast'].apply(parse_cast)
 films.columns = films.columns.str.strip()  # remove empty spaces in columns' names for easier access
 
+
 def create_movie_text(row):
     """
     Combine metadata into one descriptive text field
@@ -57,31 +56,21 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 embeddings = model.encode(films['description'].tolist(), show_progress_bar=True)
 embeddings = np.array(embeddings)
 
-def build_actor_mapping(database):
-    """
-    Build mappings from actor names to directors and genres
-    :param database: main movie dataset
-    :return: 2 dictionaries: actor_to_directors and actor_to_genres
-    """
-    # Initialize dictionaries for mapping actors to directors and genres
-    actor_to_directors = defaultdict(set)  # a set to avoid repeating directors
-    actor_to_genres = defaultdict(list)  # a list so that the same genre could appear twice
+# Initialize dictionaries for mapping actors to directors and genres
+actor_to_directors = defaultdict(set)  # a set to avoid repeating directors
+actor_to_genres = defaultdict(list)  # a list so that the same genre could appear twice
 
-    # Map actors to directors and genres
-    for j, row in database.iterrows():
-        for actor in row['Actor_Names']:
-            if isinstance(row['Director'], str):
-                for d in [director.strip() for director in row['Director'].split(",") if director.strip()]:  # some movies have more than 1 director
-                    actor_to_directors[actor].add(d)
-            if isinstance(row['Genres'], str):
-                for g in [genre.strip() for genre in row['Genres'].split(",") if genre.strip()]:
-                    actor_to_genres[actor].append(g)
+# Map actors to directors and genres
+for j, row in films.iterrows():
+    for actor in row['Actor_Names']:
+        if isinstance(row['Director'], str):
+            for d in [director.strip() for director in row['Director'].split(",") if director.strip()]:  # some movies have more than 1 director
+                actor_to_directors[actor].add(d)
+        if isinstance(row['Genres'], str):
+            for g in [genre.strip() for genre in row['Genres'].split(",") if genre.strip()]:
+                actor_to_genres[actor].append(g)
 
-    return actor_to_directors, actor_to_genres
-
-actor_to_directors, actor_to_genres = build_actor_mapping(films)
-
-def get_actor(num_actor):
+def get_actor():
     """
     Retrieve an actor's name from the shuffled list of all actors.
 
@@ -89,7 +78,7 @@ def get_actor(num_actor):
 
     return : a string with the name of the actor corresponding to the given index.
     """
-    return all_actors[num_actor]
+    return all_actors[random.randint(0, len(all_actors) - 1)]
 
 
 def recommend_movies(liked_actors, disliked_actors, weights, top_k):
@@ -102,15 +91,6 @@ def recommend_movies(liked_actors, disliked_actors, weights, top_k):
     # Create 2 text queries from actor names
     like_actor_text = ", ".join(liked_actors) if liked_actors else ""
     dislike_actor_text = ", ".join(disliked_actors) if disliked_actors else ""
-
-    # Special case — no preferences at all
-    if not liked_actors and not disliked_actors:
-        # Neutral embedding
-        preference_vec = model.encode(["generic movie query"])
-        similarity_scores = cosine_similarity(preference_vec, embeddings)[0]
-        similar_indices = np.argsort(similarity_scores)[::-1][:top_k]
-
-        return films.iloc[similar_indices][['Title']]
 
     # Encode the actors related queries
     like_actors_vec = model.encode([f"Movies featuring actors like {like_actor_text}."]) \
@@ -167,46 +147,9 @@ def recommend_movies(liked_actors, disliked_actors, weights, top_k):
 
     # Give the final recommendation
     recommendations = films.iloc[similar_indices][['Title']].copy()
+    recommendations['Score'] = final_scores[similar_indices]
     return recommendations
 
-if __name__ == "__main__":
-    liked_actors = []
-    disliked_actors = []
-
-    print("Respond to the following actors with:")
-    print(" y = like or n = dislike\n")
-
-    # Retrieve num_actors_to_show(int) actors from shuffled all_actors list
-    # User will swipe on them one by one
-    for i in range(num_actors_to_show) :
-        actor = get_actor(i)
-
-        while True:
-            response = input(f"{actor}? (y/n): ").strip().lower()
-            if response in ['y', 'n']:
-                break
-            else:
-                print("Please respond with 'y' or 'n'")
-
-        # The liked actors will be added to the liked_actors and the disliked actors will be added to disliked_actors
-        if response == 'y':
-            liked_actors.append(actor)
-        elif response == 'n':
-            disliked_actors.append(actor)
-
-
-    print("\nYou've finished rating actors.")
-    print(f"Liked actors ({len(liked_actors)}): {', '.join(liked_actors)}")
-    print(f"Disliked actors ({len(disliked_actors)}): {', '.join(disliked_actors)}")
-
-    # Weights values
-    weights = {
-        "liked_actors": 1.2,
-        "disliked_actors": 1.0,
-        "genres": 0.8,
-        "directors": 0.6,
-        "bonus_genre_director": 0.5  # how much the extra bonuses affect score
-    }
 
 def bias_correction(disliked_actors, drop_fraction=0.5):
     """
@@ -231,11 +174,10 @@ def bias_correction(disliked_actors, drop_fraction=0.5):
     print(f"\nBias correction applied: Ignoring {num_to_drop} disliked actors -> {', '.join(ignored)}")
     return corrected_list
 
-if __name__ == "__main__":
-    # Apply bias correction to disliked actors
-    disliked_actors = bias_correction(disliked_actors, drop_fraction=0.2)
 
-    # Generate recommendations
-    recs = recommend_movies(liked_actors, disliked_actors, weights, top_k=4)
-    print("\nRecommended Movies Based on Weighted Preferences and Bonuses:\n")
-    print(recs.to_string(index=False))
+   
+        
+
+
+
+
