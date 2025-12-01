@@ -5,7 +5,7 @@ import { Button, Dimensions, Image, ScrollView, StyleSheet, Text, View } from "r
 import Swiper from "react-native-deck-swiper";
 
 const { width, height } = Dimensions.get("window");
-const API = "http://145.118.239.11:8000"; // replace with your backend IP
+const API = "http://145.118.237.217:8000"; // replace with your backend IP
 
 interface Actor {
   name: string;
@@ -87,21 +87,31 @@ export default function Home() {
 
       //Fetch poster for top movie immediately
       if (recs.length > 0) {
+        const TMDB_API_KEY = "118d6406df6cc4311fb96f3c4e44f65c";
         const topMovie = recs[0];
+
         try {
-          const url = `https://en.wikipedia.org/w/api.php?action=query&titles=${encodeURIComponent(
-            topMovie.title + " (film)"
-          )}&prop=pageimages&format=json&pithumbsize=500&origin=*`;
-          const response = await axios.get(url);
-          const page = Object.values(response.data.query.pages)[0] as any;
-          if (page.thumbnail) setTopMoviePoster(page.thumbnail.source);
-        } catch (err) {
-          console.warn("Could not fetch top movie poster:", err);
+          const cleanTitle = topMovie.title.replace(/\(\d{4}\)/, "").trim();
+
+          const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(
+            cleanTitle
+          )}`;
+
+          const searchRes = await axios.get(searchUrl);
+          const result = searchRes.data.results?.[0];
+
+          if (result?.poster_path) {
+            setTopMoviePoster(`https://image.tmdb.org/t/p/w500${result.poster_path}`);
+          } 
+          else {
+            console.warn("TMDB search returned no results:", cleanTitle);
+          }
+        } catch(err: any) {
+          console.warn("Could not fetch top movie poster:", err.response?.data || err);
         }
       }
-
-    } catch (err) {
-      console.error("Failed to fetch recommendations:", err);
+    } catch (err: any) {
+      console.warn("Could not fetch recommendations:", err.response?.data || err);
     }
   };
 
@@ -215,4 +225,5 @@ const styles = StyleSheet.create({
     color: "#ccc",
     textAlign: "center",
   },
-});
+});    
+
