@@ -103,6 +103,15 @@ def recommend_movies(liked_actors, disliked_actors, weights, top_k):
     like_actor_text = ", ".join(liked_actors) if liked_actors else ""
     dislike_actor_text = ", ".join(disliked_actors) if disliked_actors else ""
 
+    # Special case — no preferences at all
+    if not liked_actors and not disliked_actors:
+        # Neutral embedding
+        preference_vec = model.encode(["generic movie query"])
+        similarity_scores = cosine_similarity(preference_vec, embeddings)[0]
+        similar_indices = np.argsort(similarity_scores)[::-1][:top_k]
+
+        return films.iloc[similar_indices][['Title']]
+
     # Encode the actors related queries
     like_actors_vec = model.encode([f"Movies featuring actors like {like_actor_text}."]) \
         if like_actor_text else np.zeros((1, embeddings.shape[1]))
@@ -199,29 +208,30 @@ if __name__ == "__main__":
         "bonus_genre_director": 0.5  # how much the extra bonuses affect score
     }
 
-    def bias_correction(disliked_actors, drop_fraction=0.5):
-        """
-        Randomly ignores a fraction of disliked actors to reduce bias from unknown actors.
-        Returns a filtered list of disliked actors that will actually affect recommendations.
+def bias_correction(disliked_actors, drop_fraction=0.5):
+    """
+    Randomly ignores a fraction of disliked actors to reduce bias from unknown actors.
+    Returns a filtered list of disliked actors that will actually affect recommendations.
 
-        param disliked_actors: list of actors the user disliked
-        param drop_fraction: fraction of disliked actors to ignore
-        return: filtered list of disliked actors
-        """
-        if not disliked_actors:
-            return disliked_actors  # nothing to do
+    param disliked_actors: list of actors the user disliked
+    param drop_fraction: fraction of disliked actors to ignore
+    return: filtered list of disliked actors
+    """
+    if not disliked_actors:
+        return disliked_actors  # nothing to do
 
-        num_to_drop = int(len(disliked_actors) * drop_fraction)
-        # Randomly choose actors to ignore
-        ignored = set(random.sample(disliked_actors, num_to_drop))
-        corrected_list = []
-        for actor in disliked_actors:
-            if actor not in ignored:
-                corrected_list.append(actor)
+    num_to_drop = int(len(disliked_actors) * drop_fraction)
+    # Randomly choose actors to ignore
+    ignored = set(random.sample(disliked_actors, num_to_drop))
+    corrected_list = []
+    for actor in disliked_actors:
+        if actor not in ignored:
+            corrected_list.append(actor)
 
-        print(f"\nBias correction applied: Ignoring {num_to_drop} disliked actors -> {', '.join(ignored)}")
-        return corrected_list
+    print(f"\nBias correction applied: Ignoring {num_to_drop} disliked actors -> {', '.join(ignored)}")
+    return corrected_list
 
+if __name__ == "__main__":
     # Apply bias correction to disliked actors
     disliked_actors = bias_correction(disliked_actors, drop_fraction=0.2)
 
