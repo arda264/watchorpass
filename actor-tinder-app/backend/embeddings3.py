@@ -81,7 +81,7 @@ def build_actor_mapping(database):
 
 actor_to_directors, actor_to_genres = build_actor_mapping(films)
 
-def get_actor(num_actor):
+def get_actor():
     """
     Retrieve an actor's name from the shuffled list of all actors.
 
@@ -89,8 +89,7 @@ def get_actor(num_actor):
 
     return : a string with the name of the actor corresponding to the given index.
     """
-    return all_actors[num_actor]
-
+    return all_actors[random.randint(0, len(all_actors) - 1)]
 
 def recommend_movies(liked_actors, disliked_actors, weights, top_k):
     """
@@ -239,3 +238,5 @@ if __name__ == "__main__":
     recs = recommend_movies(liked_actors, disliked_actors, weights, top_k=4)
     print("\nRecommended Movies Based on Weighted Preferences and Bonuses:\n")
     print(recs.to_string(index=False))
+
+

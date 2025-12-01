@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List
-from embeddings5 import get_actor, recommend_movies, bias_correction
+from embeddings3 import get_actor, recommend_movies, bias_correction
 
 #fastapi setup
 app = FastAPI()
@@ -25,7 +25,7 @@ class RecommendRequest(BaseModel):
 class Recommendation(BaseModel):
     title: str
     Genres: str
-    Score: float
+
 
 
 #routes
@@ -49,12 +49,6 @@ def get_recommendations(payload: RecommendRequest):
     }
 
     recs_df = recommend_movies(payload.liked_actors, corrected_disliked, weights, top_k=15)
-
-
-    # If Score column doesn't exist, fill it with 0
-    if 'Score' not in recs_df.columns:
-        recs_df['Score'] = 0.0
-    # ------------------
 
     recommendations = recs_df.to_dict(orient="records")
     return {"recommendations": recommendations}

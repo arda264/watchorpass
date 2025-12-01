@@ -125,8 +125,7 @@ export default function Home() {
 
         {topMoviePoster && <Image source={{ uri: topMoviePoster }} style={styles.poster} />}
         <Text style={styles.movieTitle}>{topMovie.title}</Text>
-        <Text style={styles.movieInfo}>{topMovie.Genres}</Text>
-        <Text style={styles.movieInfo}>Score: {topMovie.Score.toFixed(3)}</Text>
+        
 
         <Button
           title="Swipe Again"
