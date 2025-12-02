@@ -200,8 +200,8 @@ if __name__ == "__main__":
 
     # Weights values
     weights = {
-        "liked_actors": 1.2,
-        "disliked_actors": 1.0,
+        "liked_actors": 1.4,
+        "disliked_actors": 0.7,
         "genres": 0.8,
         "directors": 0.6,
         "bonus_genre_director": 0.5  # how much the extra bonuses affect score

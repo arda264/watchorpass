@@ -5,7 +5,6 @@ Description: this file contains unittests for simpler functions from embeddings3
 parse_cast(), create_movie_text(), get_actor(), mapping actors to directors and genres
 """
 import pytest
-import embeddings3
 import pandas as pd
 from embeddings3 import parse_cast, create_movie_text, get_actor, build_actor_mapping
 
