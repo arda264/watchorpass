@@ -41,11 +41,11 @@ def get_recommendations(payload: RecommendRequest):
     corrected_disliked = bias_correction(payload.disliked_actors, drop_fraction=0.2)
 
     weights = {
-        "liked_actors": 1.2,
-        "disliked_actors": 1.0,
-        "genres": 0.8,
-        "directors": 0.6,
-        "bonus_genre_director": 0.5
+        "liked_actors": 1.8,
+        "disliked_actors": 0.6,
+        "genres": 0.6,
+        "directors": 0.7,
+        "bonus_genre_director": 0.1
     }
 
     recs_df = recommend_movies(payload.liked_actors, corrected_disliked, weights, top_k=15)
