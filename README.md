@@ -24,7 +24,7 @@ Required changes to run the program
 1) Open a command prompt, and run the command ipconfig on Windows or ifconfig on Macbook
 2) Copy the ipv4 adress under the Wireless LAN adapter WiFi section
 3) open the index.tsx file under in the folder actor-tinder-app\app
-4) On line 8, change the variable const API to "http://your ipv4 adress"
+4) On line 8, change IP adress in the value of variable const API to your IP adress after the "//"
 5) Save and close the file
 
 ## How to Run
