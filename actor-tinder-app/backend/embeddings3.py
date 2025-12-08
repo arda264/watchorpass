@@ -19,7 +19,6 @@ for c in actors.itertuples(index=False):
 all_actors = list(actor_map.values())
 random.shuffle(all_actors)
 
-# Testing
 num_actors_to_show = 30
 
 def parse_cast(cast_str):
@@ -200,11 +199,11 @@ if __name__ == "__main__":
 
     # Weights values
     weights = {
-        "liked_actors": 1.4,
-        "disliked_actors": 0.7,
-        "genres": 0.8,
-        "directors": 0.6,
-        "bonus_genre_director": 0.5  # how much the extra bonuses affect score
+        "liked_actors": 1.8,
+        "disliked_actors": 0.5,
+        "genres": 0.6,
+        "directors": 0.7,
+        "bonus_genre_director": 0.1  # how much the extra bonuses affect score
     }
 
 def bias_correction(disliked_actors, drop_fraction=0.5):
