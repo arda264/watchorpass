@@ -13,8 +13,8 @@ How to download the required packages
 3) run the command, git pull [text](https://git.liacs.nl/butterfingers/softwaredevelopment.git) in the folder you created (The link can be found when you click blue button called "code" towards top right and click on HTTPS).
 4) Open a command prompt on your device as admin, and navigate to the folder you created with the project in using cd command.
 5) Run in the command prompt, cd actor-tinder-app
-6) Run in the command prompt, winget install OpenJS.NodeJS
-7) Run in the command prompt, npm install --global expo-cli
+6) Go to this site and download Node.js, [text](https://nodejs.org/en/download)
+7) Run in the command prompt, npm install expo
 8) Run in the command prompt, cd backend
 9) Run in the command prompt, pip install uvicorn
 10) Run in the command prompt, pip install fastapi
