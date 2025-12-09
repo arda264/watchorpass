@@ -43,10 +43,19 @@ To run on web press "w". To get a cleaner look you can inspect the webpage and i
 
 To run on your phone install the expo go app on your appstore and scan the QR code. Note that in your first scan it might not work, close the app and scan again.
 
+## How to run unit tests
+
+1) Open the terminal
+2) Navigate to the "tests" folder
+3) Make sure you have Pytest installed. If not, use the command "pip install pytest"
+4) In the command line type "pytest"
+5) Wait for approximately 30 sec
+6) To get the coverage report install the coverage plugin (pip install pytest-cov) and type "pytest --cov=embeddings3 --cov-report=term-missing"
+
 ## Support
 Please send your feedback and questions to a.cavusoglu@umail.leidenuniv.nl
 
 ## Authors
 Group 33
 
-Arda Cavusoglu, Alina Gladchenko, Ian Birdsall, Melisa Saldir, Nour Taylor
+Arda Cavusoglu, Alina Gladchenko, Ian Birdsall, Melisa Saldir, Nour Taylor, Matteo Atzori
