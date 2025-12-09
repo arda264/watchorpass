@@ -4,7 +4,6 @@ Author: Alina Gladchenko
 Description: this file contains unittests for simpler functions from embeddings3.py module:
 parse_cast(), create_movie_text(), get_actor(), mapping actors to directors and genres
 """
-import pytest
 import pandas as pd
 from embeddings3 import parse_cast, create_movie_text, get_actor, build_actor_mapping
 
@@ -103,34 +102,36 @@ def test_create_movie_text_invalid():
     # Expected result
     assert result == "Genres: . Director: . Actors: Christian Bale, Gary Oldman."
 
-def test_get_actor(monkeypatch):
+def test_get_actor_random(monkeypatch):
     """
-    Test scenario: retrieving an actor's name with a valid index
+    Test scenario: correctly retrieving a random actor's name
     Should return an actor's name
     """
     # Creating a temporary list of actors
     mock_all_actors = ["Ellen Burstyn", "Jared Leto", "Jennifer Connelly"]
-    mock_num_actor = 2
     monkeypatch.setattr("embeddings3.all_actors", mock_all_actors)
-    result = get_actor(mock_num_actor)
+
+    # Force random.randint to always return index 2 (to control the result)
+    monkeypatch.setattr("random.randint", lambda a, b: 2)
+
+    result = get_actor()
 
     # Expected result
     assert result == "Jennifer Connelly"
 
-def test_get_actor_index_error(monkeypatch):
+def test_get_single_actor_(monkeypatch):
     """
-    Test scenario: retrieving an actor's name with an out-of-range index
-    Should raise an IndexError
+    Test scenario: only one available actor in the database
+    Should return this actor's name
     """
-    # Creating a temporary list of actors with max index == 2
-    mock_all_actors = ["Ellen Burstyn", "Jared Leto", "Jennifer Connelly"]
-    mock_num_actor = 3
+    # Creating a temporary list with only 1 actor
+    mock_all_actors = ["Jared Leto"]
     monkeypatch.setattr("embeddings3.all_actors", mock_all_actors)
 
-    # If the exception is raised the test is passed
-    with pytest.raises(IndexError):
-        get_actor(mock_num_actor)
+    result = get_actor()
 
+    # Expected result
+    assert result == "Jared Leto"
 
 def test_mapping():
     """

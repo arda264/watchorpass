@@ -1,3 +1,9 @@
+"""
+File: tests/embeddings3.py
+Authors: Alina Gladchenko, Ian Birdsall, Matteo Atzori, Melisa Saldar
+Description: this file is a duplicate of a file backend/embeddings3.py that contains the main recommendation
+algorithm and functions for parsing the data. It is meant for testing.
+"""
 import numpy as np
 import pandas as pd  # Manipulate data tables
 from sentence_transformers import SentenceTransformer  # Creating text embeddings
@@ -19,7 +25,6 @@ for c in actors.itertuples(index=False):
 all_actors = list(actor_map.values())
 random.shuffle(all_actors)
 
-# Testing
 num_actors_to_show = 30
 
 def parse_cast(cast_str):
@@ -83,11 +88,8 @@ actor_to_directors, actor_to_genres = build_actor_mapping(films)
 
 def get_actor():
     """
-    Retrieve an actor's name from the shuffled list of all actors.
-
-    param num_actor : an integer index position of the desired actor within the shuffled 'all_actors' list.
-
-    return : a string with the name of the actor corresponding to the given index.
+    Retrieve a random actor's name from the shuffled list of all actors.
+    return : a string with the name of the actor.
     """
     return all_actors[random.randint(0, len(all_actors) - 1)]
 
@@ -178,7 +180,7 @@ if __name__ == "__main__":
     # Retrieve num_actors_to_show(int) actors from shuffled all_actors list
     # User will swipe on them one by one
     for i in range(num_actors_to_show) :
-        actor = get_actor(i)
+        actor = get_actor()
 
         while True:
             response = input(f"{actor}? (y/n): ").strip().lower()
@@ -200,11 +202,11 @@ if __name__ == "__main__":
 
     # Weights values
     weights = {
-        "liked_actors": 1.2,
-        "disliked_actors": 1.0,
-        "genres": 0.8,
-        "directors": 0.6,
-        "bonus_genre_director": 0.5  # how much the extra bonuses affect score
+        "liked_actors": 1.8,
+        "disliked_actors": 0.5,
+        "genres": 0.6,
+        "directors": 0.7,
+        "bonus_genre_director": 0.1  # how much the extra bonuses affect score
     }
 
 def bias_correction(disliked_actors, drop_fraction=0.5):

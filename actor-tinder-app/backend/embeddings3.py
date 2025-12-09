@@ -1,3 +1,8 @@
+"""
+File: backend/embeddings3.py
+Authors: Alina Gladchenko, Ian Birdsall, Matteo Atzori, Melisa Saldar
+Description: this file contains the main recommendation algorithm and functions for parsing the data.
+"""
 import numpy as np
 import pandas as pd  # Manipulate data tables
 from sentence_transformers import SentenceTransformer  # Creating text embeddings
@@ -82,11 +87,8 @@ actor_to_directors, actor_to_genres = build_actor_mapping(films)
 
 def get_actor():
     """
-    Retrieve an actor's name from the shuffled list of all actors.
-
-    param num_actor : an integer index position of the desired actor within the shuffled 'all_actors' list.
-
-    return : a string with the name of the actor corresponding to the given index.
+    Retrieve a random actor's name from the shuffled list of all actors.
+    return : a string with the name of the actor.
     """
     return all_actors[random.randint(0, len(all_actors) - 1)]
 
@@ -177,7 +179,7 @@ if __name__ == "__main__":
     # Retrieve num_actors_to_show(int) actors from shuffled all_actors list
     # User will swipe on them one by one
     for i in range(num_actors_to_show) :
-        actor = get_actor(i)
+        actor = get_actor()
 
         while True:
             response = input(f"{actor}? (y/n): ").strip().lower()

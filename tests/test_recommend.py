@@ -1,8 +1,12 @@
+"""
+File: test_recommend.py
+Author: Alina Gladchenko
+Description: this file contains unittests for the recommendation algorithm
+"""
 import numpy as np
 import pandas as pd
 import pytest
-from unittest.mock import MagicMock, patch
-from collections import defaultdict
+from unittest.mock import MagicMock
 from embeddings3 import recommend_movies, build_actor_mapping, bias_correction
 
 @pytest.fixture()
