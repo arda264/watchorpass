@@ -5,7 +5,7 @@ import { Button, Dimensions, Image, ScrollView, StyleSheet, Text, View } from "r
 import Swiper from "react-native-deck-swiper";
 
 const { width, height } = Dimensions.get("window");
-const API = "http://145.118.198.126:8000"; // replace with your backend IP
+const API = "http://145.118.236.114:8000"; // replace with your backend IP
 const TMDB_API_KEY = "118d6406df6cc4311fb96f3c4e44f65c";
 
 interface Actor {
@@ -84,7 +84,7 @@ export default function Home() {
 
     const nextIndex = cardIndex + 1;
     setCardIndex(nextIndex);
-
+    console.log(`Swiped ${likedActor ? "right" : "left"} on ${actor.name}`);
     // Trigger recommendations only after last card
     if (nextIndex === actors.length) {
       onSwipesComplete();
