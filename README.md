@@ -24,7 +24,7 @@ Required changes to run the program
 1) Open a command prompt, and run the command ipconfig on Windows or ifconfig on Macbook
 2) Copy the ipv4 adress under the Wireless LAN adapter WiFi section
 3) open the index.tsx file under in the folder actor-tinder-app\app
-4) On line 8, change IP adress in the value of variable const API to your IP adress after the "//"
+4) On line 8, change IP adress in the value of variable const API to your IP adress between the "http://" and ":8000"
 5) Save and close the file
 
 ## How to Run
@@ -42,6 +42,7 @@ Make sure you followed the steps above and if not first install the required pac
 To run on web press "w". To get a cleaner look you can inspect the webpage and it will adjust to phone screen dimensions.  
 
 To run on your phone install the expo go app on your appstore and scan the QR code. Note that in your first scan it might not work, close the app and scan again.
+iOS Appstore [here](https://apps.apple.com/us/app/expo-go/id982107779), Google Playstore [here](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en)
 
 ## How to run unit tests
 
