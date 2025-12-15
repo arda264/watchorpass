@@ -6,13 +6,14 @@ Watch or Pass is our project for the 2nd year 1st semester course Software Devel
 
 ## Required packages and changes
 
-How to download the required packages
+How to download the required packages. If you have the project files locally skip to the 4th step!
 
 1) Make sure git is installed in your device
 2) Create a folder, and initialize git in that folder using the command, git init.
 3) run the command, git pull [text](https://git.liacs.nl/butterfingers/softwaredevelopment.git) in the folder you created (The link can be found when you click blue button called "code" towards top right and click on HTTPS).
+
 4) Open a command prompt on your device as admin, and navigate to the folder you created with the project in using cd command.
-5) Run in the command prompt, cd actor-tinder-app
+5) Go to the project folder in Run in the command prompt, cd actor-tinder-app
 6) Go to this site and download Node.js, [text](https://nodejs.org/en/download)
 7) Run in the command prompt, npm install expo
 8) Run in the command prompt, cd backend
