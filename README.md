@@ -12,20 +12,21 @@ How to download the required packages. If you have the project files locally ski
 2) Create a folder, and initialize git in that folder using the command: git init.
 3) run the command: git pull [project link](https://git.liacs.nl/butterfingers/softwaredevelopment.git) in the folder you created (The link can be found when you click blue button called "code" towards top right and click on HTTPS).
 
-4) Open a command prompt on your device as admin, and navigate to the project folder with the project in using cd command.
-5) Go to the project folder and navigate to \actor-tinder-app
+4) Open a command prompt on your device as admin, and navigate to the project folder
+5) Once in the project folder and navigate to \actor-tinder-app
 6) Go to this site and download Node.js, [Nodejs download](https://nodejs.org/en/download) it is recommended to use the installer for your operating system. 
 7) Run in the command prompt: npm install expo
+8) Run in the command prompt: npx expo install expo-router
 8) Navigate to \actor-tinder-app\backend
-9) Run in the command prompt: pip install uvicorn fastapi numpy pandas sentence_transformers scikit-learn   
+9) Run in the command prompt: pip install uvicorn fastapi numpy==1.26.4 pandas sentence_transformers scikit-learn   
 
 
 Required changes to run the program
 
-1) Open a command prompt, and run the command ipconfig on Windows or ifconfig on Macbook
-2) Copy the ipv4 adress under the Wireless LAN adapter WiFi section
+1) Open a command prompt, and run the command ipconfig on Windows or ipconfig getifaddr en0 on Macbook
+2) Copy the ipv4 address under the Wireless LAN adapter WiFi section
 3) open the index.tsx file in the folder actor-tinder-app\app
-4) On line 8, change IP adress in the value of variable const API to your IP adress between the "http://" and ":8000"
+4) On line 8, change IP address in the value of variable const API to your IP address between the "http://" and ":8000"
 5) Save and close the file
 
 ## How to Run
