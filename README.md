@@ -9,15 +9,15 @@ Watch or Pass is our project for the 2nd year 1st semester course Software Devel
 How to download the required packages. If you have the project files locally skip to the 4th step!
 
 1) Make sure git is installed in your device
-2) Create a folder, and initialize git in that folder using the command, git init.
-3) run the command, git pull [project link](https://git.liacs.nl/butterfingers/softwaredevelopment.git) in the folder you created (The link can be found when you click blue button called "code" towards top right and click on HTTPS).
+2) Create a folder, and initialize git in that folder using the command: git init.
+3) run the command: git pull [project link](https://git.liacs.nl/butterfingers/softwaredevelopment.git) in the folder you created (The link can be found when you click blue button called "code" towards top right and click on HTTPS).
 
 4) Open a command prompt on your device as admin, and navigate to the project folder with the project in using cd command.
-5) Go to the project folder in Run in the command prompt, cd actor-tinder-app
-6) Go to this site and download Node.js, [Nodejs download](https://nodejs.org/en/download)
-7) Run in the command prompt, npm install expo
-8) Run in the command prompt, cd backend
-9) Run in the command prompt, pip install uvicorn fastapi numpy pandas sentence_transformers sklearn ast  
+5) Go to the project folder and navigate to \actor-tinder-app
+6) Go to this site and download Node.js, [Nodejs download](https://nodejs.org/en/download) it is recommended to use the installer for your operating system. 
+7) Run in the command prompt: npm install expo
+8) Navigate to \actor-tinder-app\backend
+9) Run in the command prompt: pip install uvicorn fastapi numpy pandas sentence_transformers scikit-learn   
 
 
 Required changes to run the program
@@ -40,10 +40,12 @@ Make sure you followed the steps above and if not first install the required pac
 6) Navigate to the project folder
 7) Navigate to \actor-tinder-app
 8) Run npx expo start -c
+9) When you're done using the programme, use "Ctrl + C" in each command prompt window to shutdown the server and the programme. 
 
 The intention is to run the programme using the Expo Go App, since this provides the best user experience.  
-To run on web press "w". To get a cleaner look you can inspect the webpage and it will adjust to phone screen dimensions.  
 
+To run on web press "w". To get a cleaner look you can inspect the webpage and it will adjust to phone screen dimensions.
+  
 To run on your phone install the expo go app on your appstore and scan the QR code. Note that in your first scan it might not work, close the app on phone and scan again.
 iOS Appstore [here](https://apps.apple.com/us/app/expo-go/id982107779), Google Playstore [here](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en)
 
