@@ -87,5 +87,5 @@ def get_recommendations(payload: RecommendRequest):
 # 4. RENDER STARTUP
 if __name__ == "__main__":
     # Render provides the PORT as an environment variable
-    port = int(os.environ.get("PORT", 8000))
+    port = int(os.environ.get("PORT", 8080))
     uvicorn.run(app, host="0.0.0.0", port=port)
