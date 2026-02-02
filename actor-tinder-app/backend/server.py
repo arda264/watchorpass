@@ -57,6 +57,11 @@ def get_random_actor():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+@app.get("/actors")
+def actors_alias():
+    return get_actor_batch()  # or whatever function backs /actor-batch
+
+
 @app.post("/recommend")
 def get_recommendations(payload: RecommendRequest):
     try:
