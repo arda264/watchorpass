@@ -1,14 +1,18 @@
 {
   "expo": {
     "name": "actor-tinder-app",
-    "slug": "actor-tinder-app",
+    "slug": "watch-or-pass",
     "version": "1.0.0",
     "orientation": "portrait",
     "backgroundColor": "#000000",
     "icon": "./assets/images/icon.png",
     "userInterfaceStyle": "automatic",
-    "ios": { "backgroundColor": "#000000" },
-    "android": { "backgroundColor": "#000000" },
+    "ios": {
+      "backgroundColor": "#000000"
+    },
+    "android": {
+      "backgroundColor": "#000000"
+    },
     "plugins": [
       [
         "expo-splash-screen",
@@ -16,9 +20,17 @@
           "image": "./assets/images/splash-icon.png",
           "resizeMode": "contain",
           "backgroundColor": "#000000",
-          "dark": { "backgroundColor": "#000000" }
+          "dark": {
+            "backgroundColor": "#000000"
+          }
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "2eaadf7d-f412-46be-a58c-9f74c5dbb2e0"
+      }
+    },
+    "owner": "arda264"
   }
 }
