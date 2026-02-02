@@ -1,5 +1,4 @@
 // app/index.tsx
-// app/index.tsx
 import axios from "axios";
 import React, { useEffect, useState, useRef } from "react";
 import { Dimensions, Image, ScrollView, StyleSheet, Text, View, TouchableOpacity, Alert } from "react-native";
@@ -29,6 +28,7 @@ export default function Home() {
   const [disliked, setDisliked] = useState<string[]>([]);
   const [recommendations, setRecommendations] = useState<Recommendation[] | null>(null);
   const [topMoviePoster, setTopMoviePoster] = useState<string | undefined>(undefined);
+  const [isLoadingRecs, setIsLoadingRecs] = useState(false);
   const swiperRef = useRef<any>(null);
 
   const fetchActors = async () => {
@@ -66,15 +66,22 @@ export default function Home() {
       setImagesLoaded(true);
     } catch (err) {
       console.error("Failed to fetch actor batch:", err);
-      Alert.alert("Connection Error", "Could not reach the backend server.");
+      Alert.alert("Connection Error", "Could not reach the backend server. Please check your connection.");
     }
   };
 
   useEffect(() => {
+    // Validate API_URL is configured
+    if (!API_URL) {
+      Alert.alert(
+        "Configuration Error", 
+        "API URL is not configured. Please check your .env file and ensure EXPO_PUBLIC_API_URL is set."
+      );
+      return;
+    }
     fetchActors();
   }, []);
 
-  // NEW: Refactored to pass current lists directly to handle React's async state
   const handleSwipe = (likedActor: boolean) => {
     if (cardIndex >= actors.length) return;
 
@@ -91,11 +98,14 @@ export default function Home() {
     // If it's the last card, trigger recommendations with the NEWLY updated lists
     if (nextIndex === actors.length) {
       onSwipesComplete(newLiked, newDisliked);
+      return; // Prevent further execution
     }
   };
 
   const onSwipesComplete = async (finalLiked: string[], finalDisliked: string[]) => {
+    setIsLoadingRecs(true);
     const payload = { liked_actors: finalLiked, disliked_actors: finalDisliked };
+    
     try {
       const res = await axios.post(`${API_URL}/recommend`, payload);
       
@@ -113,6 +123,24 @@ export default function Home() {
       }
     } catch (err: any) {
       console.warn("Could not fetch recommendations:", err.response?.data || err);
+      Alert.alert(
+        "Error", 
+        "Failed to get recommendations. Please try again.",
+        [
+          {
+            text: "Retry",
+            onPress: () => {
+              setRecommendations(null);
+              setLiked([]);
+              setDisliked([]);
+              setCardIndex(0);
+              fetchActors();
+            }
+          }
+        ]
+      );
+    } finally {
+      setIsLoadingRecs(false);
     }
   };
 
@@ -131,14 +159,36 @@ export default function Home() {
     }
   };
 
+  const resetApp = () => {
+    setRecommendations(null);
+    setLiked([]);
+    setDisliked([]);
+    setCardIndex(0);
+    setTopMoviePoster(undefined);
+    fetchActors();
+  };
+
+  // Loading state
   if (!imagesLoaded) {
     return (
       <View style={styles.container}>
-        <Text style={{ color: "#FF6B6B", fontSize: 18 }}>Loading actors...</Text>
+        <Text style={styles.loadingText}>Loading actors...</Text>
       </View>
     );
   }
 
+  // Loading recommendations
+  if (isLoadingRecs) {
+    return (
+      <LinearGradient colors={['#FD297B', '#FF5864', '#FF655B']} style={styles.gradientContainer}>
+        <View style={styles.loadingContainer}>
+          <Text style={styles.loadingRecsText}>Finding your perfect match...</Text>
+        </View>
+      </LinearGradient>
+    );
+  }
+
+  // Show recommendations if available
   if (recommendations && recommendations.length > 0) {
     const topMovie = recommendations[0];
     return (
@@ -148,18 +198,9 @@ export default function Home() {
           <Text style={styles.recommendationTitle}>Your Top Movie</Text>
           {topMoviePoster && <Image source={{ uri: topMoviePoster }} style={styles.poster} />}
           <Text style={styles.movieTitle}>{topMovie.title}</Text>
+          <Text style={styles.genreText}>{topMovie.Genres}</Text>
           
-          <TouchableOpacity
-            style={styles.tinderButton}
-            onPress={() => {
-              setRecommendations(null);
-              setLiked([]);
-              setDisliked([]);
-              setCardIndex(0);
-              setTopMoviePoster(undefined);
-              fetchActors();
-            }}
-          >
+          <TouchableOpacity style={styles.tinderButton} onPress={resetApp}>
             <Text style={styles.buttonText}>Keep Swiping</Text>
           </TouchableOpacity>
         </ScrollView>
@@ -167,6 +208,20 @@ export default function Home() {
     );
   }
 
+  // Handle empty recommendations
+  if (recommendations && recommendations.length === 0) {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.noMatchText}>No matches found 😔</Text>
+        <Text style={styles.noMatchSubtext}>Try swiping on different actors!</Text>
+        <TouchableOpacity style={[styles.tinderButton, { backgroundColor: '#FF5864' }]} onPress={resetApp}>
+          <Text style={[styles.buttonText, { color: 'white' }]}>Try Again</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  }
+
+  // Main swiper view
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -178,16 +233,21 @@ export default function Home() {
           ref={swiperRef}
           cards={actors}
           cardIndex={cardIndex}
-          renderCard={(actor) => (
-            <View style={styles.card}>
-              {actor?.image && <Image source={{ uri: actor.image }} style={styles.cardImage} />}
-              <LinearGradient colors={['transparent', 'rgba(0,0,0,0.9)']} style={styles.cardGradient}>
-                <View style={styles.cardInfo}>
-                  <Text style={styles.actorName}>{actor?.name}</Text>
-                </View>
-              </LinearGradient>
-            </View>
-          )}
+          renderCard={(actor) => {
+            // Safety check for undefined actors
+            if (!actor) return <View />;
+            
+            return (
+              <View style={styles.card}>
+                {actor.image && <Image source={{ uri: actor.image }} style={styles.cardImage} />}
+                <LinearGradient colors={['transparent', 'rgba(0,0,0,0.9)']} style={styles.cardGradient}>
+                  <View style={styles.cardInfo}>
+                    <Text style={styles.actorName}>{actor.name}</Text>
+                  </View>
+                </LinearGradient>
+              </View>
+            );
+          }}
           onSwipedRight={() => handleSwipe(true)}
           onSwipedLeft={() => handleSwipe(false)}
           stackSize={3}
@@ -198,35 +258,230 @@ export default function Home() {
           cardHorizontalMargin={20}
           animateCardOpacity
           overlayLabels={{
-            left: { title: 'Pass', style: { label: styles.overlayLabelLeft, wrapper: styles.overlayWrapperLeft } },
-            right: { title: 'Watch', style: { label: styles.overlayLabelRight, wrapper: styles.overlayWrapperRight } }
+            left: { 
+              title: 'PASS', 
+              style: { 
+                label: styles.overlayLabelLeft, 
+                wrapper: styles.overlayWrapperLeft 
+              } 
+            },
+            right: { 
+              title: 'WATCH', 
+              style: { 
+                label: styles.overlayLabelRight, 
+                wrapper: styles.overlayWrapperRight 
+              } 
+            }
           }}
         />
+      </View>
+
+      {/* Progress indicator */}
+      <View style={styles.progressContainer}>
+        <Text style={styles.progressText}>
+          {cardIndex} / {actors.length}
+        </Text>
       </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#FAFAFA', justifyContent: 'center', alignItems: 'center' },
-  gradientContainer: { flex: 1 },
-  header: { paddingTop: 50, paddingBottom: 10, backgroundColor: 'white', alignItems: 'center', borderBottomWidth: 1, borderBottomColor: '#E8E8E8', width: '100%' },
-  logo: { fontSize: 32, fontWeight: 'bold', color: '#FF5864' },
-  swiperContainer: { flex: 1, paddingTop: 20, width: '100%' },
-  card: { height: height * 0.7, borderRadius: 20, overflow: 'hidden', backgroundColor: 'white', elevation: 8 },
-  cardImage: { width: '100%', height: '100%', resizeMode: 'cover' },
-  cardGradient: { position: 'absolute', bottom: 0, left: 0, right: 0, height: '40%', justifyContent: 'flex-end', padding: 20 },
-  cardInfo: { marginBottom: 10 },
-  actorName: { fontSize: 32, fontWeight: 'bold', color: 'white' },
-  recommendationContainer: { flexGrow: 1, justifyContent: 'center', alignItems: 'center', padding: 30 },
-  matchText: { fontSize: 48, fontWeight: 'bold', color: 'white' },
-  recommendationTitle: { fontSize: 22, color: 'white', marginBottom: 30 },
-  poster: { width: 250, height: 350, borderRadius: 20, marginBottom: 30 },
-  movieTitle: { fontSize: 24, color: 'white', fontWeight: 'bold', textAlign: 'center', marginBottom: 40 },
-  tinderButton: { backgroundColor: 'white', paddingVertical: 16, paddingHorizontal: 60, borderRadius: 30 },
-  buttonText: { color: '#FF5864', fontSize: 18, fontWeight: 'bold' },
-  overlayLabelLeft: { borderColor: '#FF6B6B', color: '#FF6B6B', borderWidth: 4, fontSize: 40, fontWeight: 'bold', padding: 8, borderRadius: 8 },
-  overlayWrapperLeft: { flexDirection: 'column', alignItems: 'flex-end', justifyContent: 'flex-start', marginTop: 50, marginLeft: -30 },
-  overlayLabelRight: { borderColor: '#4ECDC4', color: '#4ECDC4', borderWidth: 4, fontSize: 40, fontWeight: 'bold', padding: 8, borderRadius: 8 },
-  overlayWrapperRight: { flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'flex-start', marginTop: 50, marginLeft: 30 },
+  container: { 
+    flex: 1, 
+    backgroundColor: '#FAFAFA', 
+    justifyContent: 'center', 
+    alignItems: 'center' 
+  },
+  gradientContainer: { 
+    flex: 1 
+  },
+  header: { 
+    paddingTop: 50, 
+    paddingBottom: 10, 
+    backgroundColor: 'white', 
+    alignItems: 'center', 
+    borderBottomWidth: 1, 
+    borderBottomColor: '#E8E8E8', 
+    width: '100%' 
+  },
+  logo: { 
+    fontSize: 32, 
+    fontWeight: 'bold', 
+    color: '#FF5864' 
+  },
+  swiperContainer: { 
+    flex: 1, 
+    paddingTop: 20, 
+    width: '100%' 
+  },
+  card: { 
+    height: height * 0.7, 
+    borderRadius: 20, 
+    overflow: 'hidden', 
+    backgroundColor: 'white', 
+    elevation: 8,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+  },
+  cardImage: { 
+    width: '100%', 
+    height: '100%', 
+    resizeMode: 'cover' 
+  },
+  cardGradient: { 
+    position: 'absolute', 
+    bottom: 0, 
+    left: 0, 
+    right: 0, 
+    height: '40%', 
+    justifyContent: 'flex-end', 
+    padding: 20 
+  },
+  cardInfo: { 
+    marginBottom: 10 
+  },
+  actorName: { 
+    fontSize: 32, 
+    fontWeight: 'bold', 
+    color: 'white' 
+  },
+  recommendationContainer: { 
+    flexGrow: 1, 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    padding: 30 
+  },
+  matchText: { 
+    fontSize: 48, 
+    fontWeight: 'bold', 
+    color: 'white',
+    marginBottom: 10
+  },
+  recommendationTitle: { 
+    fontSize: 22, 
+    color: 'white', 
+    marginBottom: 30,
+    opacity: 0.9
+  },
+  poster: { 
+    width: 250, 
+    height: 350, 
+    borderRadius: 20, 
+    marginBottom: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 4.65,
+    elevation: 8,
+  },
+  movieTitle: { 
+    fontSize: 24, 
+    color: 'white', 
+    fontWeight: 'bold', 
+    textAlign: 'center', 
+    marginBottom: 10,
+    paddingHorizontal: 20
+  },
+  genreText: {
+    fontSize: 16,
+    color: 'white',
+    opacity: 0.8,
+    textAlign: 'center',
+    marginBottom: 40,
+    paddingHorizontal: 20
+  },
+  tinderButton: { 
+    backgroundColor: 'white', 
+    paddingVertical: 16, 
+    paddingHorizontal: 60, 
+    borderRadius: 30,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+  buttonText: { 
+    color: '#FF5864', 
+    fontSize: 18, 
+    fontWeight: 'bold' 
+  },
+  overlayLabelLeft: { 
+    borderColor: '#FF6B6B', 
+    color: '#FF6B6B', 
+    borderWidth: 4, 
+    fontSize: 40, 
+    fontWeight: 'bold', 
+    padding: 8, 
+    borderRadius: 8 
+  },
+  overlayWrapperLeft: { 
+    flexDirection: 'column', 
+    alignItems: 'flex-end', 
+    justifyContent: 'flex-start', 
+    marginTop: 50, 
+    marginLeft: -30 
+  },
+  overlayLabelRight: { 
+    borderColor: '#4ECDC4', 
+    color: '#4ECDC4', 
+    borderWidth: 4, 
+    fontSize: 40, 
+    fontWeight: 'bold', 
+    padding: 8, 
+    borderRadius: 8 
+  },
+  overlayWrapperRight: { 
+    flexDirection: 'column', 
+    alignItems: 'flex-start', 
+    justifyContent: 'flex-start', 
+    marginTop: 50, 
+    marginLeft: 30 
+  },
+  progressContainer: {
+    paddingVertical: 15,
+    alignItems: 'center',
+    backgroundColor: 'white',
+    borderTopWidth: 1,
+    borderTopColor: '#E8E8E8',
+  },
+  progressText: {
+    fontSize: 16,
+    color: '#666',
+    fontWeight: '600'
+  },
+  loadingText: {
+    color: '#FF6B6B',
+    fontSize: 18,
+    fontWeight: '600'
+  },
+  loadingContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  loadingRecsText: {
+    color: 'white',
+    fontSize: 24,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    paddingHorizontal: 40
+  },
+  noMatchText: {
+    fontSize: 32,
+    fontWeight: 'bold',
+    color: '#FF6B6B',
+    marginBottom: 10,
+    textAlign: 'center'
+  },
+  noMatchSubtext: {
+    fontSize: 18,
+    color: '#666',
+    marginBottom: 30,
+    textAlign: 'center',
+    paddingHorizontal: 40
+  }
 });
