@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Name
 Watch or Pass (previously Actor Tinder)
 
@@ -66,3 +67,7 @@ Please send your feedback and questions to a.cavusoglu@umail.leidenuniv.nl
 Group 33
 
 Arda Cavusoglu, Alina Gladchenko, Ian Birdsall, Melisa Saldir, Nour Taylor, Matteo Atzori
+=======
+# watchorpass
+Watch or Pass is an app
+>>>>>>> 723f154 (Initial commit)
