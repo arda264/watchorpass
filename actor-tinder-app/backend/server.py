@@ -5,7 +5,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List
 import uvicorn
-import gc
 
 # Import your custom logic
 # Ensure these files are in the same folder as server.py
@@ -16,10 +15,10 @@ app = FastAPI(title="WatchOrPass API")
 # 1. CORS SETUP
 # Replace with your actual frontend URL for better security
 origins = [
+    "*"
     "https://watchorpass.app",
     "https://www.watchorpass.app",
     "http://localhost:8081",
-     allow_origins=["*"]
 ]
 
 app.add_middleware(
@@ -86,7 +85,6 @@ def get_recommendations(payload: RecommendRequest):
         print(f"Error in recommendation: {e}")
         raise HTTPException(status_code=500, detail="Failed to generate recommendations.")
 
-gc.collect()
 
 # 4. RENDER STARTUP
 if __name__ == "__main__":
