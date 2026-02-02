@@ -6,7 +6,7 @@ import Swiper from "react-native-deck-swiper";
 
 const { width, height } = Dimensions.get("window");
 const API_URL = process.env.EXPO_PUBLIC_API_URL;
-const TMDB_API_KEY = process.env.EXPO_PUBLIC_TMDB_API_KEY || "118d6406df6cc4311fb96f3c4e44f65c";
+const TMDB_API_KEY = "118d6406df6cc4311fb96f3c4e44f65c"
 
 interface Actor {
   name: string;
@@ -74,11 +74,15 @@ export default function Home() {
 
       // 3. Preload images
       console.log("Preloading images...");
-      await Promise.all(
-        actorsWithImages.map((actor) =>
-          actor.image ? Image.prefetch(actor.image) : Promise.resolve()
-        )
-      );
+      actorsWithImages.forEach(actor => {
+        if (actor.image) {
+          Image.prefetch(actor.image).catch(() => {});
+        }
+      });
+
+      setActors(actorsWithImages);
+      setImagesLoaded(true);
+
 
       console.log("✓ All images preloaded");
       setActors(actorsWithImages);
