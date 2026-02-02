@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-## Name
+This was done as a prototype will change soon. ## Name
 Watch or Pass (previously Actor Tinder)
 
 ## Description
