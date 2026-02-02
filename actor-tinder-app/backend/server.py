@@ -12,7 +12,7 @@ import random
 # Import your custom logic
 from embeddings3 import get_actor, recommend_movies, bias_correction, all_actors
 
-app = FastAPI(title="WatchOrPass API")
+app = FastAPI()
 
 # FIXED CORS CONFIGURATION
 # Allow requests from your Vercel domain and localhost for testing
@@ -82,10 +82,3 @@ def get_recommendations(payload: RecommendRequest):
     except Exception as e:
         print(f"Error in recommendation: {e}")
         raise HTTPException(status_code=500, detail="Failed to generate recommendations.")
-
-
-# 4. RENDER STARTUP
-if __name__ == "__main__":
-    # Render provides the PORT as an environment variable
-    port = int(os.environ.get("PORT", 8080))
-    uvicorn.run(app, host="0.0.0.0", port=port)
