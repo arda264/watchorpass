@@ -1,3 +1,4 @@
+# server.py - UPDATED CORS CONFIGURATION
 import os
 import pandas as pd
 from fastapi import FastAPI, HTTPException
@@ -5,30 +6,27 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List
 import uvicorn
+import gc
+import random
 
 # Import your custom logic
-# Ensure these files are in the same folder as server.py
-from embeddings3 import get_actor, recommend_movies, bias_correction
+from embeddings3 import get_actor, recommend_movies, bias_correction, all_actors
 
 app = FastAPI(title="WatchOrPass API")
 
-# 1. CORS SETUP
-# Replace with your actual frontend URL for better security
-origins = [
-    "*"
-    "https://watchorpass.app",
-    "https://www.watchorpass.app",
-    "http://localhost:8081",
-]
+# FIXED CORS CONFIGURATION
+# Allow requests from your Vercel domain and localhost for testing
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],  # During debugging, allow all origins
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
+# ... rest of your code stays the same
 # 2. DATA MODELS
 class RecommendRequest(BaseModel):
     liked_actors: List[str]
