@@ -6,7 +6,7 @@ import Swiper from "react-native-deck-swiper";
 import { LinearGradient } from 'expo-linear-gradient';
 
 const { width, height } = Dimensions.get("window");
-const API = "http://192.168.101.3:8000"; // replace with your backend IP
+const API_URL = process.env.EXPO_PUBLIC_API_URL; // replace with your backend IP
 const TMDB_API_KEY = "118d6406df6cc4311fb96f3c4e44f65c";
 
 interface Actor {
@@ -35,7 +35,7 @@ export default function Home() {
     const batch: Actor[] = [];
     for (let i = 0; i < 30; i++) {
       try {
-        const res = await axios.get(`${API}/actor`);
+        const res = await axios.get(`${API_URL}/actor`);
         batch.push({ name: res.data.name });
       } catch (err) {
         console.warn("Failed to fetch actor from backend:", err);
@@ -97,7 +97,7 @@ export default function Home() {
   const onSwipesComplete = async () => {
     const payload = { liked_actors: liked, disliked_actors: disliked };
     try {
-      const res = await axios.post(`${API}/recommend`, payload);
+      const res = await axios.post(`${API_URL}/recommend`, payload);
       const recs: Recommendation[] = res.data.recommendations.map((movie: any) => ({
         title: movie.Title,
         Genres: movie.Genres || "",
