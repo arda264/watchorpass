@@ -57,7 +57,8 @@ def create_movie_text(row):
 films['description'] = films.apply(create_movie_text, axis=1)  # specifying axis to address rows of the table
 
 # Generate vectors from movies' descriptions using a pretrained model and store them in embeddings
-model = SentenceTransformer('all-MiniLM-L6-v2')
+model = SentenceTransformer('paraphrase-MiniLM-L3-v2')
+model.half()
 embeddings = model.encode(films['description'].tolist(), show_progress_bar=True)
 embeddings = np.array(embeddings)
 

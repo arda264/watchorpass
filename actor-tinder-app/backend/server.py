@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import List
 import uvicorn
+import gc
 
 # Import your custom logic
 # Ensure these files are in the same folder as server.py
@@ -73,6 +74,8 @@ def get_recommendations(payload: RecommendRequest):
     except Exception as e:
         print(f"Error in recommendation: {e}")
         raise HTTPException(status_code=500, detail="Failed to generate recommendations.")
+
+gc.collect()
 
 # 4. RENDER STARTUP
 if __name__ == "__main__":
