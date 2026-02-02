@@ -1,12 +1,13 @@
 // app/index.tsx
+// app/index.tsx
 import axios from "axios";
-import React, { useEffect, useState } from "react";
-import { Button, Dimensions, Image, ScrollView, StyleSheet, Text, View, TouchableOpacity } from "react-native";
+import React, { useEffect, useState, useRef } from "react";
+import { Dimensions, Image, ScrollView, StyleSheet, Text, View, TouchableOpacity, Alert } from "react-native";
 import Swiper from "react-native-deck-swiper";
 import { LinearGradient } from 'expo-linear-gradient';
 
-const { width, height } = Dimensions.get("window");
-const API_URL = process.env.EXPO_PUBLIC_API_URL; // replace with your backend IP
+const { height } = Dimensions.get("window");
+const API_URL = process.env.EXPO_PUBLIC_API_URL;
 const TMDB_API_KEY = "118d6406df6cc4311fb96f3c4e44f65c";
 
 interface Actor {
@@ -28,104 +29,108 @@ export default function Home() {
   const [disliked, setDisliked] = useState<string[]>([]);
   const [recommendations, setRecommendations] = useState<Recommendation[] | null>(null);
   const [topMoviePoster, setTopMoviePoster] = useState<string | undefined>(undefined);
-  const swiperRef = React.useRef<any>(null);
+  const swiperRef = useRef<any>(null);
 
-  // Fetch exactly 30 actors and preload images
   const fetchActors = async () => {
-    const batch: Actor[] = [];
-    for (let i = 0; i < 30; i++) {
-      try {
-        const res = await axios.get(`${API_URL}/actor`);
-        batch.push({ name: res.data.name });
-      } catch (err) {
-        console.warn("Failed to fetch actor from backend:", err);
-      }
+    try {
+      setImagesLoaded(false);
+      // 1. Get 30 random actor names in ONE batch call
+      const res = await axios.get(`${API_URL}/actor-batch`);
+      const actorNames = res.data.actors;
+
+      // 2. Fetch all TMDb images at once in parallel
+      const actorsWithImages = await Promise.all(
+        actorNames.map(async (name: string) => {
+          try {
+            const searchUrl = `https://api.themoviedb.org/3/search/person?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(name)}`;
+            const response = await axios.get(searchUrl);
+            const result = response.data.results?.[0];
+            const image = result?.profile_path
+              ? `https://image.tmdb.org/t/p/w500${result.profile_path}`
+              : undefined;
+            return { name, image };
+          } catch (err) {
+            return { name, image: undefined };
+          }
+        })
+      );
+
+      // 3. Preload images
+      await Promise.all(
+        actorsWithImages.map((actor) =>
+          actor.image ? Image.prefetch(actor.image) : Promise.resolve()
+        )
+      );
+
+      setActors(actorsWithImages);
+      setImagesLoaded(true);
+    } catch (err) {
+      console.error("Failed to fetch actor batch:", err);
+      Alert.alert("Connection Error", "Could not reach the backend server.");
     }
-
-    const actorsWithImages = await Promise.all(
-      batch.map(async (actor) => {
-        try {
-          const searchUrl = `https://api.themoviedb.org/3/search/person?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(actor.name)}`;
-          const response = await axios.get(searchUrl);
-          const result = response.data.results?.[0];
-
-          const image = result?.profile_path
-            ? `https://image.tmdb.org/t/p/w500${result.profile_path}` // smaller image
-            : undefined;
-
-          return { ...actor, image };
-        } catch (err) {
-          console.warn(`Could not fetch TMDb image for ${actor.name}`, err);
-          return actor;
-        }
-      })
-    );
-
-    // Preload images to prevent flashing
-    await Promise.all(
-      actorsWithImages.map((actor) =>
-        actor.image ? Image.prefetch(actor.image) : Promise.resolve()
-      )
-    );
-
-    setActors(actorsWithImages);
-    setImagesLoaded(true);
   };
 
   useEffect(() => {
     fetchActors();
   }, []);
 
-  // Swipe handler
+  // NEW: Refactored to pass current lists directly to handle React's async state
   const handleSwipe = (likedActor: boolean) => {
     if (cardIndex >= actors.length) return;
 
     const actor = actors[cardIndex];
-    if (likedActor) setLiked((prev) => [...prev, actor.name]);
-    else setDisliked((prev) => [...prev, actor.name]);
+    const newLiked = likedActor ? [...liked, actor.name] : liked;
+    const newDisliked = !likedActor ? [...disliked, actor.name] : disliked;
+
+    if (likedActor) setLiked(newLiked);
+    else setDisliked(newDisliked);
 
     const nextIndex = cardIndex + 1;
     setCardIndex(nextIndex);
-    console.log(`Swiped ${likedActor ? "right" : "left"} on ${actor.name}`);
-    // Trigger recommendations only after last card
+
+    // If it's the last card, trigger recommendations with the NEWLY updated lists
     if (nextIndex === actors.length) {
-      onSwipesComplete();
+      onSwipesComplete(newLiked, newDisliked);
     }
   };
 
-  // Recommendations
-  const onSwipesComplete = async () => {
-    const payload = { liked_actors: liked, disliked_actors: disliked };
+  const onSwipesComplete = async (finalLiked: string[], finalDisliked: string[]) => {
+    const payload = { liked_actors: finalLiked, disliked_actors: finalDisliked };
     try {
       const res = await axios.post(`${API_URL}/recommend`, payload);
+      
+      // Ensure backend keys match (e.g., movie.Title vs movie.title)
       const recs: Recommendation[] = res.data.recommendations.map((movie: any) => ({
-        title: movie.Title,
+        title: movie.Title || movie.title,
         Genres: movie.Genres || "",
         Score: movie.Score || 0,
       }));
+      
       setRecommendations(recs);
 
       if (recs.length > 0) {
-        const topMovie = recs[0];
-        try {
-          const cleanTitle = topMovie.title.replace(/\(\d{4}\)/, "").trim();
-          const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(cleanTitle)}`;
-          const searchRes = await axios.get(searchUrl);
-          const result = searchRes.data.results?.[0];
-
-          if (result?.poster_path) {
-            setTopMoviePoster(`https://image.tmdb.org/t/p/w500${result.poster_path}`);
-          }
-        } catch (err: any) {
-          console.warn("Could not fetch top movie poster:", err.response?.data || err);
-        }
+        fetchTopMoviePoster(recs[0].title);
       }
     } catch (err: any) {
       console.warn("Could not fetch recommendations:", err.response?.data || err);
     }
   };
 
-  // Loading screen
+  const fetchTopMoviePoster = async (title: string) => {
+    try {
+      const cleanTitle = title.replace(/\(\d{4}\)/, "").trim();
+      const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(cleanTitle)}`;
+      const searchRes = await axios.get(searchUrl);
+      const result = searchRes.data.results?.[0];
+
+      if (result?.poster_path) {
+        setTopMoviePoster(`https://image.tmdb.org/t/p/w500${result.poster_path}`);
+      }
+    } catch (err) {
+      console.warn("Poster fetch failed:", err);
+    }
+  };
+
   if (!imagesLoaded) {
     return (
       <View style={styles.container}>
@@ -134,14 +139,10 @@ export default function Home() {
     );
   }
 
-  // Recommendation screen
   if (recommendations && recommendations.length > 0) {
     const topMovie = recommendations[0];
     return (
-      <LinearGradient
-        colors={['#FD297B', '#FF5864', '#FF655B']}
-        style={styles.gradientContainer}
-      >
+      <LinearGradient colors={['#FD297B', '#FF5864', '#FF655B']} style={styles.gradientContainer}>
         <ScrollView contentContainerStyle={styles.recommendationContainer}>
           <Text style={styles.matchText}>It's a Match!</Text>
           <Text style={styles.recommendationTitle}>Your Top Movie</Text>
@@ -155,8 +156,6 @@ export default function Home() {
               setLiked([]);
               setDisliked([]);
               setCardIndex(0);
-              setActors([]);
-              setImagesLoaded(false);
               setTopMoviePoster(undefined);
               fetchActors();
             }}
@@ -168,15 +167,12 @@ export default function Home() {
     );
   }
 
-  // Swiper
   return (
     <View style={styles.container}>
-      {/* Header */}
       <View style={styles.header}>
         <Text style={styles.logo}>Watch or Pass</Text>
       </View>
 
-      {/* Cards */}
       <View style={styles.swiperContainer}>
         <Swiper
           ref={swiperRef}
@@ -184,15 +180,10 @@ export default function Home() {
           cardIndex={cardIndex}
           renderCard={(actor) => (
             <View style={styles.card}>
-              {actor.image && (
-                <Image source={{ uri: actor.image }} style={styles.cardImage} />
-              )}
-              <LinearGradient
-                colors={['transparent', 'rgba(0,0,0,0.9)']}
-                style={styles.cardGradient}
-              >
+              {actor?.image && <Image source={{ uri: actor.image }} style={styles.cardImage} />}
+              <LinearGradient colors={['transparent', 'rgba(0,0,0,0.9)']} style={styles.cardGradient}>
                 <View style={styles.cardInfo}>
-                  <Text style={styles.actorName}>{actor.name}</Text>
+                  <Text style={styles.actorName}>{actor?.name}</Text>
                 </View>
               </LinearGradient>
             </View>
@@ -207,183 +198,35 @@ export default function Home() {
           cardHorizontalMargin={20}
           animateCardOpacity
           overlayLabels={{
-            left: {
-              title: 'Pass',
-              style: {
-                label: {
-                  backgroundColor: 'transparent',
-                  borderColor: '#FF6B6B',
-                  color: '#FF6B6B',
-                  borderWidth: 4,
-                  fontSize: 40,
-                  fontWeight: 'bold',
-                  padding: 8,
-                  borderRadius: 8,
-                },
-                wrapper: {
-                  flexDirection: 'column',
-                  alignItems: 'flex-end',
-                  justifyContent: 'flex-start',
-                  marginTop: 50,
-                  marginLeft: -30,
-                }
-              }
-            },
-            right: {
-              title: 'Watch',
-              style: {
-                label: {
-                  backgroundColor: 'transparent',
-                  borderColor: '#4ECDC4',
-                  color: '#4ECDC4',
-                  borderWidth: 4,
-                  fontSize: 40,
-                  fontWeight: 'bold',
-                  padding: 8,
-                  borderRadius: 8,
-                },
-                wrapper: {
-                  flexDirection: 'column',
-                  alignItems: 'flex-start',
-                  justifyContent: 'flex-start',
-                  marginTop: 50,
-                  marginLeft: 30,
-                }
-              }
-            },
+            left: { title: 'Pass', style: { label: styles.overlayLabelLeft, wrapper: styles.overlayWrapperLeft } },
+            right: { title: 'Watch', style: { label: styles.overlayLabelRight, wrapper: styles.overlayWrapperRight } }
           }}
         />
       </View>
-
-
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#FAFAFA',
-  },
-  gradientContainer: {
-    flex: 1,
-  },
-  header: {
-    paddingTop: 50,
-    paddingBottom: 10,
-    backgroundColor: 'white',
-    alignItems: 'center',
-    borderBottomWidth: 1,
-    borderBottomColor: '#E8E8E8',
-  },
-  logo: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    color: '#FF5864',
-  },
-  swiperContainer: {
-    flex: 1,
-    paddingTop: 20,
-  },
-  card: {
-    height: height * 0.7,
-    borderRadius: 20,
-    overflow: 'hidden',
-    backgroundColor: 'white',
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 5,
-    },
-    shadowOpacity: 0.15,
-    shadowRadius: 10,
-    elevation: 8,
-  },
-  cardImage: {
-    width: '100%',
-    height: '100%',
-    resizeMode: 'cover',
-  },
-  cardGradient: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    height: '40%',
-    justifyContent: 'flex-end',
-    padding: 20,
-  },
-  cardInfo: {
-    marginBottom: 10,
-  },
-  actorName: {
-    fontSize: 32,
-    fontWeight: 'bold',
-    color: 'white',
-    textShadowColor: 'rgba(0, 0, 0, 0.75)',
-    textShadowOffset: { width: 1, height: 1 },
-    textShadowRadius: 5,
-  },
-  recommendationContainer: {
-    flexGrow: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 30,
-  },
-  matchText: {
-    fontSize: 48,
-    fontWeight: 'bold',
-    color: 'white',
-    marginBottom: 10,
-    textShadowColor: 'rgba(0, 0, 0, 0.3)',
-    textShadowOffset: { width: 2, height: 2 },
-    textShadowRadius: 5,
-  },
-  recommendationTitle: {
-    fontSize: 22,
-    color: 'white',
-    marginBottom: 30,
-    fontWeight: '600',
-  },
-  poster: {
-    width: 250,
-    height: 350,
-    borderRadius: 20,
-    marginBottom: 30,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 8,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 10,
-    elevation: 10,
-  },
-  movieTitle: {
-    fontSize: 24,
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: 40,
-    paddingHorizontal: 20,
-  },
-  tinderButton: {
-    backgroundColor: 'white',
-    paddingVertical: 16,
-    paddingHorizontal: 60,
-    borderRadius: 30,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 5,
-    elevation: 8,
-  },
-  buttonText: {
-    color: '#FF5864',
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
+  container: { flex: 1, backgroundColor: '#FAFAFA', justifyContent: 'center', alignItems: 'center' },
+  gradientContainer: { flex: 1 },
+  header: { paddingTop: 50, paddingBottom: 10, backgroundColor: 'white', alignItems: 'center', borderBottomWidth: 1, borderBottomColor: '#E8E8E8', width: '100%' },
+  logo: { fontSize: 32, fontWeight: 'bold', color: '#FF5864' },
+  swiperContainer: { flex: 1, paddingTop: 20, width: '100%' },
+  card: { height: height * 0.7, borderRadius: 20, overflow: 'hidden', backgroundColor: 'white', elevation: 8 },
+  cardImage: { width: '100%', height: '100%', resizeMode: 'cover' },
+  cardGradient: { position: 'absolute', bottom: 0, left: 0, right: 0, height: '40%', justifyContent: 'flex-end', padding: 20 },
+  cardInfo: { marginBottom: 10 },
+  actorName: { fontSize: 32, fontWeight: 'bold', color: 'white' },
+  recommendationContainer: { flexGrow: 1, justifyContent: 'center', alignItems: 'center', padding: 30 },
+  matchText: { fontSize: 48, fontWeight: 'bold', color: 'white' },
+  recommendationTitle: { fontSize: 22, color: 'white', marginBottom: 30 },
+  poster: { width: 250, height: 350, borderRadius: 20, marginBottom: 30 },
+  movieTitle: { fontSize: 24, color: 'white', fontWeight: 'bold', textAlign: 'center', marginBottom: 40 },
+  tinderButton: { backgroundColor: 'white', paddingVertical: 16, paddingHorizontal: 60, borderRadius: 30 },
+  buttonText: { color: '#FF5864', fontSize: 18, fontWeight: 'bold' },
+  overlayLabelLeft: { borderColor: '#FF6B6B', color: '#FF6B6B', borderWidth: 4, fontSize: 40, fontWeight: 'bold', padding: 8, borderRadius: 8 },
+  overlayWrapperLeft: { flexDirection: 'column', alignItems: 'flex-end', justifyContent: 'flex-start', marginTop: 50, marginLeft: -30 },
+  overlayLabelRight: { borderColor: '#4ECDC4', color: '#4ECDC4', borderWidth: 4, fontSize: 40, fontWeight: 'bold', padding: 8, borderRadius: 8 },
+  overlayWrapperRight: { flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'flex-start', marginTop: 50, marginLeft: 30 },
 });

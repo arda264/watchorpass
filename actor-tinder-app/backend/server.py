@@ -18,7 +18,8 @@ app = FastAPI(title="WatchOrPass API")
 origins = [
     "https://watchorpass.app",
     "https://www.watchorpass.app",
-    "http://localhost:8081",  # Local Expo testing
+    "http://localhost:8081",
+     allow_origins=["*"]
 ]
 
 app.add_middleware(
@@ -39,6 +40,16 @@ class RecommendRequest(BaseModel):
 def health_check():
     """Simple endpoint to check if the server is awake."""
     return {"status": "online", "message": "WatchOrPass Backend is Active"}
+
+@app.get("/actor-batch")
+def get_actor_batch():
+    """Returns 30 random actors in a single call"""
+    import random
+    from embeddings3 import all_actors
+    # Take a random sample of 30
+    batch = random.sample(all_actors, 30)
+    return {"actors": batch}
+
 
 @app.get("/actor")
 def get_random_actor():
