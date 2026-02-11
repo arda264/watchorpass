@@ -538,7 +538,7 @@ export const styles = StyleSheet.create({
   actionButton: {
     width: 50,
     height: 50,
-    borderRadius: 20,
+    borderRadius: 25,
     justifyContent: "center",
     alignItems: "center",
     // iOS shadow
@@ -584,17 +584,18 @@ export const styles = StyleSheet.create({
     textAlign: "center",
   },
   posterContainer: {
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 14 },
-    shadowOpacity: 0.5,
-    shadowRadius: 22,
-    elevation: 12,
+  shadowColor: "#000",
+  shadowOffset: { width: 0, height: 10 },
+  shadowOpacity: 0.5,
+  shadowRadius: 20,
+  elevation: 10,
+  borderRadius: 20,
+  overflow: "hidden", 
   },
-  matchPoster: {
-    width: 250,
-    height: 350,
-    borderRadius: 22,
-    marginBottom: 24,
+  matchPoster: { 
+    width: 250, 
+    height: 350, 
+    marginBottom: 30,
   },
   matchMovieTitle: {
     fontSize: 22,
