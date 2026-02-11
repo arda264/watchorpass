@@ -595,7 +595,6 @@ export const styles = StyleSheet.create({
   matchPoster: { 
     width: 250, 
     height: 350, 
-    marginBottom: 30,
   },
   matchMovieTitle: {
     fontSize: 22,
