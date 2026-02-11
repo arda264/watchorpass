@@ -468,8 +468,8 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   cardImage: { 
-    width: '80%',
-    height: '80%',
+    width: '100%',
+    height: '100%',
     borderRadius: 20,
   },
   noImage: {
@@ -507,8 +507,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     paddingHorizontal: 40,
-    paddingBottom: 5,
-    paddingTop: 20,
+    paddingBottom: 10,
+    paddingTop: 40,
   },
   actionButton: {
     width: 70,
