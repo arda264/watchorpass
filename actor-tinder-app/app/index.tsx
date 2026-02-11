@@ -450,7 +450,7 @@ export const styles = StyleSheet.create({
    */
   swiperContainer: {
     flex: 1,
-    paddingTop: 6,
+    paddingTop: 30,
     paddingHorizontal: 14,
     paddingBottom: 120, // reserve for actionButtons (absolute)
   },
@@ -459,7 +459,7 @@ export const styles = StyleSheet.create({
   card: {
     alignSelf: "center",
     width: width - 28,
-    height: Math.min(height * 0.72, 620), // nicer cap on tall phones
+    height: Math.min(height * 0.82, 720), // nicer cap on tall phones
     borderRadius: 26,
     backgroundColor: "#1b1b1e",
   },
