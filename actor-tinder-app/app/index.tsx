@@ -400,10 +400,12 @@ const styles = StyleSheet.create({
     flex: 1, 
     backgroundColor: "#1a1a1a",
   },
-  
   // Loading styles
   logoContainer: {
-    alignItems: 'center',
+    flex: 1,                     // Takes up the entire screen height
+    justifyContent: 'center',    // Centers content vertically
+    alignItems: 'center',        // Centers content horizontally
+    backgroundColor: '#000',     // (Optional) ensures the background covers the screen
   },
   loadingLogo: {
     fontSize: 80,
@@ -466,8 +468,8 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   cardImage: { 
-    width: '100%',
-    height: '100%',
+    width: '80%',
+    height: '80%',
     borderRadius: 20,
   },
   noImage: {
@@ -505,7 +507,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     paddingHorizontal: 40,
-    paddingBottom: 40,
+    paddingBottom: 5,
     paddingTop: 20,
   },
   actionButton: {
