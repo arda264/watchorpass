@@ -508,6 +508,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-evenly',
     paddingHorizontal: 40,
     paddingBottom: 10,
+    paddingTop: 250,
   },
   actionButton: {
     width: 70,
