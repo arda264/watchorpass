@@ -400,13 +400,12 @@ const styles = StyleSheet.create({
     flex: 1, 
     backgroundColor: "#1a1a1a",
   },
-
-  // Loading Screen (Perfectly Centered)
+  // Loading styles
   logoContainer: {
-    flex: 1, 
-    justifyContent: 'center', 
-    alignItems: 'center',    
-    backgroundColor: '#1a1a1a',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#000',
   },
   loadingLogo: {
     fontSize: 80,
@@ -418,65 +417,64 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
 
-  // Header (Top Pinned)
+  // Header styles
   header: {
-    paddingTop: 60, // Safe area for notch
+    paddingTop: 30, // Adjust for notch
     paddingHorizontal: 20,
     paddingBottom: 10,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: '#1a1a1a',
+    zIndex: 10, // Keep header above cards
   },
   headerLogo: {
     fontSize: 32,
   },
   progressBar: {
     flex: 1,
-    height: 6,
-    backgroundColor: 'rgba(255,255,255,0.1)',
-    borderRadius: 3,
+    height: 4,
+    backgroundColor: 'rgba(255,255,255,0.2)',
+    borderRadius: 2,
     marginHorizontal: 15,
     overflow: 'hidden',
   },
   progressFill: {
     height: '100%',
     backgroundColor: '#FF655B',
+    borderRadius: 2,
   },
   headerProgress: {
     color: 'white',
     fontSize: 14,
     fontWeight: '600',
-    width: 50,
-    textAlign: 'right',
   },
 
-  // Swiper Area (The Middle "Swipable" Zone)
+  // NEW: This container holds the swiper and limits its hit area
   swiperContainer: {
-    flex: 1, // Takes up all remaining space between header and buttons
-    zIndex: 1, 
+    flex: 1,
+    marginTop: -20, // Pull up slightly to hide swiper's default top margin
   },
 
-  // Cards
+  // Card styles
   card: { 
-    height: height * 0.62, // Explicit height so it doesn't overlap buttons
+    height: height * 0.65, // Fix height to 65% of screen
     borderRadius: 20,
     backgroundColor: '#2a2a2a',
-    elevation: 5,
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.3,
-    shadowRadius: 10,
+    // Remove the flex: 1 from here so it respects the explicit height
   },
   cardInner: {
     flex: 1,
     borderRadius: 20,
     overflow: 'hidden',
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 10,
+    elevation: 5,
   },
   cardImage: { 
     width: '100%',
     height: '100%',
-    position: 'absolute',
   },
   noImage: {
     flex: 1,
@@ -497,7 +495,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
-    height: 160,
+    height: 150,
     justifyContent: 'flex-end',
   },
   cardInfo: {
@@ -507,32 +505,31 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: 'bold',
     color: '#fff',
-    textShadowColor: 'rgba(0, 0, 0, 0.5)',
-    textShadowOffset: { width: 1, height: 1 },
-    textShadowRadius: 5,
   },
 
-  // Action Buttons (Pinned to Bottom)
+  // Action buttons - FIXED POSITIONING
   actionButtons: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
     alignItems: 'center',
     paddingHorizontal: 40,
-    paddingBottom: 40, // Space from physical bottom of screen
+    paddingBottom: 25, // Pin to bottom safe area
     paddingTop: 10,
-    zIndex: 10, // Ensures buttons stay clickable
+    backgroundColor: 'transparent',
+    zIndex: 100, // Ensure buttons are clickable
   },
   actionButton: {
-    width: 70,
-    height: 70,
-    borderRadius: 35,
+    width: 75,
+    height: 75,
+    borderRadius: 37.5,
     justifyContent: 'center',
     alignItems: 'center',
-    elevation: 8,
+    backgroundColor: 'white',
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 6,
+    elevation: 8,
   },
   nopeButton: {
     backgroundColor: '#FF6B6B',
@@ -546,7 +543,7 @@ const styles = StyleSheet.create({
     color: 'white',
   },
 
-  // Match Screen
+  // Match screen styles
   matchGradient: {
     flex: 1,
   },
@@ -565,7 +562,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   matchSubtitle: {
-    fontSize: 18,
+    fontSize: 20,
     color: 'white',
     marginBottom: 40,
     opacity: 0.9,
@@ -576,18 +573,16 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 10 },
     shadowOpacity: 0.5,
     shadowRadius: 20,
-    elevation: 15,
+    elevation: 10,
   },
   matchPoster: { 
-    width: 260, 
-    height: 380, 
+    width: 250, 
+    height: 350, 
     borderRadius: 20,
     marginBottom: 30,
-    borderWidth: 3,
-    borderColor: 'white',
   },
   matchMovieTitle: { 
-    fontSize: 26,
+    fontSize: 24,
     color: 'white',
     fontWeight: 'bold',
     textAlign: 'center',
@@ -598,7 +593,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     paddingHorizontal: 50,
     paddingVertical: 18,
-    borderRadius: 35,
+    borderRadius: 30,
   },
   matchButtonText: {
     color: '#FD297B',
@@ -607,19 +602,17 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
   },
 
-  // No Match State
+  // No match styles
   noMatchTitle: {
-    fontSize: 28,
+    fontSize: 32,
     color: 'white',
     fontWeight: 'bold',
     marginBottom: 10,
-    textAlign: 'center',
   },
   noMatchSubtitle: {
-    fontSize: 16,
+    fontSize: 18,
     color: '#999',
-    marginBottom: 30,
-    textAlign: 'center',
+    marginBottom: 40,
   },
   retryButton: {
     backgroundColor: '#FF655B',
