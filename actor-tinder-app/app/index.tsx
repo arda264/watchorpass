@@ -459,7 +459,7 @@ export const styles = StyleSheet.create({
   card: {
     alignSelf: "center",
     width: width - 28,
-    height: Math.min(height * 0.82, 720),
+    height: Math.min(height * 0.76, 680),
     borderRadius: 26,
     backgroundColor: "#1b1b1e",
     marginTop: 50,   // ⬅ cleaner spacing
@@ -522,33 +522,32 @@ export const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
-    paddingBottom: 18,
-    paddingTop: 6,
+
+    paddingBottom: 14,   // smaller
+    paddingTop: 6,       // smaller
+    paddingHorizontal: 20,
 
     flexDirection: "row",
-    justifyContent: "center",   // ⬅ center them
+    justifyContent: "center",
     alignItems: "center",
-    gap: 60,                    // ⬅ controls distance between buttons
+    gap: 30,
 
-    backgroundColor: "rgba(15,15,16,0.65)",
+    backgroundColor: "rgba(0,0,0,0.55)", // lighter + thinner feel
     zIndex: 50,
   },
-
-
   actionButton: {
-    width: 70,
-    height: 70,
-    borderRadius: 35,
+    width: 56,
+    height: 56,
+    borderRadius: 28,
     justifyContent: "center",
     alignItems: "center",
 
     shadowColor: "#000",
-    shadowOffset: { width: 0, height: 8 },
-    shadowOpacity: 0.25,
-    shadowRadius: 12,
-    elevation: 10,
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.2,
+    shadowRadius: 10,
+    elevation: 8,
   },
-
   nopeButton: {
     backgroundColor: "#FF5A5F",
   },
@@ -556,8 +555,8 @@ export const styles = StyleSheet.create({
     backgroundColor: "#35D0BA",
   },
   actionIcon: {
-    fontSize: 32,
-    fontWeight: "900",
+    fontSize: 24,
+    fontWeight: "bold",
     color: "white",
   },
 
