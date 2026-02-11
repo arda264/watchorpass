@@ -523,12 +523,12 @@ export const styles = StyleSheet.create({
     right: 0,
     bottom: 0,
     paddingBottom: 18,
-    paddingTop: 12,
+    paddingTop: 6,
 
     flexDirection: "row",
     justifyContent: "center",   // ⬅ center them
     alignItems: "center",
-    gap: 40,                    // ⬅ controls distance between buttons
+    gap: 60,                    // ⬅ controls distance between buttons
 
     backgroundColor: "rgba(15,15,16,0.65)",
     zIndex: 50,
@@ -536,9 +536,9 @@ export const styles = StyleSheet.create({
 
 
   actionButton: {
-    width: 72,
-    height: 72,
-    borderRadius: 36,
+    width: 50,
+    height: 50,
+    borderRadius: 20,
     justifyContent: "center",
     alignItems: "center",
     // iOS shadow
