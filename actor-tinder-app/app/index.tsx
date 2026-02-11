@@ -450,7 +450,7 @@ export const styles = StyleSheet.create({
    */
   swiperContainer: {
     flex: 1,
-    paddingTop: 30,
+    paddingTop: 55,
     paddingHorizontal: 14,
     paddingBottom: 120, // reserve for actionButtons (absolute)
   },
@@ -522,14 +522,16 @@ export const styles = StyleSheet.create({
     bottom: 0,
     paddingBottom: 18,
     paddingTop: 12,
-    paddingHorizontal: 34,
+
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "center",   // ⬅ center them
     alignItems: "center",
-    zIndex: 50,
-    // subtle “dock” feel
+    gap: 40,                    // ⬅ controls distance between buttons
+
     backgroundColor: "rgba(15,15,16,0.65)",
+    zIndex: 50,
   },
+
 
   actionButton: {
     width: 72,
