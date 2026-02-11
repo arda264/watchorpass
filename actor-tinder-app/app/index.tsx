@@ -395,234 +395,247 @@ export default function Swipe() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: { 
-    flex: 1, 
-    backgroundColor: "#1a1a1a",
-  },
-  // Loading styles
-  logoContainer: {
+export const styles = StyleSheet.create({
+  container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#000',
-  },
-  loadingLogo: {
-    fontSize: 80,
-    marginBottom: 20,
-  },
-  loadingText: {
-    color: "white",
-    fontSize: 18,
-    fontWeight: '500',
+    backgroundColor: "#0f0f10",
   },
 
-  // Header styles
+  // Loading
+  logoContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#0f0f10",
+  },
+  loadingLogo: { fontSize: 80, marginBottom: 16 },
+  loadingText: { color: "white", fontSize: 16, fontWeight: "600", opacity: 0.9 },
+
+  // Header
   header: {
-    paddingTop: 30, // Adjust for notch
-    paddingHorizontal: 20,
+    paddingTop: 14,
+    paddingHorizontal: 18,
     paddingBottom: 10,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    zIndex: 10, // Keep header above cards
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    zIndex: 20,
   },
   headerLogo: {
-    fontSize: 32,
+    fontSize: 30,
   },
   progressBar: {
     flex: 1,
-    height: 4,
-    backgroundColor: 'rgba(255,255,255,0.2)',
-    borderRadius: 2,
-    marginHorizontal: 15,
-    overflow: 'hidden',
+    height: 6,
+    backgroundColor: "rgba(255,255,255,0.14)",
+    borderRadius: 99,
+    marginHorizontal: 14,
+    overflow: "hidden",
   },
   progressFill: {
-    height: '100%',
-    backgroundColor: '#FF655B',
-    borderRadius: 2,
+    height: "100%",
+    backgroundColor: "#FF655B",
+    borderRadius: 99,
   },
   headerProgress: {
-    color: 'white',
-    fontSize: 14,
-    fontWeight: '600',
+    color: "rgba(255,255,255,0.9)",
+    fontSize: 13,
+    fontWeight: "700",
   },
 
-  // NEW: This container holds the swiper and limits its hit area
+  /**
+   * IMPORTANT:
+   * - This creates breathing room under the header
+   * - AND reserves space at the bottom so the buttons never cover the face/name
+   */
   swiperContainer: {
     flex: 1,
-    marginTop: -20, // Pull up slightly to hide swiper's default top margin
+    paddingTop: 6,
+    paddingHorizontal: 14,
+    paddingBottom: 120, // reserve for actionButtons (absolute)
   },
 
-  // Card styles
-  card: { 
-    height: height * 0.65, // Fix height to 65% of screen
-    borderRadius: 20,
-    backgroundColor: '#2a2a2a',
-    // Remove the flex: 1 from here so it respects the explicit height
+  // Card
+  card: {
+    alignSelf: "center",
+    width: width - 28,
+    height: Math.min(height * 0.72, 620), // nicer cap on tall phones
+    borderRadius: 26,
+    backgroundColor: "#1b1b1e",
   },
   cardInner: {
     flex: 1,
-    borderRadius: 20,
-    overflow: 'hidden',
+    borderRadius: 26,
+    overflow: "hidden",
+    // iOS shadow
     shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.25,
-    shadowRadius: 10,
-    elevation: 5,
+    shadowOffset: { width: 0, height: 14 },
+    shadowOpacity: 0.35,
+    shadowRadius: 18,
+    // Android shadow
+    elevation: 10,
   },
-  cardImage: { 
-    width: '100%',
-    height: '100%',
+  cardImage: {
+    width: "100%",
+    height: "100%",
   },
+
+  // Fallback for no image
   noImage: {
     flex: 1,
-    backgroundColor: "#333",
+    backgroundColor: "#1b1b1e",
     justifyContent: "center",
     alignItems: "center",
   },
-  noImageIcon: {
-    fontSize: 60,
-    marginBottom: 10,
-  },
-  noImageText: {
-    color: '#999',
-    fontSize: 16,
-  },
+  noImageIcon: { fontSize: 56, marginBottom: 10 },
+  noImageText: { color: "rgba(255,255,255,0.55)", fontSize: 15 },
+
+  // Bottom gradient area for text
   cardGradient: {
-    position: 'absolute',
+    position: "absolute",
     left: 0,
     right: 0,
     bottom: 0,
-    height: 150,
-    justifyContent: 'flex-end',
+    height: 180,
+    justifyContent: "flex-end",
+    paddingBottom: 10,
   },
   cardInfo: {
-    padding: 20,
+    paddingHorizontal: 18,
+    paddingBottom: 14,
   },
-  cardName: { 
-    fontSize: 32,
-    fontWeight: 'bold',
-    color: '#fff',
+  cardName: {
+    fontSize: 34,
+    fontWeight: "900",
+    color: "#fff",
+    letterSpacing: 0.2,
+    textShadowColor: "rgba(0,0,0,0.35)",
+    textShadowOffset: { width: 0, height: 2 },
+    textShadowRadius: 6,
   },
 
-  // Action buttons - FIXED POSITIONING
+  // Action buttons (pinned to bottom)
   actionButtons: {
-    flexDirection: 'row',
-    justifyContent: 'space-evenly',
-    alignItems: 'center',
-    paddingHorizontal: 40,
-    paddingBottom: 25, // Pin to bottom safe area
-    paddingTop: 10,
-    backgroundColor: 'transparent',
-    zIndex: 100, // Ensure buttons are clickable
+    position: "absolute",
+    left: 0,
+    right: 0,
+    bottom: 0,
+    paddingBottom: 18,
+    paddingTop: 12,
+    paddingHorizontal: 34,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    zIndex: 50,
+    // subtle “dock” feel
+    backgroundColor: "rgba(15,15,16,0.65)",
   },
+
   actionButton: {
-    width: 75,
-    height: 75,
-    borderRadius: 37.5,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'white',
+    width: 72,
+    height: 72,
+    borderRadius: 36,
+    justifyContent: "center",
+    alignItems: "center",
+    // iOS shadow
     shadowColor: "#000",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 6,
-    elevation: 8,
+    shadowOffset: { width: 0, height: 10 },
+    shadowOpacity: 0.28,
+    shadowRadius: 14,
+    // Android shadow
+    elevation: 12,
   },
   nopeButton: {
-    backgroundColor: '#FF6B6B',
+    backgroundColor: "#FF5A5F",
   },
   likeButton: {
-    backgroundColor: '#4ECDC4',
+    backgroundColor: "#35D0BA",
   },
   actionIcon: {
     fontSize: 32,
-    fontWeight: 'bold',
-    color: 'white',
+    fontWeight: "900",
+    color: "white",
   },
 
-  // Match screen styles
-  matchGradient: {
-    flex: 1,
-  },
+  // Match screen (kept mostly as-is, just slightly cleaner)
+  matchGradient: { flex: 1 },
   matchContainer: {
     flexGrow: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingHorizontal: 30,
-    paddingVertical: 50,
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: 26,
+    paddingVertical: 40,
   },
   matchTitle: {
-    fontSize: 48,
-    fontWeight: 'bold',
-    color: 'white',
+    fontSize: 46,
+    fontWeight: "900",
+    color: "white",
     marginBottom: 10,
-    textAlign: 'center',
+    textAlign: "center",
   },
   matchSubtitle: {
-    fontSize: 20,
-    color: 'white',
-    marginBottom: 40,
-    opacity: 0.9,
-    textAlign: 'center',
+    fontSize: 18,
+    color: "rgba(255,255,255,0.9)",
+    marginBottom: 34,
+    textAlign: "center",
   },
   posterContainer: {
     shadowColor: "#000",
-    shadowOffset: { width: 0, height: 10 },
+    shadowOffset: { width: 0, height: 14 },
     shadowOpacity: 0.5,
-    shadowRadius: 20,
-    elevation: 10,
+    shadowRadius: 22,
+    elevation: 12,
   },
-  matchPoster: { 
-    width: 250, 
-    height: 350, 
-    borderRadius: 20,
+  matchPoster: {
+    width: 250,
+    height: 350,
+    borderRadius: 22,
+    marginBottom: 24,
+  },
+  matchMovieTitle: {
+    fontSize: 22,
+    color: "white",
+    fontWeight: "800",
+    textAlign: "center",
     marginBottom: 30,
-  },
-  matchMovieTitle: { 
-    fontSize: 24,
-    color: 'white',
-    fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: 40,
-    paddingHorizontal: 20,
+    paddingHorizontal: 18,
   },
   matchButton: {
-    backgroundColor: 'white',
-    paddingHorizontal: 50,
-    paddingVertical: 18,
-    borderRadius: 30,
+    backgroundColor: "white",
+    paddingHorizontal: 46,
+    paddingVertical: 16,
+    borderRadius: 999,
   },
   matchButtonText: {
-    color: '#FD297B',
-    fontSize: 18,
-    fontWeight: 'bold',
-    letterSpacing: 1,
+    color: "#FD297B",
+    fontSize: 17,
+    fontWeight: "900",
+    letterSpacing: 0.6,
   },
 
-  // No match styles
+  // No match
   noMatchTitle: {
-    fontSize: 32,
-    color: 'white',
-    fontWeight: 'bold',
-    marginBottom: 10,
+    fontSize: 30,
+    color: "white",
+    fontWeight: "900",
+    marginBottom: 8,
+    textAlign: "center",
   },
   noMatchSubtitle: {
-    fontSize: 18,
-    color: '#999',
-    marginBottom: 40,
+    fontSize: 16,
+    color: "rgba(255,255,255,0.6)",
+    marginBottom: 30,
+    textAlign: "center",
   },
   retryButton: {
-    backgroundColor: '#FF655B',
-    paddingHorizontal: 40,
-    paddingVertical: 15,
-    borderRadius: 25,
+    backgroundColor: "#FF655B",
+    paddingHorizontal: 36,
+    paddingVertical: 14,
+    borderRadius: 999,
   },
   retryButtonText: {
-    color: 'white',
+    color: "white",
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: "900",
   },
 });
