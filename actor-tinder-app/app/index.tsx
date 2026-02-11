@@ -400,12 +400,13 @@ const styles = StyleSheet.create({
     flex: 1, 
     backgroundColor: "#1a1a1a",
   },
-  // Loading styles
+
+  // Loading Screen (Perfectly Centered)
   logoContainer: {
-    flex: 1,                     // Takes up the entire screen height
-    justifyContent: 'center',    // Centers content vertically
-    alignItems: 'center',        // Centers content horizontally
-    backgroundColor: '#000',     // (Optional) ensures the background covers the screen
+    flex: 1, 
+    justifyContent: 'center', 
+    alignItems: 'center',    
+    backgroundColor: '#1a1a1a',
   },
   loadingLogo: {
     fontSize: 80,
@@ -417,62 +418,68 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
 
-  // Header styles
+  // Header (Top Pinned)
   header: {
-    paddingTop: 50,
+    paddingTop: 60, // Safe area for notch
     paddingHorizontal: 20,
     paddingBottom: 10,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    backgroundColor: '#1a1a1a',
   },
   headerLogo: {
     fontSize: 32,
   },
   progressBar: {
     flex: 1,
-    height: 4,
-    backgroundColor: 'rgba(255,255,255,0.2)',
-    borderRadius: 2,
+    height: 6,
+    backgroundColor: 'rgba(255,255,255,0.1)',
+    borderRadius: 3,
     marginHorizontal: 15,
     overflow: 'hidden',
   },
   progressFill: {
     height: '100%',
     backgroundColor: '#FF655B',
-    borderRadius: 2,
   },
   headerProgress: {
     color: 'white',
     fontSize: 14,
     fontWeight: '600',
+    width: 50,
+    textAlign: 'right',
   },
 
-  // Card styles
+  // Swiper Area (The Middle "Swipable" Zone)
+  swiperContainer: {
+    flex: 1, // Takes up all remaining space between header and buttons
+    zIndex: 1, 
+  },
+
+  // Cards
   card: { 
-    flex: 1,
+    height: height * 0.62, // Explicit height so it doesn't overlap buttons
     borderRadius: 20,
     backgroundColor: '#2a2a2a',
+    elevation: 5,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 10,
   },
   cardInner: {
     flex: 1,
     borderRadius: 20,
     overflow: 'hidden',
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 10,
-    elevation: 5,
   },
   cardImage: { 
     width: '100%',
     height: '100%',
-    borderRadius: 20,
+    position: 'absolute',
   },
   noImage: {
+    flex: 1,
     backgroundColor: "#333",
     justifyContent: "center",
     alignItems: "center",
@@ -490,7 +497,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
-    height: 150,
+    height: 160,
     justifyContent: 'flex-end',
   },
   cardInfo: {
@@ -500,15 +507,20 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: 'bold',
     color: '#fff',
+    textShadowColor: 'rgba(0, 0, 0, 0.5)',
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 5,
   },
 
-  // Action buttons
+  // Action Buttons (Pinned to Bottom)
   actionButtons: {
     flexDirection: 'row',
     justifyContent: 'space-evenly',
+    alignItems: 'center',
     paddingHorizontal: 40,
-    paddingBottom: 10,
-    paddingTop: 450,
+    paddingBottom: 40, // Space from physical bottom of screen
+    paddingTop: 10,
+    zIndex: 10, // Ensures buttons stay clickable
   },
   actionButton: {
     width: 70,
@@ -516,14 +528,11 @@ const styles = StyleSheet.create({
     borderRadius: 35,
     justifyContent: 'center',
     alignItems: 'center',
+    elevation: 8,
     shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
+    shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 6,
-    elevation: 8,
   },
   nopeButton: {
     backgroundColor: '#FF6B6B',
@@ -537,12 +546,12 @@ const styles = StyleSheet.create({
     color: 'white',
   },
 
-  // Match screen styles
+  // Match Screen
   matchGradient: {
     flex: 1,
   },
   matchContainer: {
-    flex: 1,
+    flexGrow: 1,
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: 30,
@@ -556,7 +565,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   matchSubtitle: {
-    fontSize: 20,
+    fontSize: 18,
     color: 'white',
     marginBottom: 40,
     opacity: 0.9,
@@ -564,22 +573,21 @@ const styles = StyleSheet.create({
   },
   posterContainer: {
     shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 10,
-    },
+    shadowOffset: { width: 0, height: 10 },
     shadowOpacity: 0.5,
     shadowRadius: 20,
-    elevation: 10,
+    elevation: 15,
   },
   matchPoster: { 
-    width: 250, 
-    height: 350, 
+    width: 260, 
+    height: 380, 
     borderRadius: 20,
     marginBottom: 30,
+    borderWidth: 3,
+    borderColor: 'white',
   },
   matchMovieTitle: { 
-    fontSize: 24,
+    fontSize: 26,
     color: 'white',
     fontWeight: 'bold',
     textAlign: 'center',
@@ -590,15 +598,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     paddingHorizontal: 50,
     paddingVertical: 18,
-    borderRadius: 30,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 0.3,
-    shadowRadius: 8,
-    elevation: 5,
+    borderRadius: 35,
   },
   matchButtonText: {
     color: '#FD297B',
@@ -607,17 +607,19 @@ const styles = StyleSheet.create({
     letterSpacing: 1,
   },
 
-  // No match styles
+  // No Match State
   noMatchTitle: {
-    fontSize: 32,
+    fontSize: 28,
     color: 'white',
     fontWeight: 'bold',
     marginBottom: 10,
+    textAlign: 'center',
   },
   noMatchSubtitle: {
-    fontSize: 18,
+    fontSize: 16,
     color: '#999',
-    marginBottom: 40,
+    marginBottom: 30,
+    textAlign: 'center',
   },
   retryButton: {
     backgroundColor: '#FF655B',
