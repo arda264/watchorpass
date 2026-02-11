@@ -459,9 +459,11 @@ export const styles = StyleSheet.create({
   card: {
     alignSelf: "center",
     width: width - 28,
-    height: Math.min(height * 0.82, 720), // nicer cap on tall phones
+    height: Math.min(height * 0.82, 720),
     borderRadius: 26,
     backgroundColor: "#1b1b1e",
+    marginTop: 50,   // ⬅ cleaner spacing
+
   },
   cardInner: {
     flex: 1,
